@@ -5,7 +5,7 @@
 <node CREATED="1329315981833" HGAP="147" ID="ID_1745876367" MODIFIED="1384971590609" POSITION="left" TEXT="RMI/IIOP" VSHIFT="12">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 </node>
-<node CREATED="1329317095739" HGAP="150" ID="ID_1853132524" MODIFIED="1400599632644" POSITION="left" TEXT="Enterprise">
+<node CREATED="1329317095739" HGAP="166" ID="ID_1853132524" MODIFIED="1400600803809" POSITION="left" TEXT="Enterprise">
 <font BOLD="true" NAME="SansSerif" SIZE="14"/>
 <node CREATED="1329315549536" HGAP="125" ID="ID_1842161117" MODIFIED="1331475220471" TEXT="CDI" VSHIFT="1">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -317,7 +317,7 @@
 </html></richcontent>
 </node>
 </node>
-<node COLOR="#990000" CREATED="1331472785643" FOLDED="true" HGAP="26" ID="ID_1278426090" MODIFIED="1400600670202" TEXT="What difference betweem Non-Repeatable Read and Phantom Read?" VSHIFT="10">
+<node COLOR="#990000" CREATED="1331472785643" HGAP="26" ID="ID_1278426090" MODIFIED="1400600909932" TEXT="What difference betweem Non-Repeatable Read and Phantom Read?" VSHIFT="10">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1400600489096" ID="ID_1410061751" MODIFIED="1400600490253" TEXT="A non-repeatable read occurs, when during the course of a transaction, a row is retrieved twice and the values within the row differ between reads."/>
 <node CREATED="1400600499612" ID="ID_143188172" MODIFIED="1400600544080" TEXT="A phantom read occurs when, in the course of a transaction, two identical queries are executed, and the collection of rows returned by the second query is different from the first."/>
