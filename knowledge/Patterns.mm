@@ -1,4 +1,4 @@
-<map version="0.9.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1329206750276" ID="ID_432205224" MODIFIED="1329207412323" STYLE="bubble" TEXT="Patterns">
 <node CREATED="1329206920401" ID="ID_332886420" MODIFIED="1329207919338" POSITION="right" TEXT="Design Patterns">
@@ -8,6 +8,9 @@
 <font NAME="SansSerif" SIZE="10"/>
 <node CREATED="1332158777866" ID="ID_1126113304" MODIFIED="1332158823240" TEXT="Introduced to organise object functions usage from specified interface."/>
 <node CREATED="1332158904177" ID="ID_575004819" MODIFIED="1332158909161" TEXT="Translates one interface for a class into a compatible interface."/>
+<node CREATED="1400633120005" ID="ID_714303472" MODIFIED="1400633157710" TEXT="Convert the interface of a class into another interface clients expect. "/>
+<node CREATED="1400633140955" ID="ID_1716999487" MODIFIED="1400633151886" TEXT="Adapter lets classes work together that couldn&apos;t otherwise because of incompatible interfaces. "/>
+<node CREATED="1400633151887" ID="ID_1910217374" MODIFIED="1400633151888" TEXT="&#xa;Wrap an existing class with a new interface. Impedance match an old component to a new system"/>
 </node>
 <node COLOR="#999999" CREATED="1332158740351" ID="ID_1669305068" MODIFIED="1332158746319" TEXT="Motivation">
 <font NAME="SansSerif" SIZE="10"/>
@@ -17,15 +20,120 @@
 </node>
 <node COLOR="#999999" CREATED="1332158702289" ID="ID_920408120" MODIFIED="1332158977691" TEXT="Example">
 <font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400635751164" ID="ID_463146664" MODIFIED="1400635995800">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Client---&gt;Adaptor===&gt;Adaptee1(+do1())&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;|========&gt;Adaptee2(+do2())
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1329206790338" ID="ID_1258750525" MODIFIED="1332158062875" TEXT="Decorator"/>
-<node CREATED="1329206843682" ID="ID_1474689256" MODIFIED="1329206857401" TEXT="Proxy \ Surrogate"/>
-<node CREATED="1329206858041" ID="ID_319244367" MODIFIED="1329206868744" TEXT="Information Expert"/>
-<node CREATED="1329206869198" ID="ID_625052204" MODIFIED="1329206875713" TEXT="Composite"/>
-<node CREATED="1329206880776" ID="ID_615137909" MODIFIED="1329206891432" TEXT="Bridge \ Handle \ Body"/>
-<node CREATED="1329206892010" ID="ID_590060588" MODIFIED="1329206905307" TEXT="Flyweight"/>
-<node CREATED="1329206905713" ID="ID_975214571" MODIFIED="1329206916744" TEXT="Facade"/>
+</node>
+<node CREATED="1329206790338" ID="ID_1258750525" MODIFIED="1332158062875" TEXT="Decorator">
+<node COLOR="#999999" CREATED="1332158653914" ID="ID_18894441" MODIFIED="1332158746319" TEXT="Goal">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400633428874" ID="ID_1713980562" MODIFIED="1400633485994" TEXT="Add new behaviour to the existing class without extending it"/>
+</node>
+</node>
+<node CREATED="1329206843682" ID="ID_1474689256" MODIFIED="1329206857401" TEXT="Proxy \ Surrogate">
+<node COLOR="#999999" CREATED="1332158653914" ID="ID_1879155220" MODIFIED="1332158746319" TEXT="Goal">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400633530694" ID="ID_1274745065" MODIFIED="1400633532400" TEXT="Provide a surrogate or placeholder for another object to control access to it. Use an extra level of indirection to support distributed, controlled, or intelligent access."/>
+</node>
+</node>
+<node CREATED="1329206858041" ID="ID_319244367" MODIFIED="1329206868744" TEXT="Information Expert">
+<node COLOR="#999999" CREATED="1332158653914" ID="ID_241890711" MODIFIED="1332158746319" TEXT="Goal">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
+</node>
+<node CREATED="1329206869198" FOLDED="true" ID="ID_625052204" MODIFIED="1400635087506" TEXT="Composite">
+<node COLOR="#999999" CREATED="1332158653914" ID="ID_1875547492" MODIFIED="1332158746319" TEXT="Goal">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400634138672" ID="ID_529334466" MODIFIED="1400634140251" TEXT="Compose objects into tree structures to represent whole-part hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly. Recursive composition &quot;Directories contain entries, each of which could be a directory.&quot; 1-to-many &quot;has a&quot; up the &quot;is a&quot; hierarchy"/>
+</node>
+<node COLOR="#999999" CREATED="1400633996060" ID="ID_1695689178" MODIFIED="1400634016696" TEXT="Example">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400634634358" ID="ID_1523094063" MODIFIED="1400634763494">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Component&lt;------&lt;*&gt;Composite
+    </p>
+    <p>
+      ^&#160;&#160;&#160;^_____________________|
+    </p>
+    <p>
+      |
+    </p>
+    <p>
+      |
+    </p>
+    <p>
+      Leaf
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1329206880776" ID="ID_615137909" MODIFIED="1400635094167" TEXT="Bridge">
+<node CREATED="1400634248203" ID="ID_273869746" MODIFIED="1400634249247" TEXT="Decouple an abstraction from its implementation so that the two can vary independently. Publish interface in an inheritance hierarchy, and bury implementation in its own inheritance hierarchy. Beyond encapsulation, to insulation"/>
+<node COLOR="#999999" CREATED="1400634817711" ID="ID_1334350267" MODIFIED="1400634822209" TEXT="Example">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400634826134" ID="ID_1768002647" MODIFIED="1400635213951">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      _&gt;&#160;&#160;Abstraction&lt;&gt;------IImplementor(+do())&lt;===ConcreteImplementor
+    </p>
+    <p>
+      |&#160;&#160;- impl:Implementor
+    </p>
+    <p>
+      |
+    </p>
+    <p>
+      |_ AbstractionImpl
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1329206892010" ID="ID_590060588" MODIFIED="1329206905307" TEXT="Flyweight">
+<node COLOR="#999999" CREATED="1400635264614" ID="ID_1006401352" MODIFIED="1400635268336" TEXT="Goal">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400635269510" ID="ID_1322419392" MODIFIED="1400635270681" TEXT="Use sharing to support large numbers of fine-grained objects efficiently"/>
+</node>
+<node COLOR="#999999" CREATED="1400635272398" ID="ID_896549023" MODIFIED="1400635276512" TEXT="Example">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400635276902" ID="ID_651650855" MODIFIED="1400635276902" TEXT=""/>
+</node>
+</node>
+<node CREATED="1329206905713" ID="ID_975214571" MODIFIED="1329206916744" TEXT="Facade">
+<node COLOR="#999999" CREATED="1400635677983" ID="ID_951218146" MODIFIED="1400635683024" TEXT="Goal">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400635683910" ID="ID_1050033930" MODIFIED="1400635687153" TEXT="Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use. Wrap a complicated subsystem with a simpler interface"/>
+</node>
+</node>
+<node CREATED="1400633064039" ID="ID_464563078" MODIFIED="1400633066418" TEXT="http://sourcemaking.com/design_patterns/structural_patterns"/>
 </node>
 <node CREATED="1329206975557" HGAP="83" ID="ID_3452391" MODIFIED="1331911921536" TEXT="Behaviour Patterns" VSHIFT="10">
 <node CREATED="1329206990619" ID="ID_1350297685" MODIFIED="1329206996776" TEXT="Interpreter"/>
@@ -35,12 +143,53 @@
 <node CREATED="1329207149963" ID="ID_328599478" MODIFIED="1329207161901" TEXT="Publish - Subscribe"/>
 <node CREATED="1329207162323" ID="ID_952415931" MODIFIED="1329207173448" TEXT="Delegation Event Model"/>
 <node CREATED="1329207179244" ID="ID_1302355595" MODIFIED="1329207181463" TEXT="Visitor"/>
-<node CREATED="1329207182073" ID="ID_1293778698" MODIFIED="1329207184479" TEXT="Mediator"/>
+<node CREATED="1329207182073" ID="ID_1293778698" MODIFIED="1329207184479" TEXT="Mediator">
+<node CREATED="1400636566462" ID="ID_641629600" MODIFIED="1400636567656" TEXT="Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently. Design an intermediary to decouple many peers. Promote the many-to-many relationships between interacting peers to &quot;full object status&quot;."/>
+</node>
 <node CREATED="1329207184916" ID="ID_1686931544" MODIFIED="1329207187307" TEXT="State"/>
-<node CREATED="1329207187573" ID="ID_1416928834" MODIFIED="1329207190619" TEXT="Strategy"/>
-<node CREATED="1329207191119" ID="ID_113259266" MODIFIED="1329207203760" TEXT="Memento"/>
-<node CREATED="1329207204276" ID="ID_646172058" MODIFIED="1329207213823" TEXT="Chain of Responsibility"/>
-<node CREATED="1329207223619" ID="ID_32633190" MODIFIED="1329207227541" TEXT="Template Method"/>
+<node CREATED="1329207187573" ID="ID_1416928834" MODIFIED="1329207190619" TEXT="Strategy">
+<node CREATED="1400637323962" ID="ID_1058045353" MODIFIED="1400637333508" TEXT="Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from the clients that use it."/>
+<node CREATED="1400637334993" ID="ID_1309637289" MODIFIED="1400637493932" TEXT="Client---&gt;Abstraction(+doSomething())&lt;=====ConcreteAbstraction">
+<font NAME="Geneva" SIZE="12"/>
+</node>
+</node>
+<node CREATED="1329207191119" ID="ID_113259266" MODIFIED="1329207203760" TEXT="Memento">
+<node CREATED="1400636706345" ID="ID_249275755" MODIFIED="1400636707652" TEXT="Without violating encapsulation, capture and externalize an object&apos;s internal state so that the object can be returned to this state later."/>
+</node>
+<node CREATED="1329207204276" ID="ID_646172058" MODIFIED="1329207213823" TEXT="Chain of Responsibility">
+<node CREATED="1400636810277" ID="ID_724064507" MODIFIED="1400636811304" TEXT="Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it. Launch-and-leave requests with a single processing pipeline that contains many possible handlers. An object-oriented linked list with recursive traversal."/>
+<node COLOR="#999999" CREATED="1400636834652" ID="ID_35711244" MODIFIED="1400636839158" TEXT="Example">
+<font NAME="SansSerif" SIZE="10"/>
+<node CREATED="1400636839388" ID="ID_1138470431" MODIFIED="1400636964492">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      if( I can handle it){
+    </p>
+    <p>
+      handleIt();
+    </p>
+    <p>
+      }else{
+    </p>
+    <p>
+      next.handle();
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1329207223619" ID="ID_32633190" MODIFIED="1329207227541" TEXT="Template Method">
+<node CREATED="1400637122018" ID="ID_926608433" MODIFIED="1400637285243" TEXT="Basically it is a classical abstract class with abstract methods. Usually if some abstract method is used in an implementation method in this abstract class then this method is called the template method.&#xa;"/>
+</node>
 </node>
 <node CREATED="1329207269369" ID="ID_433305086" MODIFIED="1331911924223" TEXT="Creational Patterns" VSHIFT="6">
 <node CREATED="1329207288838" ID="ID_1300911340" MODIFIED="1329207299994" TEXT="Abstract Factory"/>
@@ -104,7 +253,9 @@
 <node CREATED="1329209115698" ID="ID_1919100787" MODIFIED="1329209125213" TEXT="Data Transfer Object"/>
 </node>
 <node CREATED="1329208430901" HGAP="143" ID="ID_1794791899" MODIFIED="1332157885487" TEXT="Offline Concurrency Patterns" VSHIFT="41">
-<node CREATED="1329207839213" ID="ID_1352860583" MODIFIED="1329207849073" TEXT="Optimistic Offline Lock"/>
+<node CREATED="1329207839213" ID="ID_1352860583" MODIFIED="1329207849073" TEXT="Optimistic Offline Lock">
+<node CREATED="1400637828192" ID="ID_546718067" MODIFIED="1400637829634" TEXT="Prevents conflicts between concurrent business transactions by detecting a conflict and rolling back the transaction."/>
+</node>
 <node CREATED="1329207861901" ID="ID_1949477643" MODIFIED="1329208346963" TEXT="Pessimistic Offline Lock"/>
 <node CREATED="1329208355276" ID="ID_1414434205" MODIFIED="1329208363713" TEXT="Coarse Grained Lock"/>
 <node CREATED="1329208364213" ID="ID_1930664881" MODIFIED="1329208371307" TEXT="Implicit Lock"/>
@@ -133,7 +284,7 @@
   </head>
   <body>
     <p>
-      <img src="recordSetSketch.gif" />
+      <img src="recordSetSketch.gif"/>
     </p>
   </body>
 </html></richcontent>
