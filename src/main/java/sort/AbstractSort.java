@@ -1,12 +1,12 @@
 package sort;
 
-abstract class AbstractSort implements Sort {
+abstract class AbstractSort implements SortAlgorithm {
 	Stats stats;
 
 	public AbstractSort(Stats stats) {
 		this.stats = stats;
 	}
-	
+
 	public AbstractSort() {
 		this(new VoidStats());
 	}
@@ -21,14 +21,13 @@ abstract class AbstractSort implements Sort {
 			while ((fS /= size) > 1)
 				j++;
 		}
-		System.out.println(String.format(
-			"%s: size=%d, passes=%d(n^%d), swaps=%d(n^%d)",
-			getClass().getSimpleName(),
-			size,
-			passes,
-			i,
-			swaps,
-			j));
+		System.out.println(String.format("%s: size=%d, passes=%d(n^%d), swaps=%d(n^%d)", getClass().getSimpleName(),
+				size, passes, i, swaps, j));
 	}
-
+	
+	void swap(int i, int j, int[] a){
+		a[i] = a[i] ^ a[j];
+		a[j] = a[i] ^ a[j];
+		a[i] = a[i] ^ a[j];
+	}
 }

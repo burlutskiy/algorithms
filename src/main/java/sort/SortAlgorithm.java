@@ -1,5 +1,5 @@
 package sort;
 
-interface Sort {
+interface SortAlgorithm {
 	void sort(int[] a);
 }

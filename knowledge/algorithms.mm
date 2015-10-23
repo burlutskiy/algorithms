@@ -1,7 +1,7 @@
-<map version="0.9.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1383141749484" ID="ID_50399789" MODIFIED="1387218359219" STYLE="bubble" TEXT="Algorithms">
-<node CREATED="1383141758378" FOLDED="true" HGAP="32" ID="ID_589109986" MODIFIED="1387218330657" POSITION="right" TEXT="In-place algorithm" VSHIFT="32">
+<node CREATED="1383141758378" HGAP="32" ID="ID_589109986" MODIFIED="1422279597224" POSITION="right" TEXT="In-place algorithm" VSHIFT="32">
 <node CREATED="1383141840615" ID="ID_1443336954" MODIFIED="1383141855143" TEXT="In-place algorithm is an algorithm which transforms input using a data structure with a small, constant amount of extra storage space."/>
 </node>
 <node CREATED="1383141857967" HGAP="43" ID="ID_588941768" MODIFIED="1384975458553" POSITION="left" TEXT="Complexity" VSHIFT="-13"/>
@@ -13,10 +13,14 @@
 <node CREATED="1383141945307" ID="ID_1799825412" MODIFIED="1383141947632" TEXT="Insertion"/>
 <node CREATED="1383141948272" ID="ID_990605924" MODIFIED="1383141957447" TEXT="Coctail"/>
 <node CREATED="1383141975362" ID="ID_687812031" MODIFIED="1383141977421" TEXT="Selection"/>
-<node CREATED="1383141978529" ID="ID_300301576" MODIFIED="1387296590438" TEXT="Quick"/>
+<node CREATED="1383141978529" ID="ID_300301576" MODIFIED="1387296590438" TEXT="Quick">
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_300301576" ENDARROW="Default" ENDINCLINATION="1174;0;" ID="Arrow_ID_63694950" SOURCE="ID_1299581101" STARTARROW="None" STARTINCLINATION="1398;0;"/>
+</node>
 <node CREATED="1383141981042" ID="ID_1573858968" MODIFIED="1383141982836" TEXT="Radix"/>
 <node CREATED="1383141983304" ID="ID_975960269" MODIFIED="1383141988953" TEXT="Bucket"/>
-<node CREATED="1383141998753" ID="ID_1198039621" MODIFIED="1387296115091" TEXT="Merge"/>
+<node CREATED="1383141998753" ID="ID_1198039621" MODIFIED="1387296115091" TEXT="Merge">
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1198039621" ENDARROW="Default" ENDINCLINATION="1105;0;" ID="Arrow_ID_527707985" SOURCE="ID_1299581101" STARTARROW="None" STARTINCLINATION="1105;0;"/>
+</node>
 <node CREATED="1383142001421" ID="ID_551910477" MODIFIED="1383142002935" TEXT="Heap"/>
 <node CREATED="1383142003575" ID="ID_1068596759" MODIFIED="1383142004979" TEXT="Intro"/>
 <node CREATED="1383142007101" ID="ID_873912082" MODIFIED="1383142010519" TEXT="Odd-even"/>
@@ -71,8 +75,8 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1366206438544" HGAP="51" ID="ID_106437397" MODIFIED="1387296784823" POSITION="right" TEXT="Algorithms" VSHIFT="-26"/>
-<node CREATED="1387217983525" FOLDED="true" HGAP="50" ID="ID_18576043" MODIFIED="1387297768876" POSITION="right" TEXT="Multithreading" VSHIFT="-9">
+<node CREATED="1366206438544" HGAP="50" ID="ID_106437397" MODIFIED="1422279615925" POSITION="right" TEXT="Algorithms" VSHIFT="3"/>
+<node CREATED="1387217983525" HGAP="50" ID="ID_18576043" MODIFIED="1422279617228" POSITION="right" TEXT="Multithreading" VSHIFT="-9">
 <node CREATED="1382966945407" ID="ID_889736538" MODIFIED="1382966946111" TEXT="&#x41c;&#x43d;&#x43e;&#x433;&#x43e;&#x43f;&#x43e;&#x442;&#x43e;&#x447;&#x43d;&#x43e;&#x441;&#x442;&#x44c;: deadlock &#x438; &#x441;&#x43f;&#x43e;&#x441;&#x43e;&#x431;&#x44b; &#x435;&#x433;&#x43e; &#x43e;&#x431;&#x43d;&#x430;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x438;&#x44f;/&#x43f;&#x440;&#x435;&#x434;&#x43e;&#x442;&#x432;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x438;&#x44f;, livelock, starvation, &#x43f;&#x440;&#x438;&#x43c;&#x438;&#x442;&#x438;&#x432;&#x44b; &#x441;&#x438;&#x43d;&#x445;&#x440;&#x43e;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;, &#x43a;&#x43b;&#x430;&#x441;&#x441;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;&#x438; (&#x447;&#x438;&#x442;&#x430;&#x442;&#x435;&#x43b;&#x438;-&#x43f;&#x438;&#x441;&#x430;&#x442;&#x435;&#x43b;&#x438;, &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x438;-&#x43f;&#x43e;&#x442;&#x440;&#x435;&#x431;&#x438;&#x442;&#x435;&#x43b;&#x438;, &#x43e;&#x431;&#x435;&#x434;&#x430;&#x44e;&#x449;&#x438;&#x435; &#x444;&#x438;&#x43b;&#x43e;&#x441;&#x43e;&#x444;&#x44b;). &#x410;&#x442;&#x43e;&#x43c;&#x430;&#x440;&#x43d;&#x44b;&#x435; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438; (compare-and-set) &#x438; &#x438;&#x445; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;."/>
 <node CREATED="1387218022274" ID="ID_549253592" MODIFIED="1387218025868" TEXT="deadlocks"/>
 <node CREATED="1387218026946" ID="ID_276804576" MODIFIED="1387218030227" TEXT="livelock"/>
@@ -101,11 +105,12 @@
 <node CREATED="1387218116694" ID="ID_1772116987" MODIFIED="1387218120053" TEXT="Rabin-Karp"/>
 </node>
 <node CREATED="1382966956266" ID="ID_1138123096" MODIFIED="1387298875911" POSITION="left" TEXT="Backtracking" VSHIFT="16">
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1138123096" ENDARROW="Default" ENDINCLINATION="-36;287;" ID="Arrow_ID_1757470467" SOURCE="ID_1292819205" STARTARROW="None" STARTINCLINATION="12;231;"/>
 <node CREATED="1387217907965" ID="ID_1667046434" MODIFIED="1387217914027" TEXT="Solving sudoku"/>
 <node CREATED="1387217914683" ID="ID_619656687" MODIFIED="1387217966807" TEXT="Alignment of Queens"/>
 </node>
 <node CREATED="1387218360516" ID="ID_1359430717" MODIFIED="1387218396171" POSITION="right" TEXT="Categories">
-<node CREATED="1387218397249" FOLDED="true" HGAP="23" ID="ID_795698864" MODIFIED="1389291576210" TEXT="Simple recursive" VSHIFT="23">
+<node CREATED="1387218397249" HGAP="23" ID="ID_795698864" MODIFIED="1422279643841" TEXT="Simple recursive" VSHIFT="23">
 <node CREATED="1387218614697" ID="ID_1375676122" MODIFIED="1387218628899" TEXT="A simple recursive algorithm:&#xa;Solves the base cases directly&#xa;Recurs with a simpler subproblem&#xa;Does some extra work to convert the solution to the simpler subproblem into a solution to the given problem&#xa;I call these &#x201c;simple&#x201d; because several of the other algorithm types are inherently recursive&#xa;"/>
 <node CREATED="1387218638165" ID="ID_798384599" MODIFIED="1387230176769" TEXT="Examples">
 <node CREATED="1387218661399" HGAP="17" ID="ID_738607870" MODIFIED="1387230179237" TEXT="To count the number of elements in a list:&#xa;If the list is empty, return zero; otherwise,&#xa;Step past the first element, and count the remaining elements in the list&#xa;Add one to the result&#xa;To test if a value occurs in a list:&#xa;If the list is empty, return false; otherwise,&#xa;If the first thing in the list is the given value, return true; otherwise&#xa;Step past the first element, and test whether the value occurs in the remainder of the list&#xa;" VSHIFT="13"/>
@@ -124,7 +129,7 @@
 <arrowlink DESTINATION="ID_1198039621" ENDARROW="Default" ENDINCLINATION="1105;0;" ID="Arrow_ID_527707985" STARTARROW="None" STARTINCLINATION="1105;0;"/>
 <arrowlink DESTINATION="ID_300301576" ENDARROW="Default" ENDINCLINATION="1174;0;" ID="Arrow_ID_63694950" STARTARROW="None" STARTINCLINATION="1398;0;"/>
 <node CREATED="1387296506534" ID="ID_1097987470" MODIFIED="1387296939804" TEXT="Finding Fibonacci Numbers" VSHIFT="16">
-<node CREATED="1387296520127" ID="ID_1109544055" MODIFIED="1387296579126" TEXT="To find the nth Fibonacci number:&#xa; - If n is zero or one, return one; otherwise,&#xa; - Compute fibonacci(n-1) and fibonacci(n-2)&#xa; - Return the sum of these two numbers&#xb;&#xa;This is an expensive algorithm&#xa; - It requires O(fibonacci(n)) time&#xa; - This is equivalent to exponential time, that is, O(2^n)&#xa;"/>
+<node CREATED="1387296520127" ID="ID_1109544055" MODIFIED="1387296579126" TEXT="To find the nth Fibonacci number:&#xa; - If n is zero or one, return one; otherwise,&#xa; - Compute fibonacci(n-1) and fibonacci(n-2)&#xa; - Return the sum of these two numbers&#xa;This is an expensive algorithm&#xa; - It requires O(fibonacci(n)) time&#xa; - This is equivalent to exponential time, that is, O(2^n)&#xa;"/>
 </node>
 </node>
 </node>
@@ -139,7 +144,7 @@
 <node CREATED="1366207706518" ID="ID_933487602" MODIFIED="1366207708486" TEXT="Prim"/>
 <node CREATED="1366207708752" ID="ID_329063163" MODIFIED="1366207714595" TEXT="EDF scheduling"/>
 <node CREATED="1387296946444" FOLDED="true" ID="ID_165711154" MODIFIED="1387297189579" TEXT="Counting money">
-<node CREATED="1387296960960" ID="ID_1900069357" MODIFIED="1387297006193" TEXT="Suppose you want to count out a certain amount of money, using the fewest possible bills and coins&#xa;A greedy algorithm would do this would be:&#xb;At each step, take the largest possible bill or coin that does not overshoot&#xa;- Example: To make $6.39, you can choose:&#xa; * a $5 bill&#xa; * a $1 bill, to make $6&#xa; * a 25&#xa2; coin, to make $6.25&#xa; * A 10&#xa2; coin, to make $6.35&#xa; * four 1&#xa2; coins, to make $6.39&#xa;For US money, the greedy algorithm always gives the optimum solution"/>
+<node CREATED="1387296960960" ID="ID_1900069357" MODIFIED="1387297006193" TEXT="Suppose you want to count out a certain amount of money, using the fewest possible bills and coins&#xa;A greedy algorithm would do this would be:At each step, take the largest possible bill or coin that does not overshoot&#xa;- Example: To make $6.39, you can choose:&#xa; * a $5 bill&#xa; * a $1 bill, to make $6&#xa; * a 25&#xa2; coin, to make $6.25&#xa; * A 10&#xa2; coin, to make $6.35&#xa; * four 1&#xa2; coins, to make $6.39&#xa;For US money, the greedy algorithm always gives the optimum solution"/>
 <node CREATED="1387297150955" ID="ID_1664164692" MODIFIED="1387297186438" TEXT="A failure of the greedy algorithm&#xa;In some (fictional) monetary system, &#x201c;krons&#x201d; come in 1 kron, 7 kron, and 10 kron coins&#xa;Using a greedy algorithm to count out 15 krons, you would get&#xa; - A 10 kron piece&#xa; - Five 1 kron pieces, for a total of 15 krons&#xa; - This requires six coins&#xa;A better solution would be to use two 7 kron pieces and one 1 kron piece&#xa; - This only requires three coins&#xa;The greedy algorithm results in a solution, but not in an optimal solution&#xa;"/>
 </node>
 <node CREATED="1387296848962" ID="ID_448185933" MODIFIED="1387296876993" TEXT="An optimization problem is one in which you want to find, not just a solution, but the best solution&#xa;A &#x201c;greedy algorithm&#x201d; sometimes works well for optimization problems&#xa;A greedy algorithm works in phases: At each phase:&#xa; - You take the best you can get right now, without regard for future consequences&#xa; - You hope that by choosing a local optimum at each step, you will end up at a global optimum&#xa;"/>

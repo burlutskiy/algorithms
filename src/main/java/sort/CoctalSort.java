@@ -24,11 +24,11 @@ public class CoctalSort extends AbstractSort {
 				stats.increaseComparisons();
 			}
 			t--;
-			
+
 			stats.increaseComparisons();
 			if (!swapped)
 				break;
-			
+
 			for (int i = t; i > 0; i--) {
 				if (a[i - 1] > a[i]) {
 					int dummy = a[i];
@@ -41,7 +41,6 @@ public class CoctalSort extends AbstractSort {
 				stats.increasePasses();
 			}
 			r++;
-		}
-		while (swapped);
+		} while (swapped);
 	}
 }

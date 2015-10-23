@@ -9,13 +9,14 @@ interface Stats {
 
 	void increaseSwaps();
 
+	void increaseSwaps(int times);
+	
+	void increasePasses(int times);
+
 	int getComparisons();
 
 	int getPasses();
 
 	int getSwaps();
 
-	void increaseSwaps(int times);
-
-	void increasePasses(int times);
 }

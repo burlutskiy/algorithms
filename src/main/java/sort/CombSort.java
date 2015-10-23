@@ -3,10 +3,10 @@ package sort;
 /**
  * http://en.wikipedia.org/wiki/Comb_sort
  * 
- * @author burlutal Worst case performance \Omega(n^2)[1] Best case performance
- *         O(n) Average case performance \Omega(n^2/2^p), where p is the number
- *         of increments Worst case space complexity
- * 
+ * @author burlutal 
+ * 	Worst case performance \Omega(n^2)[1] 
+ * 	Best case performance O(n) 
+ * 	Average case performance \Omega(n^2/2^p), where p is the number of increments Worst case space complexity
  */
 public class CombSort extends AbstractSort {
 	public void sort(int[] a) {
@@ -21,9 +21,7 @@ public class CombSort extends AbstractSort {
 			swapped = false;
 			while (i + gap < n) {
 				if (a[i] > a[i + gap]) {
-					int dummy = a[i + gap];
-					a[i + gap] = a[i];
-					a[i] = dummy;
+					swap(i + gap, i, a);
 					stats.increaseSwaps();
 					swapped = true;
 				}
