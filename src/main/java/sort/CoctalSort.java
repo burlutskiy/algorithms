@@ -7,37 +7,39 @@ package sort;
  * 
  */
 public class CoctalSort extends AbstractSort {
+
+	private void swapWithBottom(int[] a, int i) {
+		a[i] = a[i] ^ a[i - 1];
+		a[i - 1] = a[i] ^ a[i - 1];
+		a[i] = a[i] ^ a[i - 1];
+		stats.increasePasses();
+	}
+
+	private boolean less(int x, int y, int[] a) {
+		stats.increaseComparisons();
+		return a[x] < a[y];
+	}
+
 	public void sort(int[] a) {
 		int r = 0, t = a.length;
 		boolean swapped;
 		do {
 			swapped = false;
 			for (int i = r + 1; i < t; i++) {
-				if (a[i - 1] > a[i]) {
-					int dummy = a[i];
-					a[i] = a[i - 1];
-					a[i - 1] = dummy;
-					stats.increaseSwaps();
+				if (less(i, i - 1, a)) {
+					swapWithBottom(a, i);
 					swapped = true;
 				}
 				stats.increasePasses();
-				stats.increaseComparisons();
 			}
 			t--;
-
 			stats.increaseComparisons();
 			if (!swapped)
 				break;
-
-			for (int i = t; i > 0; i--) {
-				if (a[i - 1] > a[i]) {
-					int dummy = a[i];
-					a[i] = a[i - 1];
-					a[i - 1] = dummy;
-					swapped = true;
-					stats.increaseSwaps();
+			for (int i = t; i > r; i--) {
+				if (less(i, i - 1, a)) {
+					swapWithBottom(a, i);
 				}
-				stats.increaseComparisons();
 				stats.increasePasses();
 			}
 			r++;
