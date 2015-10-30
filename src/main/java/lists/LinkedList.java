@@ -15,7 +15,7 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	Node<T> tail;
 	int size = 0;
 
-	class Node<T> {
+	static class Node<T> {
 		Node<T> next;
 		T value;
 		
@@ -158,6 +158,25 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		tail = moreTail;
 	}
 
+	LinkedList<Integer> sum(LinkedList<Integer> list2) {
+		LinkedList<Integer> result = new LinkedList<>();
+		sumInternal((Node<Integer>) this.root, list2.root, result, 0);
+		return result;
+	}
+
+	private static void sumInternal(Node<Integer> node1, Node<Integer> node2, LinkedList<Integer> result, int add) {
+		if (node1 != null || node2 != null || add > 0) {
+			int res = (node1 != null ? node1.value : 0) + (node2 != null ? node2.value : 0) + add;
+			if (res < 10) {
+				result.add(res);
+				sumInternal(node1 != null ? node1.next : null, node2 != null ? node2.next : null, result, 0);
+			} else {
+				result.add(res - 10);
+				sumInternal(node1 != null ? node1.next : null, node2 != null ? node2.next : null, result, res/10);
+			}
+		}
+	}
+
 	@Override
 	public String toString() {
 		return root.toString();
@@ -175,3 +194,4 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		list.print();
 	}
 }
+
