@@ -158,7 +158,20 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		tail = moreTail;
 	}
 
-	LinkedList<Integer> sum(LinkedList<Integer> list2) {
+	public boolean hasACycle(){
+		Node<T> slow = root;
+		Node<T> fast = slow;
+		do {
+			if(slow.next == null || fast.next == null || fast.next.next == null)
+				return false;
+			slow = slow.next;
+			fast = fast.next.next;
+		} 
+		while(slow != fast && slow.next != null );
+		return slow == fast;
+	}
+	
+	public LinkedList<Integer> sum(LinkedList<Integer> list2) {
 		LinkedList<Integer> result = new LinkedList<>();
 		sumInternal((Node<Integer>) this.root, list2.root, result, 0);
 		return result;
