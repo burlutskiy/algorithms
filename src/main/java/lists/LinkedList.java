@@ -1,6 +1,5 @@
 package lists;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -18,20 +17,12 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	static class Node<T> {
 		Node<T> next;
 		T value;
-		
+
 		@Override
 		public String toString() {
-			Node<T> node = this;
-			StringBuffer sb = new StringBuffer();
-			do {
-				sb.append(node.value);
-				node = node.next;
-				if (node != null)
-					sb.append(",");
-			} while (node != null);
-			return sb.toString();
+			return String.valueOf(value);
 		}
-		
+
 	}
 
 	public void add(T value) {
@@ -158,19 +149,50 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		tail = moreTail;
 	}
 
-	public boolean hasACycle(){
+	public boolean hasACycle() {
 		Node<T> slow = root;
 		Node<T> fast = slow;
 		do {
-			if(slow.next == null || fast.next == null || fast.next.next == null)
+			if (slow.next == null || fast.next == null || fast.next.next == null)
 				return false;
 			slow = slow.next;
 			fast = fast.next.next;
-		} 
-		while(slow != fast && slow.next != null );
+		} while (slow != fast && slow.next != null);
 		return slow == fast;
 	}
-	
+
+	/**
+	 * Let us denote <br>
+	 * m = steps to cycle point <br>
+	 * L = size of loop<br>
+	 * d = distance between meet point and cycle point<br>
+	 * x = fast: steps ahead of meat point<br>
+	 * y = slow: steps ahead of meat point<br>
+	 * then x = 2y & x = m + n*L - d & y = m + L - d; => <br>
+	 * => m + n*L - d = 2(m + L - d) => d = m + (2-n)*L => <br>
+	 * => d = m (mod L) which means the distance between root and cycle point is
+	 * same as distance between meeting point and cycle point multiplied by some
+	 * (2-n), which is doesn't matter, so that if we go from fast and root until
+	 * we meet again and met point will be cycle point.
+	 */
+	public Node<T> getCyclePoint() {
+		Node<T> slow = root;
+		Node<T> fast = slow;
+		do {
+			if (slow.next == null || fast.next == null || fast.next.next == null)
+				return null;
+			slow = slow.next;
+			fast = fast.next.next;
+		} while (slow != fast && slow.next != null);
+
+		slow = root;
+		while (slow != fast) {
+			slow = slow.next;
+			fast = fast.next;
+		}
+		return slow;
+	}
+
 	public LinkedList<Integer> sum(LinkedList<Integer> list2) {
 		LinkedList<Integer> result = new LinkedList<>();
 		sumInternal((Node<Integer>) this.root, list2.root, result, 0);
@@ -185,26 +207,33 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 				sumInternal(node1 != null ? node1.next : null, node2 != null ? node2.next : null, result, 0);
 			} else {
 				result.add(res - 10);
-				sumInternal(node1 != null ? node1.next : null, node2 != null ? node2.next : null, result, res/10);
+				sumInternal(node1 != null ? node1.next : null, node2 != null ? node2.next : null, result, res / 10);
 			}
 		}
 	}
 
 	@Override
 	public String toString() {
-		return root.toString();
+		Node<T> node = this.root;
+		StringBuffer sb = new StringBuffer();
+		int count = 0;
+		do {
+			sb.append(node.value);
+			node = node.next;
+			if (node != null)
+				sb.append(",");
+		} while (node != null && ++count <= size);
+		return sb.toString();
 	}
-	
+
 	public static void main(String[] args) {
 		LinkedList<Integer> list = new LinkedList<>();
-		list.add(4);
 		list.add(1);
 		list.add(2);
-		list.add(1);
+		list.add(3);
+		list.add(4);
 		list.add(5);
-		list.add(1);
-		list.rearangeAround(2);
-		list.print();
+		list.tail.next = list.root.next.next;
+		System.out.println(list.getCyclePoint());
 	}
 }
-
