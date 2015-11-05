@@ -2,8 +2,11 @@ package lists;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Stack;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
+
+import utils.Reference;
 
 /**
  * 
@@ -193,6 +196,60 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		return slow;
 	}
 
+	/**
+	 * Define slow and fast pointers and move forward at x and 2x speed and till
+	 * fast reaches the end then go with slow to the end checking at the each
+	 * step the element from stack the must be equal
+	 */
+	public boolean isPalindrome() {
+		Node<T> slow = root;
+		Node<T> fast = slow;
+		Stack<T> stack = new Stack<>();
+		while (fast != null && fast.next != null) {
+			stack.add(slow.value);
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		if (fast != null)
+			slow = slow.next;
+		while (slow != null) {
+			if (slow.value.compareTo(stack.pop()) != 0)
+				return false;
+			slow = slow.next;
+		}
+		return true;
+	}
+
+	/**
+	 * Go recursively to the middle of list then assign middle to ref and go
+	 * back to the root while comparing ref with stack value
+	 * 
+	 * @return
+	 */
+	public boolean isPalindromeRecursevely() {
+		Reference<Boolean> result = new Reference<Boolean>(new Boolean(true));
+		isPalindromeRecursevelyInternal(root, new Reference<Node<T>>(root), 0, result);
+		return result.value;
+	}
+
+	private void isPalindromeRecursevelyInternal(Node<T> node, Reference<Node<T>> ref, int i,
+			Reference<Boolean> result) {
+		if (i < size / 2) {
+			isPalindromeRecursevelyInternal(node.next, ref, i + 1, result);
+		} else {
+			ref.value = node;
+			if (size % 2 != 0)
+				ref.value = node.next;
+			return;
+		}
+		if (!result.value)
+			return;
+		if (ref.value.value != node.value) {
+			result.value = false;
+		}
+		ref.value = ref.value.next;
+	}
+
 	public LinkedList<Integer> sum(LinkedList<Integer> list2) {
 		LinkedList<Integer> result = new LinkedList<>();
 		sumInternal((Node<Integer>) this.root, list2.root, result, 0);
@@ -228,12 +285,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
 	public static void main(String[] args) {
 		LinkedList<Integer> list = new LinkedList<>();
-		list.add(1);
-		list.add(2);
-		list.add(3);
-		list.add(4);
-		list.add(5);
-		list.tail.next = list.root.next.next;
-		System.out.println(list.getCyclePoint());
+		System.out.println(list.isPalindromeRecursevely());
 	}
 }
