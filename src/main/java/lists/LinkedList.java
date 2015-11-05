@@ -166,17 +166,17 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
 	/**
 	 * Let us denote <br>
-	 * m = steps to cycle point <br>
-	 * L = size of loop<br>
-	 * d = distance between meet point and cycle point<br>
-	 * x = fast: steps ahead of meat point<br>
-	 * y = slow: steps ahead of meat point<br>
+	 * m = steps to a cycle point <br>
+	 * L = size of a loop<br>
+	 * d = steps from a meet point ahead of the cycle point<br>
+	 * x = fast: steps ahead of the meet point<br>
+	 * y = slow: steps ahead of the meet point<br>
 	 * then x = 2y & x = m + n*L - d & y = m + L - d; => <br>
 	 * => m + n*L - d = 2(m + L - d) => d = m + (2-n)*L => <br>
-	 * => d = m (mod L) which means the distance between root and cycle point is
-	 * same as distance between meeting point and cycle point multiplied by some
+	 * => d = m (mod L) which means the distance between a root and the cycle point is
+	 * same a distance between the meeting point and the cycle point multiplied by some
 	 * (2-n), which is doesn't matter, so that if we go from fast and root until
-	 * we meet again and met point will be cycle point.
+	 * we meet again and the meet point will be the cycle point.
 	 */
 	public Node<T> getCyclePoint() {
 		Node<T> slow = root;
