@@ -11,35 +11,27 @@ import org.junit.Test;
  * 
  * @author burlutal
  */
-public class StackWithConstantLookUpForMin<T extends Comparable<T>> extends Stack<T> {
-
-	class NodeWithMin extends Node {
-		final T min;
-
-		public NodeWithMin(NodeWithMin prev, T value) {
-			super(prev, value);
-			if (prev == null || prev.min.compareTo(value) > 0)
-				this.min = value;
-			else {
-				this.min = prev.min;
-			}
-		}
-	}
-
-	NodeWithMin getTop() {
-		return (NodeWithMin) top;
-	}
+public class StackWithConstantLookUpForMinEfficient<T extends Comparable<T>> extends Stack<T> {
+	Stack<T> mins = new Stack<>();
 
 	@Override
 	public void push(T newValue) {
-		this.top = new NodeWithMin(getTop(), newValue);
+		super.push(newValue);
+		if(mins.isEmpty() || mins.top.getValue().compareTo(newValue) > 0){
+			mins.push(newValue);
+		}
 	}
 
+	@Override
+	public T pop() {
+		T value = super.pop();
+		if(value == mins.top.getValue())
+			mins.pop();
+		return value;
+	}
+	
 	public T min() {
-		if (getTop() != null) {
-			return getTop().min;
-		}
-		return null;
+		return mins.top.getValue();
 	}
 
 	@Test
@@ -53,6 +45,5 @@ public class StackWithConstantLookUpForMin<T extends Comparable<T>> extends Stac
 		stack.pop();
 		Assert.assertSame(-1, stack.min());
 	}
-
 
 }

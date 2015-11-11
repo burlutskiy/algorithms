@@ -34,7 +34,7 @@ public class Stack<T extends Comparable<T>> {
 	public T pop(){
 		if(top == null)
 			return null;
-		INode<T> node = top.getPrev();
+		INode<T> node = top;
 		top = top.getPrev();
 		return node.getValue();
 	}
@@ -55,5 +55,8 @@ public class Stack<T extends Comparable<T>> {
 		} while (node != null);
 		return sb.toString();
 	}
-
+	
+	public boolean isEmpty(){
+		return top == null;
+	}
 }
