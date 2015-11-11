@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Describe how you could use a single array to implement three stacks.
  * @author burlutal
  *
  */

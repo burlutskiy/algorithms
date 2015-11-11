@@ -4,13 +4,14 @@
 package strings;
 
 /**
- * @author burlutal Write a method to replace all spaces in a string with'%20'.
- *         You may assume that the string has sufficient space at the end of the
- *         string to hold the additional characters, and that you are given the
- *         "true" length of the string. (Note: if implementing in Java, please
- *         use a character array so that you can perform this operation in
- *         place.) EXAMPLE Input: "Mr John Smith Output: "Mr%20Dohn%20Smith"
- *
+ * Write a method to replace all spaces in a string with'%20'. You may assume
+ * that the string has sufficient space at the end of the string to hold the
+ * additional characters, and that you are given the "true" length of the
+ * string. (Note: if implementing in Java, please use a character array so that
+ * you can perform this operation in place.) EXAMPLE Input:
+ * "Mr John Smith Output: "Mr%20Dohn%20Smith"
+ * 
+ * @author burlutal
  */
 public class ShiftWordsInString {
 
@@ -18,11 +19,10 @@ public class ShiftWordsInString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String
-		 str = "I am Mr John Smith";
-//		 str = " I am Mr John Smith ";
-//		 str = " ";
-//		str = "  ";
+		String str = "I am Mr John Smith";
+		// str = " I am Mr John Smith ";
+		// str = " ";
+		// str = " ";
 		char[] input = new char[100];
 		System.arraycopy(str.toCharArray(), 0, input, 0, str.length());
 		replace2(input, str.length());

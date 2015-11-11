@@ -42,6 +42,9 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	}
 
 	/**
+	 * Write code to remove duplicates from an unsorted linked list. FOLLOW UP
+	 * How would you solve this problem if a temporary buffer is not allowed?
+	 * 
 	 * Assuming we can use HashSet, if not we can sort if first and then remove
 	 * duplicates
 	 * 
@@ -65,6 +68,12 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		} while (node != null);
 	}
 
+	/**
+	 * Implement an algorithm to find the kth to last element of a singly linked
+	 * list.
+	 * 
+	 * Straight implementation.
+	 */
 	public T nthToLast(int k) {
 		if (k <= 0)
 			return null;
@@ -85,6 +94,12 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		return p1.value;
 	}
 
+	/**
+	 * Implement an algorithm to find the kth to last element of a singly linked
+	 * list.
+	 * 
+	 * Recursive implementation.
+	 */
 	public T nthToLastRecurcive(int k) {
 		AtomicReference<T> result = new AtomicReference<>();
 		AtomicInteger counter = new AtomicInteger();
@@ -109,9 +124,11 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	}
 
 	/**
+	 * 
+	 * Write code to partition a linked list around a value x, such that all
+	 * nodes less than x come before all nodes greater than or equal to x.
 	 * Assuming values in the list are not null
 	 * 
-	 * @param value
 	 */
 	public void rearangeAround(T value) {
 		Node<T> lessTail = null;
@@ -152,6 +169,10 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		tail = moreTail;
 	}
 
+	/**
+	 * Determine if there is a cycle in a single linked list.
+	 * 
+	 */
 	public boolean hasACycle() {
 		Node<T> slow = root;
 		Node<T> fast = slow;
@@ -173,10 +194,11 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	 * y = slow: steps ahead of the meet point<br>
 	 * then x = 2y & x = m + n*L - d & y = m + L - d; => <br>
 	 * => m + n*L - d = 2(m + L - d) => d = m + (2-n)*L => <br>
-	 * => d = m (mod L) which means the distance between a root and the cycle point is
-	 * same a distance between the meeting point and the cycle point multiplied by some
-	 * (2-n), which is doesn't matter, so that if we go from fast and root until
-	 * we meet again and the meet point will be the cycle point.
+	 * => d = m (mod L) which means the distance between a root and the cycle
+	 * point is same a distance between the meeting point and the cycle point
+	 * multiplied by some (2-n), which is doesn't matter, so that if we go from
+	 * fast and root until we meet again and the meet point will be the cycle
+	 * point.
 	 */
 	public Node<T> getCyclePoint() {
 		Node<T> slow = root;
@@ -197,6 +219,8 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	}
 
 	/**
+	 * Implement a function to check if a linked list is a palindrome.
+	 * 
 	 * Define slow and fast pointers and move forward at x and 2x speed and till
 	 * fast reaches the end then go with slow to the end checking at the each
 	 * step the element from stack the must be equal
@@ -221,10 +245,11 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 	}
 
 	/**
+	 * Implement a function to check if a linked list is a palindrome.
+	 * 
 	 * Go recursively to the middle of list then assign middle to ref and go
 	 * back to the root while comparing ref with stack value
 	 * 
-	 * @return
 	 */
 	public boolean isPalindromeRecursevely() {
 		Reference<Boolean> result = new Reference<Boolean>(new Boolean(true));
@@ -250,6 +275,17 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 		ref.value = ref.value.next;
 	}
 
+	/**
+	 * You have two numbers represented by a linked list, where each node
+	 * contains a single digit. The digits are stored in reverse order, such
+	 * that the Ts digit is at the head of the list. Write a function that adds
+	 * the two numbers and returns the sum as a linked list. EXAMPLE Input: (7->
+	 * 1 -> 6) + (5 -> 9 -> 2).That is, 617 + 295. Output: 2 -> 1 -> 9.That is,
+	 * 912. FOLLOW UP Suppose the digits are stored in forward order. Repeat the
+	 * above problem. EXAMPLE Input: (6 -> 1 -> 7) + (2 -> 9 -> 5).That is, 617
+	 * + 295. Output: 9 -> 1 -> 2.That is, 912.
+	 * 
+	 */
 	public LinkedList<Integer> sum(LinkedList<Integer> list2) {
 		LinkedList<Integer> result = new LinkedList<>();
 		sumInternal((Node<Integer>) this.root, list2.root, result, 0);
