@@ -31,6 +31,12 @@ public class Stack<T extends Comparable<T>> {
 		}
 	}
 	
+	public T peek() {
+		if(top == null)
+			return null;
+		return top.getValue();
+	}
+	
 	public T pop(){
 		if(top == null)
 			return null;
@@ -40,7 +46,8 @@ public class Stack<T extends Comparable<T>> {
 	}
 	
 	public void push(T newValue){
-		top = new Node(top, newValue);
+		INode<T> v = top;
+		top = new Node(v, newValue);
 	}
 	
 	@Override
