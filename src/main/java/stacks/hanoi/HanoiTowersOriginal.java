@@ -29,24 +29,31 @@ public class HanoiTowersOriginal extends HanoiTowers {
 
 	@Override
 	public void solve() {
-		while (!isHanoiSolved()) {
-			swapFirstSecond();
-			swapFirstThird();
-			swapSecondThird();
-		}
+		do {
+			if (depth % 2 == 0) {
+				swapFirstSecond();
+				swapFirstThird();
+				swapSecondThird();
+			} else {
+				swapFirstThird();
+				swapFirstSecond();
+				swapSecondThird();
+			}
+		} while (!isHanoiSolved());
 	}
 
 	private void swapFirstSecond() {
-		swap(StackIndex.FIRST, StackIndex.SECOND);
+		if (!isHanoiSolved())
+			swap(StackIndex.FIRST, StackIndex.SECOND);
 	}
 
 	private void swapFirstThird() {
-		if(!isHanoiSolved())
+		if (!isHanoiSolved())
 			swap(StackIndex.FIRST, StackIndex.THIRD);
 	}
 
 	private void swapSecondThird() {
-		if(!isHanoiSolved())
+		if (!isHanoiSolved())
 			swap(StackIndex.SECOND, StackIndex.THIRD);
 	}
 
@@ -71,5 +78,5 @@ public class HanoiTowersOriginal extends HanoiTowers {
 		towers.push(to, value);
 		moves++;
 	}
-	
+
 }

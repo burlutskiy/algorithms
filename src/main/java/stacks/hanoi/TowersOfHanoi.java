@@ -4,28 +4,20 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TowersOfHanoi {
-
+	private final static int N = 15;
 	@Test
 	public void testNotOriginal() {
-		HanoiTowers hanoi = new HanoiTowers(4);
+		HanoiTowers hanoi = new HanoiTowers(N);
 		hanoi.solve();
 		Assert.assertTrue(hanoi.isHanoiSolved());
-	}
-
-	@Test
-	public void testCount() {
-		for (int i = 2; i < 10; i++) {
-			HanoiTowers hanoi = new HanoiTowers(i);
-			hanoi.solve();
-			System.out.println(hanoi.getMoves());
-		}
+		Assert.assertEquals((long)Math.pow(3, N) - 1, hanoi.getMoves());
 	}
 
 	@Test
 	public void testOriginal() {
-		HanoiTowers hanoi = new HanoiTowersOriginal(4);
+		HanoiTowers hanoi = new HanoiTowersOriginal(N);
 		hanoi.solve();
 		Assert.assertTrue(hanoi.isHanoiSolved());
-		Assert.assertEquals((long)Math.pow(2, 4) - 1, hanoi.getMoves());
+		Assert.assertEquals((long)Math.pow(2, N) - 1, hanoi.getMoves());
 	}
 }
