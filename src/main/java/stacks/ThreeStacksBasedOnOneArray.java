@@ -1,12 +1,7 @@
-/**
- * 
- */
 package stacks;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import stacks.ThreeStacksBasedOnOneArray.StackIndex;
 
 /**
  * Describe how you could use a single array to implement three stacks.
@@ -16,10 +11,10 @@ import stacks.ThreeStacksBasedOnOneArray.StackIndex;
  */
 public class ThreeStacksBasedOnOneArray {
 
-	static enum StackIndex {
+	public static enum StackIndex {
 		FIRST, SECOND, THIRD;
 
-		StackIndex toTheLeft() {
+		public StackIndex toTheLeft() {
 			if (this == SECOND)
 				return FIRST;
 			else if (this == THIRD)
@@ -28,7 +23,7 @@ public class ThreeStacksBasedOnOneArray {
 				return null;
 		}
 
-		StackIndex toTheRight() {
+		public StackIndex toTheRight() {
 			if (this == FIRST)
 				return SECOND;
 			else if (this == SECOND)
