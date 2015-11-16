@@ -24,7 +24,7 @@ import stacks.ThreeStacksBasedOnOneArray.StackIndex;
  * 
  * @author burlutal
  */
-public class HanoiTowersOriginal extends HanoiTowersNotOriginalSolution1 {
+public class HanoiTowersOriginal extends HanoiTowers {
 	public HanoiTowersOriginal(int depth) {
 		super(depth);
 	}

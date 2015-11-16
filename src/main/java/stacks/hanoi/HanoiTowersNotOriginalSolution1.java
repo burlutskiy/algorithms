@@ -1,9 +1,7 @@
 package stacks.hanoi;
 
 import stacks.Stack;
-import stacks.ThreeStacksBasedOnOneArray;
 import stacks.ThreeStacksBasedOnOneArray.StackIndex;
-import stacks.ThreeStacksBasedOnOneArray.ThreeStack;
 
 /**
  * 
@@ -26,7 +24,7 @@ import stacks.ThreeStacksBasedOnOneArray.ThreeStack;
  * @author burlutal
  *
  */
-public class HanoiTowersNotOriginalSolution1 {
+public class HanoiTowersNotOriginalSolution1 extends HanoiTowers {
 	enum Direction {
 		right, left;
 
@@ -55,26 +53,10 @@ public class HanoiTowersNotOriginalSolution1 {
 		}
 	}
 
-	final int depth;
-	final ThreeStack towers;
 	Stack<Swipe> operations;
-	protected long moves = 0;
-
 	public HanoiTowersNotOriginalSolution1(int depth) {
-		this.depth = depth;
+		super(depth);
 		this.operations = new Stack<>();
-		this.towers = new ThreeStacksBasedOnOneArray.ThreeStack(depth);
-		for (int i = 0; i < depth; i++) {
-			towers.push(StackIndex.FIRST, depth - i);
-		}
-	}
-
-	public boolean isHanoiSolved() {
-		return towers.isEmpty(StackIndex.FIRST) && towers.isEmpty(StackIndex.SECOND);
-	}
-
-	protected Integer towerValue(StackIndex index) {
-		return towers.peek(index);
 	}
 
 	public void solve() {
@@ -142,9 +124,5 @@ public class HanoiTowersNotOriginalSolution1 {
 	@Override
 	public String toString() {
 		return towers.toString();
-	}
-
-	public long getMoves() {
-		return moves;
 	}
 }
