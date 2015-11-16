@@ -20,9 +20,11 @@ import stacks.ThreeStacksBasedOnOneArray.StackIndex;
  * can be solved in seven moves. The minimum number of moves required to solve a
  * Tower of Hanoi puzzle is 2^n - 1, where n is the number of disks.
  * 
+ * https://en.wikipedia.org/wiki/Tower_of_Hanoi
+ * 
  * @author burlutal
  */
-public class HanoiTowersOriginal extends HanoiTowers {
+public class HanoiTowersOriginal extends HanoiTowersNotOriginalSolution1 {
 	public HanoiTowersOriginal(int depth) {
 		super(depth);
 	}
@@ -42,17 +44,17 @@ public class HanoiTowersOriginal extends HanoiTowers {
 		} while (!isHanoiSolved());
 	}
 
-	private void swapFirstSecond() {
+	protected void swapFirstSecond() {
 		if (!isHanoiSolved())
 			swap(StackIndex.FIRST, StackIndex.SECOND);
 	}
 
-	private void swapFirstThird() {
+	protected void swapFirstThird() {
 		if (!isHanoiSolved())
 			swap(StackIndex.FIRST, StackIndex.THIRD);
 	}
 
-	private void swapSecondThird() {
+	protected void swapSecondThird() {
 		if (!isHanoiSolved())
 			swap(StackIndex.SECOND, StackIndex.THIRD);
 	}

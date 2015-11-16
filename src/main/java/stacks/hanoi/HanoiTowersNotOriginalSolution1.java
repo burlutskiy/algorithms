@@ -26,7 +26,7 @@ import stacks.ThreeStacksBasedOnOneArray.ThreeStack;
  * @author burlutal
  *
  */
-public class HanoiTowers {
+public class HanoiTowersNotOriginalSolution1 {
 	enum Direction {
 		right, left;
 
@@ -60,7 +60,7 @@ public class HanoiTowers {
 	Stack<Swipe> operations;
 	protected long moves = 0;
 
-	public HanoiTowers(int depth) {
+	public HanoiTowersNotOriginalSolution1(int depth) {
 		this.depth = depth;
 		this.operations = new Stack<>();
 		this.towers = new ThreeStacksBasedOnOneArray.ThreeStack(depth);
