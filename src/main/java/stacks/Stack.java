@@ -52,6 +52,8 @@ public class Stack<T extends Comparable<T>> {
 	
 	@Override
 	public String toString() {
+		if(top == null)
+			return "";
 		INode<T> node = top;
 		StringBuffer sb = new StringBuffer();
 		do {
