@@ -1,5 +1,10 @@
 package trees;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  *
  * Recursive implementation of binary search tree
@@ -30,6 +35,10 @@ public class BST<K extends Comparable<K>, V> {
 		}
 	}
 
+	interface NodeVisitor {
+		public void visitNode(BST.TreeNode node);
+	}
+
 	public V get(K key) {
 		return get(root, key);
 	}
@@ -37,10 +46,9 @@ public class BST<K extends Comparable<K>, V> {
 	private V get(TreeNode node, K key) {
 		if (node == null)
 			return null;
-		int compareTo = key.compareTo(node.key);
-		if (compareTo < 0) {
+		if (less(key, node.key)) {
 			return get(node.left, key);
-		} else if (compareTo > 0) {
+		} else if (greather(key, node.key)) {
 			return get(node.right, key);
 		} else
 			return node.value;
@@ -70,8 +78,7 @@ public class BST<K extends Comparable<K>, V> {
 		if (node == null) {
 			return newNode;
 		} else {
-			int compareTo = key.compareTo(node.key);
-			if (compareTo <= 0) {
+			if (lessOrEquals(key, node.key)) {
 				node.left = put(node.left, key, newNode);
 			} else {
 				node.right = put(node.right, key, newNode);
@@ -83,12 +90,12 @@ public class BST<K extends Comparable<K>, V> {
 	public V min() {
 		if (root == null)
 			return null;
-		return min(root);
+		return min(root).value;
 	}
 
-	private V min(TreeNode node) {
+	private TreeNode min(TreeNode node) {
 		if (node.left == null)
-			return node.value;
+			return node;
 		return min(node.left);
 	}
 
@@ -113,7 +120,10 @@ public class BST<K extends Comparable<K>, V> {
 
 	private TreeNode deleteMax(TreeNode node) {
 		if (node.right == null) {
-			return null;
+			if (node.left != null)
+				return node.left;
+			else
+				return null;
 		} else {
 			node.right = deleteMax(node.right);
 		}
@@ -128,7 +138,10 @@ public class BST<K extends Comparable<K>, V> {
 
 	private TreeNode deleteMin(TreeNode node) {
 		if (node.left == null) {
-			return null;
+			if (node.right != null)
+				return node.right;
+			else
+				return null;
 		} else {
 			node.left = deleteMin(node.left);
 		}
@@ -142,25 +155,32 @@ public class BST<K extends Comparable<K>, V> {
 	}
 
 	private V remove(TreeNode parent, TreeNode node, K key) {
-		int compareTo = key.compareTo(node.key);
-		if (compareTo < 0) {
+		if (less(key, node.key)) {
 			return remove(node, node.left, key);
-		} else if (compareTo > 0) {
+		} else if (greather(key, node.key)) {
 			return remove(node, node.right, key);
 		} else {
 			if (parent == null) {
 				root = null;
+				if (node.left != null)
+					root = put(root, node.left.key, node.left);
+				if (node.right != null)
+					root = put(root, node.right.key, node.right);
 			} else {
-				if (parent == node.left) {
+				if (parent.left == node) {
 					parent.left = null;
+					if (node.left != null)
+						parent.left = put(parent.left, node.left.key, node.left);
+					if (node.right != null)
+						root = put(root, node.right.key, node.right);
 				} else {
 					parent.right = null;
+					if (node.right != null)
+						parent.right = put(parent.right, node.right.key, node.right);
+					if (node.left != null)
+						root = put(root, node.left.key, node.left);
 				}
 			}
-			if (node.left != null)
-				root = put(root, node.left.key, node.left);
-			if (node.right != null)
-				root = put(root, node.right.key, node.right);
 			return node.value;
 		}
 	}
@@ -170,4 +190,106 @@ public class BST<K extends Comparable<K>, V> {
 		return root != null ? root.toString() : "";
 	}
 
+	public boolean isBST() {
+		return isBST(root);
+	}
+
+	private boolean isBST(TreeNode node) {
+		if (node == null)
+			return true;
+		if ((node.left != null && greather(min(node.left).key, node.key))
+				|| (node.right != null && lessOrEquals(min(node.right).key, node.key)))
+			return false;
+		if (!isBST(node.left))
+			return false;
+		if (!isBST(node.right))
+			return false;
+		return true;
+	}
+
+	private boolean lessOrEquals(K k1, K k2) {
+		return k1.compareTo(k2) <= 0;
+	}
+
+	private boolean less(K k1, K k2) {
+		return k1.compareTo(k2) < 0;
+	}
+
+	private boolean greather(K k1, K k2) {
+		return k1.compareTo(k2) > 0;
+	}
+
+	public void traversePreOrder(NodeVisitor visitor) {
+		traversePreOrder(root, visitor);
+	}
+
+	private void traversePreOrder(TreeNode node, NodeVisitor visitor) {
+		if (node == null)
+			return;
+		visitor.visitNode(node);
+		traversePreOrder(node.left, visitor);
+		traversePreOrder(node.right, visitor);
+	}
+
+	public void traverseInOrder(NodeVisitor visitor) {
+		traverseInOrder(root, visitor);
+	}
+
+	private void traverseInOrder(TreeNode node, NodeVisitor visitor) {
+		if (node == null)
+			return;
+		traverseInOrder(node.left, visitor);
+		visitor.visitNode(node);
+		traverseInOrder(node.right, visitor);
+	}
+
+	public void traversePostOrder(NodeVisitor visitor) {
+		traversePostOrder(root, visitor);
+	}
+
+	private void traversePostOrder(TreeNode node, NodeVisitor visitor) {
+		if (node == null)
+			return;
+		traversePostOrder(node.left, visitor);
+		traversePostOrder(node.right, visitor);
+		visitor.visitNode(node);
+	}
+
+	public void traverseBreadthFirstNonReqursive(NodeVisitor visitor) {
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.add(root);
+		while(!queue.isEmpty()){
+			TreeNode node = queue.poll();
+			visitor.visitNode(node);
+			if(node.left != null)
+				queue.add(node.left);
+			if(node.right != null)
+				queue.add(node.right);
+		}
+	}
+	
+	public void traverseBreadthFirst(NodeVisitor visitor) {
+		HashMap<Integer, List<TreeNode>> map = new HashMap<Integer, List<TreeNode>>();
+		traverseBreadthFirst(root, 0, map);
+		int depth = 0;
+		while (map.get(depth) != null) {
+			List<TreeNode> list = map.get(depth++);
+			for (TreeNode treeNode : list) {
+				visitor.visitNode(treeNode);
+			}
+		}
+	}
+
+	private void traverseBreadthFirst(TreeNode node, int depth, HashMap<Integer, List<TreeNode>> map) {
+		if (node != null) {
+			List<TreeNode> list = map.get(depth);
+			if (list == null) {
+				list = new LinkedList<>();
+				map.put(depth, list);
+			}
+			list.add(node);
+			traverseBreadthFirst(node.left, depth + 1, map);
+			traverseBreadthFirst(node.right, depth + 1, map);
+		}
+	}
 }
