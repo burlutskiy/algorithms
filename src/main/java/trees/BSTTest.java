@@ -161,4 +161,18 @@ public class BSTTest {
 		System.out.println();
 	}
 
+	@Test
+	public void testTraverseBreadthOrder2() {
+		tree = new BST<>();
+		tree.put(4,4);
+		tree.put(2,2);
+		tree.put(6,6);
+		tree.put(1,1);
+		tree.put(3,3);
+		tree.put(5,5);
+		tree.put(7,7);
+		tree.traversePostOrder(visitor);
+	}
+	
+
 }

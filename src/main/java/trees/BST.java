@@ -292,4 +292,23 @@ public class BST<K extends Comparable<K>, V> {
 			traverseBreadthFirst(node.right, depth + 1, map);
 		}
 	}
+	
+	public void traverseBreadthFirstRecursive(NodeVisitor visitor) {
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.add(root);
+		traverseBreadthFirstRecursive(visitor, queue);
+	}
+
+	public void traverseBreadthFirstRecursive(NodeVisitor visitor, Queue<TreeNode> queue) {
+		if(queue.isEmpty())
+			return;
+		TreeNode node = queue.poll();
+		visitor.visitNode(node);
+		if(node.left!=null)
+			queue.add(node.left);
+		if(node.right!=null)
+			queue.add(node.right);
+		
+		traverseBreadthFirstRecursive(visitor, queue);
+	}
 }
