@@ -16,12 +16,19 @@ public class BSTTest {
 
 	NodeVisitor visitor = new NodeVisitor() {
 		@Override
-		public void visitNode(TreeNode node) {
+		public void visitNode(TreeNode node, int depth) {
 			System.out.print(node.value + " ");
 		}
 	};
-	
+
 	@Before
+	/**
+	 * _____4<br>
+	 * __3______8<br>
+	 * 1______6___9<br>
+	 * _2_________12<br>
+	 * _________11<br>
+	 */
 	public void setup() {
 		tree.put(4, 4);
 		tree.put(3, 3);
@@ -136,11 +143,16 @@ public class BSTTest {
 		Assert.assertFalse(tree.isBST());
 	}
 
-
 	@Test
 	public void testTraversePreOrder() {
 		tree.traversePreOrder(visitor);
 		System.out.println();
+	}
+
+	@Test
+	public void testReverse() {
+		tree.reverse();
+		Assert.assertFalse(tree.isBST());
 	}
 
 	@Test
@@ -164,15 +176,40 @@ public class BSTTest {
 	@Test
 	public void testTraverseBreadthOrder2() {
 		tree = new BST<>();
-		tree.put(4,4);
-		tree.put(2,2);
-		tree.put(6,6);
-		tree.put(1,1);
-		tree.put(3,3);
-		tree.put(5,5);
-		tree.put(7,7);
+		tree.put(4, 4);
+		tree.put(2, 2);
+		tree.put(6, 6);
+		tree.put(1, 1);
+		tree.put(3, 3);
+		tree.put(5, 5);
+		tree.put(7, 7);
 		tree.traversePostOrder(visitor);
 	}
+
+	@Test
+	public void testRotateCW() {
+		tree.rotateCW(tree.root, tree.root.left);
+		Assert.assertTrue(tree.isBST());
+		tree.rotateCW(null, tree.root);
+		Assert.assertTrue(tree.isBST());
+	}
+
+	@Test
+	public void testRotateCCW() {
+		tree.rotateCCW(tree.root, tree.root.left);
+		Assert.assertTrue(tree.isBST());
+		tree.rotateCCW(null, tree.root);
+		Assert.assertTrue(tree.isBST());
+		tree.traverseBreadthFirst(visitor);
+	}
 	
+	@Test
+	public void testMaxDepth() {
+		Assert.assertEquals(5, tree.maxDepth());
+	}	
+
+	@Test public void testPrintTree(){
+		System.out.println(tree);
+	}
 
 }

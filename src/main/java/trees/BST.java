@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import utils.Pair;
+
 /**
  *
  * Recursive implementation of binary search tree
@@ -36,7 +38,7 @@ public class BST<K extends Comparable<K>, V> {
 	}
 
 	interface NodeVisitor {
-		public void visitNode(BST.TreeNode node);
+		public void visitNode(BST.TreeNode node, int level);
 	}
 
 	public V get(K key) {
@@ -187,7 +189,44 @@ public class BST<K extends Comparable<K>, V> {
 
 	@Override
 	public String toString() {
-		return root != null ? root.toString() : "";
+		final int n = maxDepth();
+		final StringBuilder sb = new StringBuilder();
+		Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
+		queue.add(new Pair<TreeNode, Integer>(root, 0));
+		int lastLevel = 0;
+		while (!queue.isEmpty()) {
+			Pair<TreeNode, Integer> pair = queue.poll();
+			BST<K, V>.TreeNode node = pair.first;
+			int level = pair.second;
+			if (lastLevel != level) {
+				sb.append("\n");
+				lastLevel = level;
+			}
+			int numberOfSpaces = numberOfSpaces(level, n);
+			for (int i = 0; i < numberOfSpaces; i++) {
+				sb.append(" ");
+			}
+			if (node != null)
+				sb.append(node.value);
+			else
+				sb.append(" ");
+			for (int i = 0; i < numberOfSpaces; i++) {
+				sb.append(" ");
+			}
+			sb.append(" ");
+			if (node != null) {
+				queue.add(new Pair<TreeNode, Integer>(node.left != null ? node.left : null, level + 1));
+				queue.add(new Pair<TreeNode, Integer>(node.right != null ? node.right : null, level + 1));
+			} else if(level <= n){
+				queue.add(new Pair<TreeNode, Integer>(null, level + 1));
+				queue.add(new Pair<TreeNode, Integer>(null, level + 1));
+			}
+		}
+		return sb.toString();
+	}
+
+	private int numberOfSpaces(int l, int n) {
+		return (int) Math.round((Math.pow(2, n - 1) - .5) / (l + 1) - Math.pow(2, l - 1));
 	}
 
 	public boolean isBST() {
@@ -220,54 +259,55 @@ public class BST<K extends Comparable<K>, V> {
 	}
 
 	public void traversePreOrder(NodeVisitor visitor) {
-		traversePreOrder(root, visitor);
+		traversePreOrder(root, visitor, 0);
 	}
 
-	private void traversePreOrder(TreeNode node, NodeVisitor visitor) {
+	private void traversePreOrder(TreeNode node, NodeVisitor visitor, int depth) {
 		if (node == null)
 			return;
-		visitor.visitNode(node);
-		traversePreOrder(node.left, visitor);
-		traversePreOrder(node.right, visitor);
+		visitor.visitNode(node, depth);
+		traversePreOrder(node.left, visitor, depth + 1);
+		traversePreOrder(node.right, visitor, depth + 1);
 	}
 
 	public void traverseInOrder(NodeVisitor visitor) {
-		traverseInOrder(root, visitor);
+		traverseInOrder(root, visitor, 0);
 	}
 
-	private void traverseInOrder(TreeNode node, NodeVisitor visitor) {
+	private void traverseInOrder(TreeNode node, NodeVisitor visitor, int depth) {
 		if (node == null)
 			return;
-		traverseInOrder(node.left, visitor);
-		visitor.visitNode(node);
-		traverseInOrder(node.right, visitor);
+		traverseInOrder(node.left, visitor, depth + 1);
+		visitor.visitNode(node, depth);
+		traverseInOrder(node.right, visitor, depth + 1);
 	}
 
 	public void traversePostOrder(NodeVisitor visitor) {
-		traversePostOrder(root, visitor);
+		traversePostOrder(root, visitor, 0);
 	}
 
-	private void traversePostOrder(TreeNode node, NodeVisitor visitor) {
+	private void traversePostOrder(TreeNode node, NodeVisitor visitor, int depth) {
 		if (node == null)
 			return;
-		traversePostOrder(node.left, visitor);
-		traversePostOrder(node.right, visitor);
-		visitor.visitNode(node);
+		traversePostOrder(node.left, visitor, depth + 1);
+		traversePostOrder(node.right, visitor, depth + 1);
+		visitor.visitNode(node, depth);
 	}
 
 	public void traverseBreadthFirstNonReqursive(NodeVisitor visitor) {
-		Queue<TreeNode> queue = new LinkedList<>();
-		queue.add(root);
-		while(!queue.isEmpty()){
-			TreeNode node = queue.poll();
-			visitor.visitNode(node);
-			if(node.left != null)
-				queue.add(node.left);
-			if(node.right != null)
-				queue.add(node.right);
+		Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
+		queue.add(new Pair<TreeNode, Integer>(root, 0));
+		while (!queue.isEmpty()) {
+			Pair<TreeNode, Integer> pair = queue.poll();
+			BST<K, V>.TreeNode node = pair.first;
+			visitor.visitNode(node, pair.second);
+			if (node.left != null)
+				queue.add(new Pair<TreeNode, Integer>(node.left, pair.second + 1));
+			if (node.right != null)
+				queue.add(new Pair<TreeNode, Integer>(node.right, pair.second + 1));
 		}
 	}
-	
+
 	public void traverseBreadthFirst(NodeVisitor visitor) {
 		HashMap<Integer, List<TreeNode>> map = new HashMap<Integer, List<TreeNode>>();
 		traverseBreadthFirst(root, 0, map);
@@ -275,7 +315,7 @@ public class BST<K extends Comparable<K>, V> {
 		while (map.get(depth) != null) {
 			List<TreeNode> list = map.get(depth++);
 			for (TreeNode treeNode : list) {
-				visitor.visitNode(treeNode);
+				visitor.visitNode(treeNode, depth - 1);
 			}
 		}
 	}
@@ -292,23 +332,55 @@ public class BST<K extends Comparable<K>, V> {
 			traverseBreadthFirst(node.right, depth + 1, map);
 		}
 	}
-	
-	public void traverseBreadthFirstRecursive(NodeVisitor visitor) {
-		Queue<TreeNode> queue = new LinkedList<>();
-		queue.add(root);
-		traverseBreadthFirstRecursive(visitor, queue);
+
+	public void reverse() {
+		traversePreOrder(new NodeVisitor() {
+			@Override
+			public void visitNode(BST.TreeNode node, int level) {
+				TreeNode tmp = node.left;
+				node.left = node.right;
+				node.right = tmp;
+			}
+		});
 	}
 
-	public void traverseBreadthFirstRecursive(NodeVisitor visitor, Queue<TreeNode> queue) {
-		if(queue.isEmpty())
+	void rotateCW(TreeNode parent, TreeNode node) {
+		if (node.left == null)
 			return;
-		TreeNode node = queue.poll();
-		visitor.visitNode(node);
-		if(node.left!=null)
-			queue.add(node.left);
-		if(node.right!=null)
-			queue.add(node.right);
-		
-		traverseBreadthFirstRecursive(visitor, queue);
+		TreeNode tmp = node.left;
+		node.left = tmp.right;
+		if (parent == null) {
+			root = tmp;
+		} else if (parent.left == node) {
+			parent.left = tmp;
+		} else {
+			parent.right = tmp;
+		}
+		tmp.right = node;
+	}
+
+	void rotateCCW(TreeNode parent, TreeNode node) {
+		if (node.right == null)
+			return;
+		TreeNode tmp = node.right;
+		node.right = tmp.left;
+		if (parent == null) {
+			root = tmp;
+		} else if (parent.right == node) {
+			parent.right = tmp;
+		} else {
+			parent.left = tmp;
+		}
+		tmp.left = node;
+	}
+
+	public int maxDepth() {
+		return maxDepth(root, 0);
+	}
+
+	private int maxDepth(TreeNode node, int depth) {
+		if (node == null)
+			return depth;
+		return Math.max(maxDepth(node.left, depth + 1), maxDepth(node.right, depth + 1));
 	}
 }

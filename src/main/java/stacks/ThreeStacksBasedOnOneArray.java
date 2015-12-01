@@ -31,7 +31,7 @@ public class ThreeStacksBasedOnOneArray {
 			else
 				return null;
 		}
-		
+
 	}
 
 	static class StackData {
