@@ -200,7 +200,6 @@ public class BSTTest {
 		Assert.assertTrue(tree.isBST());
 		tree.rotateCCW(null, tree.root);
 		Assert.assertTrue(tree.isBST());
-		tree.traverseBreadthFirst(visitor);
 	}
 	
 	@Test
@@ -209,6 +208,8 @@ public class BSTTest {
 	}	
 
 	@Test public void testPrintTree(){
+		System.out.println(tree);
+		tree.rotateCCW(tree.root, tree.root.right);
 		System.out.println(tree);
 	}
 

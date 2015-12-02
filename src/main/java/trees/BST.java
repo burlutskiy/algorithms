@@ -207,26 +207,23 @@ public class BST<K extends Comparable<K>, V> {
 				sb.append(" ");
 			}
 			if (node != null)
-				sb.append(node.value);
+				sb.append(node.key).append(":").append(node.value);
 			else
 				sb.append(" ");
 			for (int i = 0; i < numberOfSpaces; i++) {
 				sb.append(" ");
 			}
 			sb.append(" ");
-			if (node != null) {
-				queue.add(new Pair<TreeNode, Integer>(node.left != null ? node.left : null, level + 1));
-				queue.add(new Pair<TreeNode, Integer>(node.right != null ? node.right : null, level + 1));
-			} else if(level <= n){
-				queue.add(new Pair<TreeNode, Integer>(null, level + 1));
-				queue.add(new Pair<TreeNode, Integer>(null, level + 1));
+			if (level + 1 < n) {
+				queue.add(new Pair<TreeNode, Integer>(node == null || node.left == null ? null : node.left, level + 1));
+				queue.add(new Pair<TreeNode, Integer>(node == null || node.right == null ? null : node.right, level + 1));
 			}
 		}
 		return sb.toString();
 	}
 
 	private int numberOfSpaces(int l, int n) {
-		return (int) Math.round((Math.pow(2, n - 1) - .5) / (l + 1) - Math.pow(2, l - 1));
+		return (int) Math.pow(2, n - l - 1) - 1;
 	}
 
 	public boolean isBST() {
