@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 import utils.Pair;
 
@@ -380,4 +381,27 @@ public class BST<K extends Comparable<K>, V> {
 			return depth;
 		return Math.max(maxDepth(node.left, depth + 1), maxDepth(node.right, depth + 1));
 	}
+	
+	public List<List<K>> rootToLeafPaths(){
+		List<List<K>> paths = new LinkedList<>();
+		rootToLeafPaths(new Stack<K>(), root, paths);
+		return paths;
+	}
+	
+	private void rootToLeafPaths(Stack<K> path, TreeNode node, List<List<K>> paths){
+		path.push(node.key);
+		try{
+			if(node.left == null && node.right == null){
+				paths.add(new LinkedList<>(path));
+				return;
+			}
+			if(node.left != null)
+				rootToLeafPaths(path, node.left, paths);
+			if(node.right != null)
+				rootToLeafPaths(path, node.right, paths);
+		} finally {
+			path.pop();
+		}
+	}
+	
 }

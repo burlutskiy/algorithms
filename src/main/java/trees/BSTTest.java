@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -211,6 +213,15 @@ public class BSTTest {
 		System.out.println(tree);
 		tree.rotateCCW(tree.root, tree.root.right);
 		System.out.println(tree);
+	}
+
+	@Test public void testPrintRootToLeef(){
+		List<List<Integer>> rootToLeafPaths = tree.rootToLeafPaths();
+		Assert.assertEquals(3, rootToLeafPaths.size());
+		Assert.assertEquals(2, rootToLeafPaths.get(0).get(3).intValue());
+		Assert.assertEquals(6, rootToLeafPaths.get(1).get(2).intValue());
+		Assert.assertEquals(11, rootToLeafPaths.get(2).get(4).intValue());
+		System.out.println(rootToLeafPaths);
 	}
 
 }
