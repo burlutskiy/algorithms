@@ -206,7 +206,7 @@ public class BSTTest {
 	
 	@Test
 	public void testMaxDepth() {
-		Assert.assertEquals(5, tree.maxDepth());
+		Assert.assertEquals(5, tree.height());
 	}	
 
 	@Test public void testPrintTree(){

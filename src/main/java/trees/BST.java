@@ -15,7 +15,7 @@ import utils.Pair;
  * @author burlutal
  *
  */
-public class BST<K extends Comparable<K>, V> {
+public class BST<K extends Comparable<K>, V> implements Tree<K, V> {
 	TreeNode root;
 	long size;
 
@@ -56,6 +56,7 @@ public class BST<K extends Comparable<K>, V> {
 		} else
 			return node.value;
 	}
+
 
 	public boolean contains(K key) {
 		return contains(root, key);
@@ -188,9 +189,8 @@ public class BST<K extends Comparable<K>, V> {
 		}
 	}
 
-	@Override
 	public String toString() {
-		final int n = maxDepth();
+		final int n = height();
 		final StringBuilder sb = new StringBuilder();
 		Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
 		queue.add(new Pair<TreeNode, Integer>(root, 0));
@@ -242,18 +242,6 @@ public class BST<K extends Comparable<K>, V> {
 		if (!isBST(node.right))
 			return false;
 		return true;
-	}
-
-	private boolean lessOrEquals(K k1, K k2) {
-		return k1.compareTo(k2) <= 0;
-	}
-
-	private boolean less(K k1, K k2) {
-		return k1.compareTo(k2) < 0;
-	}
-
-	private boolean greather(K k1, K k2) {
-		return k1.compareTo(k2) > 0;
 	}
 
 	public void traversePreOrder(NodeVisitor visitor) {
@@ -372,14 +360,15 @@ public class BST<K extends Comparable<K>, V> {
 		tmp.left = node;
 	}
 
-	public int maxDepth() {
-		return maxDepth(root, 0);
+	@Override
+	public int height() {
+		return height(root, 0);
 	}
 
-	private int maxDepth(TreeNode node, int depth) {
+	private int height(TreeNode node, int depth) {
 		if (node == null)
 			return depth;
-		return Math.max(maxDepth(node.left, depth + 1), maxDepth(node.right, depth + 1));
+		return Math.max(height(node.left, depth + 1), height(node.right, depth + 1));
 	}
 	
 	public List<List<K>> rootToLeafPaths(){
