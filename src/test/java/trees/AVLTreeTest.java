@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.Random;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,10 +36,39 @@ public class AVLTreeTest {
 	}
 
 	@Test
+	public void testRemove() {
+		tree.remove(10);
+		tree.remove(11);
+		tree.remove(8);
+		tree.remove(9);
+		Assert.assertEquals(4, tree.height());
+	}
+
+	@Test
 	public void testBalanced() {
 		Assert.assertTrue(tree.isBalanced());
 		tree.get(tree.root, 7).right = new AVLNode<Integer, Integer>(null, null, 5, 5);
 		Assert.assertFalse(tree.isBalanced());
 	}
 
+	@Test
+	public void testBalanced2() {
+		tree = new AVLTree<>();
+		tree.put(3,	3);
+		tree.put(1,	1);
+		tree.put(2,	2);
+		Assert.assertTrue(tree.isBalanced());
+	}
+
+	@Test
+	public void testStressTest() {
+		Random r = new Random();
+		tree = new AVLTree<>();
+		for (int i = 0; i < 1000; i++) {
+			int k = r.nextInt(1000);
+			tree.put(k, i);
+		}
+		Assert.assertTrue(tree.isBalanced());
+		System.out.println(tree);
+	}
 }

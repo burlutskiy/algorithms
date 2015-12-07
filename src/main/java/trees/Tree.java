@@ -21,7 +21,7 @@ interface Tree<K extends Comparable<K>, V, N extends Node<K, V, N>> {
 
 	V max();
 
-	V remove(K key);
+	void remove(K key);
 
 	int height();
 
@@ -51,8 +51,12 @@ interface Tree<K extends Comparable<K>, V, N extends Node<K, V, N>> {
 		return k1.compareTo(k2) <= 0;
 	}
 
+	default boolean greatherOrEquals(K k1, K k2) {
+		return k1.compareTo(k2) >= 0;
+	}
+
 	default boolean equals(K k1, K k2) {
-		return k1.compareTo(k2) <= 0;
+		return k1.compareTo(k2) == 0;
 	}
 
 	default boolean greather(K k1, K k2) {

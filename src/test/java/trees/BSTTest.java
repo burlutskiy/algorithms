@@ -60,7 +60,6 @@ public class BSTTest {
 		Assert.assertNull(tree.min());
 		Assert.assertNull(tree.max());
 		Assert.assertFalse(tree.contains(1));
-		Assert.assertNull(tree.remove(1));
 	}
 
 	@Test
@@ -87,6 +86,14 @@ public class BSTTest {
 		tree.deleteMin();
 		Assert.assertEquals(2, tree.min().intValue());
 		Assert.assertTrue(tree.contains(2));
+		tree = new BST<>();
+		tree.put(10, 10);
+		tree.put(5, 5);
+		tree.put(9, 9);
+		tree.put(6, 6);
+		tree.put(7, 7);
+		tree.deleteMin();
+		Assert.assertFalse(tree.contains(5));
 	}
 
 	@Test
@@ -221,4 +228,9 @@ public class BSTTest {
 		System.out.println(rootToLeafPaths);
 	}
 
+	@Test public void testDuplicateInsertion(){
+		tree.put(11, 11);
+		tree.put(12, 12);
+		Assert.assertTrue(tree.isBST());
+	}
 }

@@ -51,10 +51,12 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		if (node == null) {
 			return newNode;
 		} else {
-			if (lessOrEquals(key, node.key)) {
+			if (less(key, node.key)) {
 				node.left = put(node.left, key, newNode);
-			} else {
+			} else if(greather(key, node.key)) {
 				node.right = put(node.right, key, newNode);
+			} else {
+				node.value = newNode.value;
 			}
 		}
 		return node;
@@ -75,12 +77,12 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 	public V max() {
 		if (root == null)
 			return null;
-		return max(root);
+		return max(root).value;
 	}
 
-	protected V max(N node) {
+	protected N max(N node) {
 		if (node.right == null)
-			return node.value;
+			return node;
 		else
 			return max(node.right);
 	}
@@ -121,43 +123,33 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		return node;
 	}
 
-	public V remove(K key) {
+	public void remove(K key) {
 		if (root == null)
-			return null;
-		return remove(null, root, key);
+			return;
+		root = remove(root, key);
 	}
-
-	protected V remove(N parent, N node, K key) {
+	
+	protected N remove(N node, K key) {
 		if (less(key, node.key)) {
-			return remove(node, node.left, key);
+			node.left = remove(node.left, key);
 		} else if (greather(key, node.key)) {
-			return remove(node, node.right, key);
+			node.right = remove(node.right, key);
 		} else {
-			if (parent == null) {
-				root = null;
-				if (node.left != null)
-					root = put(root, node.left.key, node.left);
-				if (node.right != null)
-					root = put(root, node.right.key, node.right);
-			} else {
-				if (parent.left == node) {
-					parent.left = null;
-					if (node.left != null)
-						parent.left = put(parent.left, node.left.key, node.left);
-					if (node.right != null)
-						root = put(root, node.right.key, node.right);
-				} else {
-					parent.right = null;
-					if (node.right != null)
-						parent.right = put(parent.right, node.right.key, node.right);
-					if (node.left != null)
-						root = put(root, node.left.key, node.left);
-				}
-			}
-			return node.value;
+			node = removeNode(node);
 		}
+		return node;
 	}
 
+	protected N removeNode(N node) {
+		if (node.right == null) return node.left;
+		if (node.left  == null) return node.right;
+		N min = min(node.right);
+		node.right = deleteMin(node.right);
+		node.key = min.key;
+		node.value = min.value;
+		return node;
+	}
+	
 	public int height() {
 		return height(root, 0);
 	}
@@ -225,14 +217,10 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 	private boolean isBST(N node) {
 		if (node == null)
 			return true;
-		if ((node.left != null && greather(min(node.left).key, node.key))
+		if ((node.left != null && greatherOrEquals(max(node.left).key, node.key))
 				|| (node.right != null && lessOrEquals(min(node.right).key, node.key)))
 			return false;
-		if (!isBST(node.left))
-			return false;
-		if (!isBST(node.right))
-			return false;
-		return true;
+		return isBST(node.left) && isBST(node.right);
 	}
 
 	public List<List<K>> rootToLeafPaths(){
