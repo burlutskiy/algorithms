@@ -151,13 +151,13 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 	}
 	
 	public int height() {
-		return height(root, 0);
+		return height(root);
 	}
 
-	protected int height(N node, int depth) {
+	protected int height(N node) {
 		if (node == null)
-			return depth;
-		return Math.max(height(node.left, depth + 1), height(node.right, depth + 1));
+			return 0;
+		return Math.max(height(node.left), height(node.right)) + 1;
 	}
 	
 	public void traversePreOrder(NodeVisitor<K,V,N> visitor) {
@@ -290,14 +290,14 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 	protected boolean isBalanced(N node) {
 		if (node == null)
 			return true;
-		if (Math.abs(height(node.left, 0) - height(node.right, 0)) > 1)
+		if (Math.abs(height(node.left) - height(node.right)) > 1)
 			return false;
 		else {
 			return isBalanced(node.left) && isBalanced(node.right);
 		}
 	}
 	
-	private int numberOfSpaces(int l, int n) {
+	protected int numberOfSpaces(int l, int n) {
 		return (int) Math.pow(2, n - l - 1) - 1;
 	}
 

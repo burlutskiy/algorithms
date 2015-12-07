@@ -95,7 +95,18 @@ public class BSTTest {
 		tree.deleteMin();
 		Assert.assertFalse(tree.contains(5));
 	}
-
+	
+	@Test
+	public void testDeleteMin2() {
+		tree = new BST<>();
+		tree.put(3, 3);
+		tree.put(1, 1);
+		tree.put(6, 6);
+		tree.put(5, 5);
+		tree.put(7, 7);
+		tree.root.right = tree.deleteMin(tree.root.right);
+	}
+	
 	@Test
 	public void testRemoveWhole() {
 		tree.remove(8);
