@@ -49,7 +49,7 @@ public class BST<K extends Comparable<K>, V> extends AbstractBST<K, V, TreeNode<
 		});
 	}
 
-	void rotateCW(TreeNode<K, V> parent, TreeNode<K, V> node) {
+	void rotateRight(TreeNode<K, V> parent, TreeNode<K, V> node) {
 		if (node.left == null)
 			return;
 		TreeNode<K, V> tmp = node.left;
@@ -64,7 +64,7 @@ public class BST<K extends Comparable<K>, V> extends AbstractBST<K, V, TreeNode<
 		tmp.right = node;
 	}
 
-	void rotateCCW(TreeNode<K, V> parent, TreeNode<K, V> node) {
+	void rotateLeft(TreeNode<K, V> parent, TreeNode<K, V> node) {
 		if (node.right == null)
 			return;
 		TreeNode<K, V> tmp = node.right;

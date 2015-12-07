@@ -39,6 +39,10 @@ interface Tree<K extends Comparable<K>, V, N extends Node<K, V, N>> {
 
 	void traverseBreadthFirst(NodeVisitor<K, V, N> visitor);
 
+	boolean isBST();
+	
+	boolean isBalanced();
+	
 	default boolean less(K k1, K k2) {
 		return k1.compareTo(k2) < 0;
 	}
@@ -54,5 +58,6 @@ interface Tree<K extends Comparable<K>, V, N extends Node<K, V, N>> {
 	default boolean greather(K k1, K k2) {
 		return k1.compareTo(k2) > 0;
 	}
+	
 
 }

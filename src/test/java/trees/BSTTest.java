@@ -187,17 +187,17 @@ public class BSTTest {
 
 	@Test
 	public void testRotateCW() {
-		tree.rotateCW(tree.root, tree.root.left);
+		tree.rotateRight(tree.root, tree.root.left);
 		Assert.assertTrue(tree.isBST());
-		tree.rotateCW(null, tree.root);
+		tree.rotateRight(null, tree.root);
 		Assert.assertTrue(tree.isBST());
 	}
 
 	@Test
 	public void testRotateCCW() {
-		tree.rotateCCW(tree.root, tree.root.left);
+		tree.rotateLeft(tree.root, tree.root.left);
 		Assert.assertTrue(tree.isBST());
-		tree.rotateCCW(null, tree.root);
+		tree.rotateLeft(null, tree.root);
 		Assert.assertTrue(tree.isBST());
 	}
 	
@@ -208,7 +208,7 @@ public class BSTTest {
 
 	@Test public void testPrintTree(){
 		System.out.println(tree);
-		tree.rotateCCW(tree.root, tree.root.right);
+		tree.rotateLeft(tree.root, tree.root.right);
 		System.out.println(tree);
 	}
 

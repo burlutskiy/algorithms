@@ -13,10 +13,10 @@ import utils.Pair;
  */
 public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, V, N>> extends AbstractBinaryTree<K, V, N> {
 	public V get(K key) {
-		return get(root, key);
+		return get(root, key).value;
 	}
 
-	protected V get(N node, K key) {
+	protected N get(N node, K key) {
 		if (node == null)
 			return null;
 		if (less(key, node.key)) {
@@ -24,7 +24,7 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		} else if (greather(key, node.key)) {
 			return get(node.right, key);
 		} else
-			return node.value;
+			return node;
 	}
 
 	public boolean contains(K key) {
@@ -280,7 +280,7 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 				sb.append(" ");
 			}
 			if (node != null)
-				sb.append(node.key).append(":").append(node.value);
+				sb.append(node.key);
 			else
 				sb.append(" ");
 			for (int i = 0; i < numberOfSpaces; i++) {
@@ -295,6 +295,20 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		return sb.toString();
 	}
 
+	public boolean isBalanced() {
+		return isBalanced(root);
+	}
+
+	protected boolean isBalanced(N node) {
+		if (node == null)
+			return true;
+		if (Math.abs(height(node.left, 0) - height(node.right, 0)) > 1)
+			return false;
+		else {
+			return isBalanced(node.left) && isBalanced(node.right);
+		}
+	}
+	
 	private int numberOfSpaces(int l, int n) {
 		return (int) Math.pow(2, n - l - 1) - 1;
 	}
