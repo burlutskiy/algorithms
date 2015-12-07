@@ -1,6 +1,15 @@
 package trees;
 
-public interface Tree<K extends Comparable<K>, V> {
+/**
+ * 
+ * @author alexey
+ *
+ * @param <K>
+ *            key
+ * @param <V>
+ *            value
+ */
+interface Tree<K extends Comparable<K>, V, N extends Node<K, V, N>> {
 
 	V get(K key);
 
@@ -15,6 +24,20 @@ public interface Tree<K extends Comparable<K>, V> {
 	V remove(K key);
 
 	int height();
+
+	void deleteMax();
+
+	void deleteMin();
+
+	int size();
+
+	void traversePreOrder(NodeVisitor<K, V, N> visitor);
+
+	void traverseInOrder(NodeVisitor<K, V, N> visitor);
+
+	void traversePostOrder(NodeVisitor<K, V, N> visitor);
+
+	void traverseBreadthFirst(NodeVisitor<K, V, N> visitor);
 
 	default boolean less(K k1, K k2) {
 		return k1.compareTo(k2) < 0;

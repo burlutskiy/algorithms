@@ -6,9 +6,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import trees.BST.NodeVisitor;
-import trees.BST.TreeNode;
-
 /**
  * @author alexey
  *
@@ -16,9 +13,9 @@ import trees.BST.TreeNode;
 public class BSTTest {
 	BST<Integer, Integer> tree = new BST<>();
 
-	NodeVisitor visitor = new NodeVisitor() {
+	NodeVisitor<Integer, Integer, TreeNode<Integer, Integer>> visitor = new NodeVisitor<Integer, Integer, TreeNode<Integer, Integer>>() {
 		@Override
-		public void visitNode(TreeNode node, int depth) {
+		public void visitNode(TreeNode<Integer, Integer> node, int level) {
 			System.out.print(node.value + " ");
 		}
 	};
@@ -141,7 +138,7 @@ public class BSTTest {
 
 	@Test
 	public void testIsNotBST() {
-		tree.root.right.right.left = tree.new TreeNode(null, null, 2, 2);
+		tree.root.right.right.left = new TreeNode<>(null, null, 2, 2);
 		Assert.assertFalse(tree.isBST());
 	}
 
