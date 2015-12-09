@@ -76,6 +76,32 @@ public class AVLTreeTest {
 	}
 
 	@Test
+	public void testInsertAscendingOrder() {
+		for (AbstractAVLTree<Integer, Integer, ?> tree : trees) {
+			tree.clear();
+			for (int i = 0; i < 50; i++) {
+				tree.put(i, i);
+			}
+			for (int i = 0; i < 50; i++) {
+				tree.remove(i);
+			}
+		}
+	}
+
+	@Test
+	public void testInsertDescendingOrder() {
+		for (AbstractAVLTree<Integer, Integer, ?> tree : trees) {
+			tree.clear();
+			for (int i = 0; i < 50; i++) {
+				tree.put(50-i, 50-i);
+			}
+			for (int i = 0; i < 50; i++) {
+				tree.remove(50-i);
+			}
+		}
+	}
+
+	@Test
 	public void testStressTest() {
 		for (AbstractAVLTree<Integer, Integer, ?> tree : trees) {
 			Random r = new Random();

@@ -21,6 +21,7 @@ public abstract class AbstractAVLTree<K extends Comparable<K>, V, N extends Node
 	}
 
 	protected N balance(N node) {
+		if(node == null) return null;
 		if (rightHeavy(node, true)) {
 			if (leftHeavy(node.right, false))
 				node = rotateRightLeft(node);
@@ -76,6 +77,11 @@ public abstract class AbstractAVLTree<K extends Comparable<K>, V, N extends Node
 
 	protected boolean leftHeavy(N node, boolean strict) {
 		return height(node.left) - height(node.right) > (strict ? 1 : 0);
+	}
+
+	public void clear() {
+		root = null;
+		size = 0;
 	}
 
 }
