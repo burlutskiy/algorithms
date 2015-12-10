@@ -13,7 +13,13 @@ import org.junit.Test;
  */
 public class AVLTreeTest {
 	AbstractAVLTree<Integer, Integer, ?>[] trees = new AbstractAVLTree[] { new AVLTreeV1<>(), new AVLTreeV2<>() };
-
+	NodeVisitor<Integer, Integer, TreeNode<Integer, Integer>> visitor = new NodeVisitor<Integer, Integer, TreeNode<Integer, Integer>>() {
+		@Override
+		public void visitNode(TreeNode<Integer, Integer> node, int level) {
+			System.out.print(node.value + " ");
+		}
+	};
+	
 	@Before
 	public void init() {
 		for (AbstractAVLTree<Integer, Integer, ?> tree : trees) {
@@ -112,5 +118,30 @@ public class AVLTreeTest {
 			}
 			Assert.assertTrue(tree.isBalanced());
 		}
+	}
+	
+	@Test public void test1(){
+		AVLTreeV1<Integer, Integer> tree = new AVLTreeV1<>();
+		for (int i = 0; i < 10; i++) {
+			tree.put(i, i);
+		}
+		System.out.println(tree);
+		tree.traversePreOrder(visitor);
+		System.out.println();
+		tree.traverseInOrder(visitor);
+		System.out.println();
+		tree.traversePostOrder(visitor);
+		System.out.println();
+		tree = new AVLTreeV1<>();
+		for (int i = 0; i < 10; i++) {
+			tree.put(10-i-1, 10-i-1);
+		}
+		System.out.println(tree);
+		tree.traversePreOrder(visitor);
+		System.out.println();
+		tree.traverseInOrder(visitor);
+		System.out.println();
+		tree.traversePostOrder(visitor);
+		System.out.println();
 	}
 }

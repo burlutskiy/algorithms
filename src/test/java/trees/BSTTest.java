@@ -244,4 +244,22 @@ public class BSTTest {
 		tree.put(12, 12);
 		Assert.assertTrue(tree.isBST());
 	}
+	
+	@Test public void test1(){
+		tree = new BST<>();
+		for (int i = 0; i < 10; i++) {
+			tree.put(i, i);
+		}
+		tree.traversePreOrder(visitor);
+		System.out.println();
+		tree.traverseInOrder(visitor);
+		System.out.println();
+		tree.traversePostOrder(visitor);
+		System.out.println();
+//		tree = new BST<>();
+//		for (int i = 0; i < 10; i++) {
+//			tree.put(10-i-1, 10-i-1);
+//		}
+//		tree.traversePreOrder(visitor);
+	}
 }
