@@ -1,16 +1,15 @@
-/**
- * 
- */
 package graphs;
 
+import java.util.List;
+
 /**
- * @author burlutal
+ * 
+ * @author alexey
  *
+ * @param <V> - any object
  */
-public class Graph extends AbstractGraph<Integer, AdjacencyArrayList> {
-
-	public Graph(int vertices) {
-		super(vertices, new AdjacencyArrayList(vertices));
+public class Graph<V> extends AbstractObjectsGraph<V, IndexedGraph>{
+	public Graph(List<V> list) {
+		super(list, new IndexedGraph(list.size()));
 	}
-
 }
