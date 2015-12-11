@@ -265,13 +265,52 @@
 <node COLOR="#006699" CREATED="1449760855205" ID="ID_1128000583" MODIFIED="1449760882015" TEXT="Multi-Source Shortes Paths"/>
 </node>
 </node>
-<node CREATED="1366207602242" HGAP="30" ID="ID_1664049908" MODIFIED="1449696828815" TEXT="Depth-first search (DFS)" VSHIFT="-7">
+<node COLOR="#338800" CREATED="1366207602242" HGAP="30" ID="ID_1664049908" MODIFIED="1449859401404" TEXT="Depth-first search (DFS)" VSHIFT="-7">
 <node CREATED="1449696839540" ID="ID_1236619835" MODIFIED="1449765295270" TEXT="Connected Components">
-<node CREATED="1449637119808" HGAP="32" ID="ID_1313494420" MODIFIED="1449698760709" TEXT="Connectivity" VSHIFT="-18">
-<node CREATED="1449637215701" ID="ID_521572386" MODIFIED="1449637216622" TEXT="Is there a way to connect all of the vertices?"/>
+<node COLOR="#338800" CREATED="1449637119808" HGAP="32" ID="ID_1313494420" MODIFIED="1449859393658" TEXT="Connectivity" VSHIFT="-18">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1449637215701" ID="ID_521572386" MODIFIED="1449859393658" TEXT="Is there a way to connect all of the vertices?"/>
 </node>
 </node>
-<node CREATED="1449698897170" ID="ID_797548247" MODIFIED="1449698904094" TEXT="Bipartite Check"/>
+<node CREATED="1449698897170" ID="ID_797548247" MODIFIED="1449698904094" TEXT="Bipartite Check">
+<node CREATED="1449860433562" HGAP="31" ID="ID_1273234722" MODIFIED="1449860552440" TEXT="A bipartite graph contains no odd cycles." VSHIFT="9"/>
+<node CREATED="1449860602308" ID="ID_1762384605" MODIFIED="1449860837145">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;(Sum of Degrees) E v&#8712;V (G) deg(v) = 2e.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1449860518098" HGAP="23" ID="ID_482007280" MODIFIED="1449860551176" VSHIFT="17">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: center">
+      Bipartite Graphs and Problem Solving
+    </p>
+    <p style="text-align: center">
+      Jimmy Salvatore
+    </p>
+    <p style="text-align: center">
+      University of Chicago
+    </p>
+    <p style="text-align: center">
+      August 8, 2007
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1449860442868" ID="ID_1848661018" MODIFIED="1449860443750" TEXT="http://www.math.uchicago.edu/~may/VIGRE/VIGRE2007/REUPapers/FINALAPP/Salvatore.pdf"/>
+</node>
+</node>
 <node CREATED="1449637102771" HGAP="26" ID="ID_67860916" MODIFIED="1449764670068" TEXT="Find Cycles">
 <node CREATED="1449637253972" ID="ID_768906553" MODIFIED="1449637256141" TEXT="Is there a cycle in the graph?"/>
 </node>
@@ -319,6 +358,7 @@
 </node>
 </node>
 </node>
+<node CREATED="1449870403550" ID="ID_666396324" MODIFIED="1449870404039" TEXT="http://www.personal.kent.edu/~rmuhamma/GraphTheory/MyGraphTheory/defEx.htm"/>
 </node>
 <node CREATED="1449693256662" HGAP="27" ID="ID_934883005" MODIFIED="1449693351403" TEXT="Internal Representation" VSHIFT="24">
 <node CREATED="1449693268293" ID="ID_1722720471" MODIFIED="1449693300952" TEXT="Set-Of-Edges graph">
