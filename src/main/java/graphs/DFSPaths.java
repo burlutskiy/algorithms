@@ -10,9 +10,9 @@ import java.util.List;
  */
 public class DFSPaths<V> implements Paths<V>{
 	private final IndexedDFSPaths paths;
-	private final Digraph<V> graph;
+	private final AbstractObjectsGraph<V, ?> graph;
 	
-	public DFSPaths(IndexedDFSPaths paths, Digraph<V> graph) {
+	public DFSPaths(IndexedDFSPaths paths, AbstractObjectsGraph<V, ?>  graph) {
 		this.paths = paths;
 		this.graph = graph;
 	}
@@ -33,21 +33,20 @@ public class DFSPaths<V> implements Paths<V>{
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		paths.toString();
-		for (int v = 0; v < graph.graph.getVertices(); v++) {
+		for (int v = 0; v < graph.getVertices(); v++) {
 			if (v == paths.source)
 				continue;
 			if (paths.hasPathTo(v)) {
-				sb.append(String.format("%s to %s:  ", graph.objects.get(paths.source), graph.objects.get(v)));
+				sb.append(String.format("%s to %s:  ", graph.objFor(paths.source), graph.objFor(v)));
 				for (int x : paths.pathTo(v)) {
 					if (x == paths.source)
-						sb.append(graph.objects.get(x));
+						sb.append(graph.objFor(x));
 					else
-						sb.append("->").append(graph.objects.get(x));
+						sb.append("->").append(graph.objFor(x));
 				}
 				sb.append("\n");
 			} else {
-				sb.append(String.format("%s to %s:  not connected\n", graph.objects.get(paths.source), graph.objects.get(v)));
+				sb.append(String.format("%s to %s:  not connected\n", graph.objFor(paths.source), graph.objFor(v)));
 			}
 		}
 		return sb.toString();

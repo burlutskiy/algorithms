@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AbstractObjectsGraph<V, G extends IndexedDigraph> implements AbstractGraph<V>{
+public abstract class AbstractObjectsGraph<V, G extends IndexedDigraph> implements AbstractGraph<V>, ObjectsGraph<V>{
 	final List<V> objects;
 	final Map<V, Integer> indexMap;
 	final G graph;
@@ -43,7 +43,15 @@ public class AbstractObjectsGraph<V, G extends IndexedDigraph> implements Abstra
 	public int getEdges() {
 		return graph.getEdges();
 	}
-		
+
+	public int indexFor(V v) {
+		return indexMap.get(v);
+	}
+	
+	public V objFor(int index) {
+		return objects.get(index);
+	}
+	
     public String toString() {
         StringBuilder s = new StringBuilder();
         s.append(graph.getVertices() + " vertices, " + graph.getEdges() + " edges\n");
@@ -57,8 +65,4 @@ public class AbstractObjectsGraph<V, G extends IndexedDigraph> implements Abstra
         return s.toString();
     }
 
-	@Override
-	public DFSPaths<V> pathsFrom(V v) {
-		return new DFSPaths<V>(graph.pathsFrom(indexMap.get(v)), this);
-	}
 }

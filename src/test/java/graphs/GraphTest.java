@@ -40,7 +40,7 @@ public class GraphTest {
 	
 	@Test
 	public void testDFSPaths() throws Exception {
-		DFSPaths<String> pathsFrom = graph.pathsFrom(MOSCOW);
+		Paths<String> pathsFrom = graph.pathsFrom(MOSCOW);
 		Assert.assertEquals(pathsFrom.pathTo(PHILADELPHIA), Arrays.asList(new String[]{MOSCOW, NEW_YORK, LAS_VEGAS, LONDON, PARIS, PHILADELPHIA}));;
 		System.out.println(pathsFrom);
 	}
