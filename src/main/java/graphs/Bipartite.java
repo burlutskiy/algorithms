@@ -9,7 +9,7 @@ public class Bipartite<V> {
     private BitSet color;
     private BitSet marked;
     private int[] edgeTo; 
-    private Stack<Integer> cycle;  // odd-length cycle
+    private Stack<V> cycle;  // odd-length cycle
     private AbstractDigraph<V> graph;
     /**
      * Determines whether an undirected graph is bipartite and finds either a
@@ -41,12 +41,12 @@ public class Bipartite<V> {
 			}
             else if (color.get(iw) == color.get(v)) {
                 isBipartite = false;
-                cycle = new Stack<Integer>();
-                cycle.push(iw);
+                cycle = new Stack<V>();
+                cycle.push(w);
                 for (int x = v; x != iw; x = edgeTo[x]) {
-                    cycle.push(x);
+                    cycle.push(graph.objFor(x));
                 }
-                cycle.push(iw);
+                cycle.push(w);
             }
         }
     }
@@ -61,7 +61,7 @@ public class Bipartite<V> {
         return color.get(v);
     }
 
-    public Iterable<Integer> oddCycle() {
+    public Iterable<V> oddCycle() {
         return cycle; 
     }
 

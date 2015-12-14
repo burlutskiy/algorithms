@@ -1,7 +1,11 @@
 package graphs;
 
+import java.util.Arrays;
 import java.util.BitSet;
 
+import org.junit.Test;
+
+import junit.framework.Assert;
 import stacks.Stack;
 
 /**
@@ -71,5 +75,4 @@ public class DFSPaths<V> implements Paths<V> {
 		}
 		return sb.toString();
 	}
-
 }
