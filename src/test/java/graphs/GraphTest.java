@@ -1,10 +1,14 @@
 package graphs;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import graphs.ObjectGraph;
+import graphs.Paths;
 
 public class GraphTest {
 	private static final String LAS_VEGAS = "LasVegas";
@@ -19,7 +23,7 @@ public class GraphTest {
 	private static final String PHILADELPHIA = "Philadelphia";
 	private static final String[] cities = new String[] { MOSCOW, LONDON, PARIS, AMSTERDAM, KAZAN, NEW_YORK, STAMFORD, SAN_FRANCISCO, LAS_VEGAS,
 			PHILADELPHIA };
-	Graph<String> graph = new Graph<>(Arrays.asList(cities));
+	ObjectGraph<String> graph = new ObjectGraph<>(Arrays.asList(cities));
 
 	@Before
 	public void setUp() throws Exception {
@@ -41,9 +45,18 @@ public class GraphTest {
 	@Test
 	public void testDFSPaths() throws Exception {
 		Paths<String> pathsFrom = graph.pathsFrom(MOSCOW);
-		Assert.assertEquals(pathsFrom.pathTo(PHILADELPHIA), Arrays.asList(new String[]{MOSCOW, NEW_YORK, LAS_VEGAS, LONDON, PARIS, PHILADELPHIA}));;
+		Iterable<String> pathTo = pathsFrom.pathTo(PHILADELPHIA);
+		Iterable<String> asList = Arrays.asList(new String[]{MOSCOW, NEW_YORK, LAS_VEGAS, LONDON, PARIS, PHILADELPHIA});
+		assertEqualsIterable(pathTo, asList);
 		System.out.println(pathsFrom);
 	}
 
+	public static <V> void assertEqualsIterable(Iterable<V> iter1, Iterable<V> iter2){
+		Iterator<V> iterator = iter2.iterator();
+		for (V v : iter1) {
+			V w = iterator.next();
+			Assert.assertEquals(v, w);
+		}
+	}
 
 }

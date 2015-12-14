@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
  *
  * @param <T>
  */
-public class Stack<T extends Comparable<T>> implements Iterable<T> {
+public class Stack<T> implements Iterable<T> {
 	INode<T> top;
 
 	interface INode<T> {

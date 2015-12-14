@@ -2,7 +2,7 @@ package graphs;
 
 import java.util.List;
 
-public interface AbstractGraph<V> {
+public interface AbstractGraph<V> extends Iterable<V>{
 
 	void addEdge(V v, V w);
 
@@ -14,6 +14,7 @@ public interface AbstractGraph<V> {
 
 	int getEdges();
 	
-	Paths<V> pathsFrom(V v); 
-
+	int indexFor(V v);
+	
+	V objFor(int index);
 }

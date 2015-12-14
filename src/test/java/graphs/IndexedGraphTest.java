@@ -7,6 +7,9 @@ import java.io.FileReader;
 import org.junit.Before;
 import org.junit.Test;
 
+import graphs.IndexedGraph;
+import graphs.Paths;
+
 /**
  * @author alexey
  *
