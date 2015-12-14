@@ -56,7 +56,7 @@
 <node CREATED="1387217839670" ID="ID_1961156975" MODIFIED="1387217887887" TEXT="Abstract syntax tree"/>
 </node>
 <node CREATED="1384975461522" HGAP="44" ID="ID_352589872" MODIFIED="1387296783855" POSITION="right" TEXT="Cache Algorithms" VSHIFT="15"/>
-<node CREATED="1366207444205" HGAP="114" ID="ID_1496022331" MODIFIED="1449760917065" POSITION="left" TEXT="Trees" VSHIFT="14">
+<node CREATED="1366207444205" FOLDED="true" HGAP="114" ID="ID_1496022331" MODIFIED="1450126580107" POSITION="left" TEXT="Trees" VSHIFT="14">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1447962643469" ID="ID_407864358" MODIFIED="1449760905080" STYLE="bubble" TEXT="Binary Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -215,7 +215,7 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1366207582853" HGAP="123" ID="ID_814180733" MODIFIED="1449765814993" POSITION="left" TEXT="Graphs" VSHIFT="20">
+<node CREATED="1366207582853" HGAP="123" ID="ID_814180733" MODIFIED="1450130656540" POSITION="left" TEXT="Graphs" VSHIFT="20">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449700078094" HGAP="53" ID="ID_381749142" MODIFIED="1449760937210" TEXT="Directed Graphs" VSHIFT="12">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -239,8 +239,7 @@
       Def. Vertices <i>v</i>&#160;and <i>w</i>&#160;are <font color="#fb0808">strongly connected</font>&#160;if there is a directed path from v to w and a directed path from <i>w</i>&#160;to <i>v</i>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1449765563998" HGAP="34" ID="ID_1828939419" MODIFIED="1449766422557" TEXT="Two-Pass Kosaraju&#x2013;Sharir Algorithm" VSHIFT="-5">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -256,23 +255,24 @@
 <node CREATED="1449700532644" HGAP="36" ID="ID_1733785869" MODIFIED="1449760387924" TEXT="PageRank" VSHIFT="7"/>
 <node CREATED="1449693229727" HGAP="52" ID="ID_542520731" MODIFIED="1449760938329" TEXT="Undirected Graphs" VSHIFT="28">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1366207586962" HGAP="28" ID="ID_505138465" MODIFIED="1449761165805" TEXT="Breadth-first search (BFS)" VSHIFT="-11">
-<node CREATED="1449637086163" HGAP="39" ID="ID_1977548942" MODIFIED="1449761182557" TEXT="Path." VSHIFT="-28">
+<node COLOR="#338800" CREATED="1366207586962" HGAP="28" ID="ID_505138465" MODIFIED="1450125426777" TEXT="Breadth-first search (BFS)" VSHIFT="-11">
+<node COLOR="#338800" CREATED="1449637086163" HGAP="39" ID="ID_1977548942" MODIFIED="1450125426086" TEXT="Path." VSHIFT="-28">
 <node CREATED="1449637285900" ID="ID_548785046" MODIFIED="1449637286726" TEXT="Is there a path between s and t ?"/>
 </node>
-<node CREATED="1449637094610" HGAP="41" ID="ID_1629782939" MODIFIED="1449760852681" TEXT="Shortest path" VSHIFT="7">
-<node CREATED="1449637274576" ID="ID_162638683" MODIFIED="1449637275367" TEXT="What is the shortest path between s and t ?"/>
-<node COLOR="#006699" CREATED="1449760855205" ID="ID_1128000583" MODIFIED="1449760882015" TEXT="Multi-Source Shortes Paths"/>
+<node COLOR="#338800" CREATED="1449637094610" HGAP="41" ID="ID_1629782939" MODIFIED="1450125423612" TEXT="Shortest path" VSHIFT="7">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1449637274576" ID="ID_162638683" MODIFIED="1450125423612" TEXT="What is the shortest path between s and t ?"/>
+<node COLOR="#006699" CREATED="1449760855205" ID="ID_1128000583" MODIFIED="1450125423612" TEXT="Multi-Source Shortes Paths"/>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1366207602242" HGAP="30" ID="ID_1664049908" MODIFIED="1449859401404" TEXT="Depth-first search (DFS)" VSHIFT="-7">
-<node CREATED="1449696839540" ID="ID_1236619835" MODIFIED="1449765295270" TEXT="Connected Components">
+<node COLOR="#338800" CREATED="1449696839540" ID="ID_1236619835" MODIFIED="1450125428918" TEXT="Connected Components">
 <node COLOR="#338800" CREATED="1449637119808" HGAP="32" ID="ID_1313494420" MODIFIED="1449859393658" TEXT="Connectivity" VSHIFT="-18">
 <font NAME="SansSerif" SIZE="12"/>
-<node CREATED="1449637215701" ID="ID_521572386" MODIFIED="1449859393658" TEXT="Is there a way to connect all of the vertices?"/>
+<node COLOR="#338800" CREATED="1449637215701" ID="ID_521572386" MODIFIED="1450125431150" TEXT="Is there a way to connect all of the vertices?"/>
 </node>
 </node>
-<node CREATED="1449698897170" ID="ID_797548247" MODIFIED="1449698904094" TEXT="Bipartite Check">
+<node COLOR="#338800" CREATED="1449698897170" ID="ID_797548247" MODIFIED="1450125432695" TEXT="Bipartite Check">
 <node CREATED="1449860433562" HGAP="31" ID="ID_1273234722" MODIFIED="1449860552440" TEXT="A bipartite graph contains no odd cycles." VSHIFT="9"/>
 <node CREATED="1449860602308" ID="ID_1762384605" MODIFIED="1449860837145">
 <richcontent TYPE="NODE"><html>
@@ -284,8 +284,7 @@
       &#160;(Sum of Degrees) E v&#8712;V (G) deg(v) = 2e.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1449860518098" HGAP="23" ID="ID_482007280" MODIFIED="1449860551176" VSHIFT="17">
 <richcontent TYPE="NODE"><html>
@@ -306,16 +305,15 @@
       August 8, 2007
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1449860442868" ID="ID_1848661018" MODIFIED="1449860443750" TEXT="http://www.math.uchicago.edu/~may/VIGRE/VIGRE2007/REUPapers/FINALAPP/Salvatore.pdf"/>
 </node>
 </node>
-<node CREATED="1449637102771" HGAP="26" ID="ID_67860916" MODIFIED="1449764670068" TEXT="Find Cycles">
-<node CREATED="1449637253972" ID="ID_768906553" MODIFIED="1449637256141" TEXT="Is there a cycle in the graph?"/>
+<node COLOR="#338800" CREATED="1449637102771" HGAP="26" ID="ID_67860916" MODIFIED="1450125436327" TEXT="Find Cycles">
+<node CREATED="1449637253972" HGAP="22" ID="ID_768906553" MODIFIED="1450125441599" TEXT="Is there a cycle in the graph?" VSHIFT="5"/>
 </node>
 <node CREATED="1449637132414" HGAP="31" ID="ID_657456735" MODIFIED="1449699935240" TEXT="Planarity" VSHIFT="-4">
-<node CREATED="1449637172443" ID="ID_115077621" MODIFIED="1449637174870" TEXT="Can you draw the graph in the plane with no crossing edges?"/>
+<node CREATED="1449637172443" HGAP="23" ID="ID_115077621" MODIFIED="1450125439591" TEXT="Can you draw the graph in the plane with no crossing edges?" VSHIFT="7"/>
 <node COLOR="#990000" CREATED="1449699918399" ID="ID_609336800" MODIFIED="1449699971309" TEXT="Tarjan Planarity Algorithm">
 <node CREATED="1449699941342" ID="ID_534654284" MODIFIED="1449699950050" TEXT="log(n)"/>
 <node CREATED="1449699954085" ID="ID_1457179618" MODIFIED="1449699967249" TEXT="Discovered in 1970s"/>
@@ -389,7 +387,12 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1366206438544" HGAP="50" ID="ID_106437397" MODIFIED="1422279615925" POSITION="right" TEXT="Algorithms" VSHIFT="3"/>
+<node CREATED="1366206438544" HGAP="50" ID="ID_106437397" MODIFIED="1422279615925" POSITION="right" TEXT="Algorithms" VSHIFT="3">
+<node CREATED="1450126590685" ID="ID_991317770" MODIFIED="1450126595810" TEXT="Rubic&apos;s cube">
+<node CREATED="1450126596908" ID="ID_1893968161" MODIFIED="1450126657900" TEXT="O(N^2)"/>
+<node CREATED="1450126603715" ID="ID_1119640688" MODIFIED="1450126684180" TEXT="MIT Damaine Bros, 2011 O(N^2/log(n))"/>
+</node>
+</node>
 <node CREATED="1387217983525" FOLDED="true" HGAP="50" ID="ID_18576043" MODIFIED="1447963100931" POSITION="right" TEXT="Multithreading" VSHIFT="-9">
 <node CREATED="1382966945407" ID="ID_889736538" MODIFIED="1382966946111" TEXT="&#x41c;&#x43d;&#x43e;&#x433;&#x43e;&#x43f;&#x43e;&#x442;&#x43e;&#x447;&#x43d;&#x43e;&#x441;&#x442;&#x44c;: deadlock &#x438; &#x441;&#x43f;&#x43e;&#x441;&#x43e;&#x431;&#x44b; &#x435;&#x433;&#x43e; &#x43e;&#x431;&#x43d;&#x430;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x438;&#x44f;/&#x43f;&#x440;&#x435;&#x434;&#x43e;&#x442;&#x432;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x438;&#x44f;, livelock, starvation, &#x43f;&#x440;&#x438;&#x43c;&#x438;&#x442;&#x438;&#x432;&#x44b; &#x441;&#x438;&#x43d;&#x445;&#x440;&#x43e;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;, &#x43a;&#x43b;&#x430;&#x441;&#x441;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;&#x438; (&#x447;&#x438;&#x442;&#x430;&#x442;&#x435;&#x43b;&#x438;-&#x43f;&#x438;&#x441;&#x430;&#x442;&#x435;&#x43b;&#x438;, &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x438;-&#x43f;&#x43e;&#x442;&#x440;&#x435;&#x431;&#x438;&#x442;&#x435;&#x43b;&#x438;, &#x43e;&#x431;&#x435;&#x434;&#x430;&#x44e;&#x449;&#x438;&#x435; &#x444;&#x438;&#x43b;&#x43e;&#x441;&#x43e;&#x444;&#x44b;). &#x410;&#x442;&#x43e;&#x43c;&#x430;&#x440;&#x43d;&#x44b;&#x435; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438; (compare-and-set) &#x438; &#x438;&#x445; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;."/>
 <node CREATED="1387218022274" ID="ID_549253592" MODIFIED="1387218025868" TEXT="deadlocks"/>
