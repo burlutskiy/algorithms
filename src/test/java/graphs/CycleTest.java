@@ -14,7 +14,7 @@ import junit.framework.Assert;
 public class CycleTest {
 
 	@Test
-	public void testTrue() {
+	public void testGraphTrue() {
 		IndexedGraph g = new IndexedGraph(4);
 		g.addEdge(0, 1);
 		g.addEdge(1, 2);
@@ -45,5 +45,27 @@ public class CycleTest {
 		Assert.assertTrue(cycle.hasSelfLoop());
 		AssertGraph.assertEquals(cycle.cycle(), Arrays.asList(new Integer[]{1,1}));
 	}
+
+	@Test
+	public void testDigraphFalse() throws Exception {
+		IndexedDigraph g = GraphTestUtil.readDigraphFromFile("src/test/java/graphs/vertices1.txt");
+		Cycle<Integer> cycle = new Cycle<>(g);
+		Assert.assertFalse(cycle.hasCycle());
+	}
+
+	@Test
+	public void testDigraphAcyclicFalse() throws Exception {
+		IndexedDigraph g = GraphTestUtil.readDigraphFromFile("src/test/java/graphs/tinyDAG.txt");
+		Cycle<Integer> cycle = new Cycle<>(g);
+		Assert.assertFalse(cycle.hasCycle());
+	}
+
+	@Test
+	public void testDigraphTrue() throws Exception {
+		IndexedDigraph g = GraphTestUtil.readDigraphFromFile("src/test/java/graphs/tinyDG.txt");
+		Cycle<Integer> cycle = new Cycle<>(g);
+		Assert.assertTrue(cycle.hasCycle());
+	}
+
 
 }

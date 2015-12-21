@@ -11,12 +11,14 @@ import stacks.Stack;
  */
 public class Cycle<V> {
 	private BitSet marked;
+	private BitSet onStack;
 	private int[] edgeTo;
 	private Stack<V> cycle;
 	private final AbstractDigraph<V> graph;
 
 	public Cycle(AbstractDigraph<V> graph) {
 		this.marked = new BitSet(graph.vertices);
+		this.onStack = new BitSet(graph.vertices);
 		this.edgeTo = new int[graph.vertices];
 		this.graph = graph;
 		if (hasSelfLoop())
@@ -44,6 +46,7 @@ public class Cycle<V> {
 
 	private void dfs(int v, int from) {
 		marked.set(v);
+		onStack.set(v);
 		for (V w : graph.adjacent(graph.objFor(v))) {
 			if (cycle != null)
 				return;
@@ -51,7 +54,7 @@ public class Cycle<V> {
 			if (!marked.get(iw)) {
 				edgeTo[iw] = v;
 				dfs(iw, v);
-			} else if (iw != from) {
+			} else if (onStack.get(iw) && iw != from) {
 				cycle = new Stack<V>();
 				cycle.push(w);
 				for (int x = v; x != iw; x = edgeTo[x]) {
@@ -60,6 +63,7 @@ public class Cycle<V> {
 				cycle.push(w);
 			}
 		}
+		onStack.clear(v);
 	}
 
 	public Iterable<V> cycle() {
