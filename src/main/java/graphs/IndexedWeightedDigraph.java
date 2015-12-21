@@ -8,9 +8,9 @@ import java.util.List;
  * @author alexey
  *
  */
-public class IndexedDigraph extends AbstractUnweightedDigraph<Integer> {
+public class IndexedWeightedDigraph extends AbstractWeightedDigraph<Integer> {
 
-	public IndexedDigraph(int vertices) {
+	public IndexedWeightedDigraph(int vertices) {
 		super(vertices);
 	}
 
@@ -45,8 +45,8 @@ public class IndexedDigraph extends AbstractUnweightedDigraph<Integer> {
 	}
 
 	@Override
-	public AbstractDigraph<Integer, Integer, AdjacentBag> createInstance(int v) {
-		return new IndexedDigraph(v);
+	public IndexedWeightedDigraph createInstance(int v) {
+		return new IndexedWeightedDigraph(v);
 	}
 
 }

@@ -14,9 +14,9 @@ public class Cycle<V> {
 	private BitSet onStack;
 	private int[] edgeTo;
 	private Stack<V> cycle;
-	private final AbstractDigraph<V> graph;
+	private final AbstractUnweightedDigraph<V> graph;
 
-	public Cycle(AbstractDigraph<V> graph) {
+	public Cycle(AbstractUnweightedDigraph<V> graph) {
 		this.marked = new BitSet(graph.vertices);
 		this.onStack = new BitSet(graph.vertices);
 		this.edgeTo = new int[graph.vertices];

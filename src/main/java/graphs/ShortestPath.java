@@ -16,10 +16,10 @@ public class ShortestPath<V> {
     private int[] edgeTo; 
     private int[] distTo;
     private Stack<V> cycle;
-    private final AbstractDigraph<V> graph;
+    private final AbstractUnweightedDigraph<V> graph;
     private final int source;
 	
-    public ShortestPath(AbstractDigraph<V> graph, int source) {
+    public ShortestPath(AbstractUnweightedDigraph<V> graph, int source) {
         this.marked = new BitSet(graph.vertices);
         this.edgeTo = new int[graph.vertices];
         this.distTo = new int[graph.vertices];

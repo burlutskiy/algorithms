@@ -10,12 +10,12 @@ import stacks.Stack;
  *
  */
 public class DFSPaths<V> implements Paths<V> {
-	final AbstractDigraph<V> graph;
+	final AbstractUnweightedDigraph<V> graph;
 	final BitSet marked;
 	final int edgeTo[];
 	final int source;
 
-	public DFSPaths(AbstractDigraph<V> graph, V source) {
+	public DFSPaths(AbstractUnweightedDigraph<V> graph, V source) {
 		this.graph = graph;
 		this.source = graph.indexFor(source);
 		this.marked = new BitSet(graph.getVertices());

@@ -10,13 +10,13 @@ import java.util.BitSet;
  *            object
  */
 public class Order<V> {
-	final AbstractDigraph<V> graph;
+	final AbstractDigraph<V, ?, ?> graph;
 	final BitSet marked;
 	final int edgeTo[];
 	final GraphVisitor<V> visitor;
 	final GraphVisitor.Direction direction;
 
-	public Order(AbstractDigraph<V> graph, GraphVisitor<V> visitor, GraphVisitor.Direction direction) {
+	public Order(AbstractDigraph<V, ?, ?> graph, GraphVisitor<V> visitor, GraphVisitor.Direction direction) {
 		super();
 		this.graph = graph;
 		this.visitor = visitor;

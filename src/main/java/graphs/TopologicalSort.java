@@ -19,7 +19,7 @@ import stacks.Stack;
 public class TopologicalSort<V> {
 	private Stack<V> order;
 
-	public TopologicalSort(AbstractDigraph<V> graph) {
+	public TopologicalSort(AbstractDigraph<V, ?, ?> graph) {
 		final Stack<V> stack = new Stack<>();
 		GraphVisitor<V> visitor = new GraphVisitor<V>() {
 			@Override

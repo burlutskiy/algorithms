@@ -6,7 +6,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-public class ObjectDigraph<V> extends AbstractDigraph<V>{
+/**
+ * 
+ * @author alexey
+ *
+ */
+public class ObjectDigraph<V> extends AbstractUnweightedDigraph<V>{
 	final List<V> objects;
 	final Map<V, Integer> indexMap;
 	
@@ -28,7 +33,7 @@ public class ObjectDigraph<V> extends AbstractDigraph<V>{
 
 	public List<V> adjacent(V v) {
 		List<V> list = new ArrayList<>();
-		for (Integer w : adj.get(indexFor(v))) {
+		for (Integer w : adj.get(indexFor(v)).adj) {
 			list.add(objects.get(w));
 		}
 		return list;
@@ -49,4 +54,5 @@ public class ObjectDigraph<V> extends AbstractDigraph<V>{
 	public ObjectDigraph<V> createInstance(int v) {
 		return new ObjectDigraph<V>(v);
 	}
+
 }

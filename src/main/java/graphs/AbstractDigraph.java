@@ -8,21 +8,24 @@ import java.util.List;
  * @author alexey
  *
  */
-public abstract class AbstractDigraph<V> implements AbstractGraph<V> {
+public abstract class AbstractDigraph<V, E, A extends AdjacentBag> implements Graph<V> {
 	final int vertices; //TODO make not final
 	int edges;
-	final ArrayList<List<Integer>> adj;
+	final ArrayList<A> adj;
 	
 	public AbstractDigraph(int vertices) {
 		this.vertices = vertices;
 		this.adj = new ArrayList<>(vertices);
 		for (int i = 0; i < vertices; i++) {
-			adj.add(new LinkedList<>());
+			adj.add(createAdjacentBag());
 		}
 	}
 	
+	protected abstract A createAdjacentBag();
+	
 	public void addEdge(V v, V w){
-		adj.get(indexFor(v)).add(indexFor(w));
+		A a = adj.get(indexFor(v));
+		a.add(indexFor(w));
 		edges++;
 	}
 	
@@ -38,10 +41,10 @@ public abstract class AbstractDigraph<V> implements AbstractGraph<V> {
 		return edges;
 	}
 	
-	public abstract AbstractDigraph<V> createInstance(int v);
+	public abstract AbstractDigraph<V, E, A> createInstance(int v);
 
-	public AbstractDigraph<V> reverse(){
-		AbstractDigraph<V> clone = createInstance(vertices);
+	public AbstractDigraph<V, E, A> reverse(){
+		AbstractDigraph<V, E, A> clone = createInstance(vertices);
 		for (V v : this) {
 			for(V w : adjacent(v)){
 				clone.addEdge(w, v);
@@ -63,7 +66,4 @@ public abstract class AbstractDigraph<V> implements AbstractGraph<V> {
         return s.toString();
     }
 
-	public Paths<V> pathsFrom(V v){
-		return new DFSPaths<V>(this, v);
-	}
 }

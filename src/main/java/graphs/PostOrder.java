@@ -6,7 +6,7 @@ import java.util.List;
 public class PostOrder<V> {
 	private List<V> order;
 
-	public PostOrder(AbstractDigraph<V> graph) {
+	public PostOrder(AbstractUnweightedDigraph<V> graph) {
 		final LinkedList<V> list = new LinkedList<>();
 		GraphVisitor<V> visitor = new GraphVisitor<V>() {
 			@Override

@@ -9,10 +9,10 @@ public class ConnectedComponents<V> {
 	private int[] cc;
 	private int[] size;
 	private Stack<V> cycle;
-	private final AbstractDigraph<V> graph;
+	private final AbstractUnweightedDigraph<V> graph;
 	private int count;    
 
-	public ConnectedComponents(AbstractDigraph<V> graph) {
+	public ConnectedComponents(AbstractUnweightedDigraph<V> graph) {
 		this.marked = new BitSet(graph.vertices);
 		this.cc = new int[graph.vertices];
 		this.size = new int[graph.vertices];

@@ -10,13 +10,13 @@ public class Bipartite<V> {
     private BitSet marked;
     private int[] edgeTo; 
     private Stack<V> cycle;  // odd-length cycle
-    private AbstractDigraph<V> graph;
+    private AbstractUnweightedDigraph<V> graph;
     /**
      * Determines whether an undirected graph is bipartite and finds either a
      * bipartition or an odd-length cycle.
      * @param G the graph
      */
-    public Bipartite(AbstractDigraph<V> graph) {
+    public Bipartite(AbstractUnweightedDigraph<V> graph) {
     	this.isBipartite = true;
         this.color  = new BitSet(graph.vertices);
         this.marked = new BitSet(graph.vertices);

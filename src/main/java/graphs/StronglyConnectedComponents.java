@@ -18,10 +18,10 @@ public class StronglyConnectedComponents<V> {
 	private int[] cc;
 	private int[] size;
 	private Stack<V> cycle;
-	private final AbstractDigraph<V> graph;
+	private final AbstractUnweightedDigraph<V> graph;
 	private int count;    
 			
-	public StronglyConnectedComponents(AbstractDigraph<V> graph) {
+	public StronglyConnectedComponents(AbstractUnweightedDigraph<V> graph) {
 		this.graph = graph;
 		this.marked = new BitSet(graph.vertices);
 		this.cc = new int[graph.vertices];
