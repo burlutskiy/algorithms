@@ -38,6 +38,18 @@ public abstract class AbstractDigraph<V> implements AbstractGraph<V> {
 		return edges;
 	}
 	
+	public abstract AbstractDigraph<V> createInstance(int v);
+
+	public AbstractDigraph<V> reverse(){
+		AbstractDigraph<V> clone = createInstance(vertices);
+		for (V v : this) {
+			for(V w : adjacent(v)){
+				clone.addEdge(w, v);
+			}
+		}
+		return clone;
+	}
+	
     public String toString() {
         StringBuilder s = new StringBuilder();
         s.append(vertices + " vertices, " + edges + " edges\n");

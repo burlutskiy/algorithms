@@ -16,4 +16,7 @@ public class IndexedGraph extends IndexedDigraph {
 		adj.get(indexFor(w)).add(indexFor(v));
 	}
 	
+	public IndexedGraph createInstance(int v) {
+		return new IndexedGraph(v);
+	}
 }

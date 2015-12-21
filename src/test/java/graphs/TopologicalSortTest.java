@@ -13,7 +13,8 @@ public class TopologicalSortTest {
 		IndexedDigraph g = GraphTestUtil.readDigraphFromFile("src/test/java/graphs/tinyDAG.txt");
 		TopologicalSort<Integer> sort = new TopologicalSort<>(g);
 		Assert.assertTrue(sort.hasOrder());
-		AssertGraph.assertEquals(sort.order(), Arrays.asList(new Integer[]{8,7,2,3,0,5,1,6,9,11,10,12,4}));
+		AssertGraph.assertEquals(sort.order(),
+				Arrays.asList(new Integer[] { 8, 7, 2, 3, 0, 5, 1, 6, 9, 11, 10, 12, 4 }));
 	}
 
 }

@@ -10,6 +10,12 @@ public class ObjectDigraph<V> extends AbstractDigraph<V>{
 	final List<V> objects;
 	final Map<V, Integer> indexMap;
 	
+	public ObjectDigraph(int size) {
+		super(size);
+		this.objects = new ArrayList<>();
+		this.indexMap = new HashMap<>();
+	}
+	
 	public ObjectDigraph(List<V> list) {
 		super(list.size());
 		this.objects = list;
@@ -36,9 +42,11 @@ public class ObjectDigraph<V> extends AbstractDigraph<V>{
 		return objects.get(index);
 	}
 
-	@Override
 	public Iterator<V> iterator() {
 		return objects.iterator();
 	}
-
+	
+	public ObjectDigraph<V> createInstance(int v) {
+		return new ObjectDigraph<V>(v);
+	}
 }

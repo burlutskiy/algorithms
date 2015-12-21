@@ -44,4 +44,8 @@ public class IndexedDigraph extends AbstractDigraph<Integer> {
 		};
 	}
 
+	@Override
+	public AbstractDigraph<Integer> createInstance(int v) {
+		return new IndexedDigraph(v);
+	}
 }
