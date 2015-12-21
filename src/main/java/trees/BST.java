@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class BST<K extends Comparable<K>, V> extends AbstractBST<K, V, TreeNode<K, V>> {
 
-	public void traverseBreadthFirstRecursive(NodeVisitor<K, V, TreeNode<K, V>> visitor) {
+	public void traverseBreadthFirstRecursive(TreeVisitor<K, V, TreeNode<K, V>> visitor) {
 		HashMap<Integer, List<TreeNode<K, V>>> map = new HashMap<Integer, List<TreeNode<K, V>>>();
 		traverseBreadthFirstRecursive(root, 0, map);
 		int depth = 0;
@@ -39,7 +39,7 @@ public class BST<K extends Comparable<K>, V> extends AbstractBST<K, V, TreeNode<
 	}
 
 	public void reverse() {
-		traversePreOrder(new NodeVisitor<K, V, TreeNode<K, V>>() {
+		traversePreOrder(new TreeVisitor<K, V, TreeNode<K, V>>() {
 			@Override
 			public void visitNode(TreeNode<K, V> node, int level) {
 				TreeNode<K, V> tmp = node.left;

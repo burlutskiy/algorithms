@@ -13,7 +13,7 @@ import org.junit.Test;
  */
 public class AVLTreeTest {
 	AbstractAVLTree<Integer, Integer, ?>[] trees = new AbstractAVLTree[] { new AVLTreeV1<>(), new AVLTreeV2<>() };
-	NodeVisitor<Integer, Integer, TreeNode<Integer, Integer>> visitor = new NodeVisitor<Integer, Integer, TreeNode<Integer, Integer>>() {
+	TreeVisitor<Integer, Integer, TreeNode<Integer, Integer>> visitor = new TreeVisitor<Integer, Integer, TreeNode<Integer, Integer>>() {
 		@Override
 		public void visitNode(TreeNode<Integer, Integer> node, int level) {
 			System.out.print(node.value + " ");

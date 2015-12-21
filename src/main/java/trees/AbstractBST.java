@@ -160,11 +160,11 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		return Math.max(height(node.left), height(node.right)) + 1;
 	}
 	
-	public void traversePreOrder(NodeVisitor<K,V,N> visitor) {
+	public void traversePreOrder(TreeVisitor<K,V,N> visitor) {
 		traversePreOrder(root, visitor, 0);
 	}
 
-	private void traversePreOrder(N node, NodeVisitor<K,V,N> visitor, int depth) {
+	private void traversePreOrder(N node, TreeVisitor<K,V,N> visitor, int depth) {
 		if (node == null)
 			return;
 		visitor.visitNode(node, depth);
@@ -172,11 +172,11 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		traversePreOrder(node.right, visitor, depth + 1);
 	}
 
-	public void traverseInOrder(NodeVisitor<K,V,N> visitor) {
+	public void traverseInOrder(TreeVisitor<K,V,N> visitor) {
 		traverseInOrder(root, visitor, 0);
 	}
 
-	private void traverseInOrder(N node, NodeVisitor<K,V,N> visitor, int depth) {
+	private void traverseInOrder(N node, TreeVisitor<K,V,N> visitor, int depth) {
 		if (node == null)
 			return;
 		traverseInOrder(node.left, visitor, depth + 1);
@@ -184,11 +184,11 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		traverseInOrder(node.right, visitor, depth + 1);
 	}
 
-	public void traversePostOrder(NodeVisitor<K,V,N> visitor) {
+	public void traversePostOrder(TreeVisitor<K,V,N> visitor) {
 		traversePostOrder(root, visitor, 0);
 	}
 
-	private void traversePostOrder(N node, NodeVisitor<K,V,N> visitor, int depth) {
+	private void traversePostOrder(N node, TreeVisitor<K,V,N> visitor, int depth) {
 		if (node == null)
 			return;
 		traversePostOrder(node.left, visitor, depth + 1);
@@ -196,7 +196,7 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		visitor.visitNode(node, depth);
 	}
 
-	public void traverseBreadthFirst(NodeVisitor<K,V,N> visitor) {
+	public void traverseBreadthFirst(TreeVisitor<K,V,N> visitor) {
 		Queue<Pair<N, Integer>> queue = new LinkedList<>();
 		queue.add(new Pair<N, Integer>(root, 0));
 		while (!queue.isEmpty()) {

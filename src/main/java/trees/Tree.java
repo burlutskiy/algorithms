@@ -31,13 +31,13 @@ interface Tree<K extends Comparable<K>, V, N extends Node<K, V, N>> {
 
 	int size();
 
-	void traversePreOrder(NodeVisitor<K, V, N> visitor);
+	void traversePreOrder(TreeVisitor<K, V, N> visitor);
 
-	void traverseInOrder(NodeVisitor<K, V, N> visitor);
+	void traverseInOrder(TreeVisitor<K, V, N> visitor);
 
-	void traversePostOrder(NodeVisitor<K, V, N> visitor);
+	void traversePostOrder(TreeVisitor<K, V, N> visitor);
 
-	void traverseBreadthFirst(NodeVisitor<K, V, N> visitor);
+	void traverseBreadthFirst(TreeVisitor<K, V, N> visitor);
 
 	boolean isBST();
 	

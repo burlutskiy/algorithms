@@ -33,7 +33,30 @@ public class IndexedGraphTest {
 		System.out.println(pathsFrom);
 	}
 
-	
+	@Test
+	public void testPreOrderTest() throws Exception {
+		IndexedGraph graph = readFromFile("src/test/java/graphs/vertices1.txt");
+		GraphVisitor<Integer> visitor = new GraphVisitor<Integer>(){
+			@Override
+			public void visitNode(Integer object) {
+				System.out.println(object);
+			}
+		};
+		new Order<>(graph, visitor, GraphVisitor.Direction.PRE);
+	}
+
+	@Test
+	public void testPostOrderTest() throws Exception {
+		IndexedGraph graph = readFromFile("src/test/java/graphs/vertices1.txt");
+		GraphVisitor<Integer> visitor = new GraphVisitor<Integer>(){
+			@Override
+			public void visitNode(Integer object) {
+				System.out.println(object);
+			}
+		};
+		new Order<>(graph, visitor, GraphVisitor.Direction.POST);
+	}
+
 	public static IndexedGraph readFromFile(String filename) throws Exception{
 		FileReader fr = new FileReader(new File(filename));
 		BufferedReader br = new BufferedReader(fr);
