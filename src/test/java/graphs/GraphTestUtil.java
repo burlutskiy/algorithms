@@ -43,4 +43,34 @@ public class GraphTestUtil {
 		return graph;
 	}
 
+	public static IndexedWeightedDigraph readWeightedDigraphFromFile(String filename) throws Exception{
+		FileReader fr = new FileReader(new File(filename));
+		BufferedReader br = new BufferedReader(fr);
+		String line;
+		int vertices = Integer.parseInt(br.readLine());
+		IndexedWeightedDigraph graph = new IndexedWeightedDigraph(vertices);
+		while ((line = br.readLine()) != null) {
+			line = line.trim();
+			String[] split = line.split(" ");
+			graph.addEdge(Integer.parseInt(split[0]), Integer.parseInt(split[1]), Double.parseDouble(split[2]));
+		}
+		br.close();
+		return graph;
+	}
+
+	public static IndexedWeightedGraph readWeightedGraphFromFile(String filename) throws Exception{
+		FileReader fr = new FileReader(new File(filename));
+		BufferedReader br = new BufferedReader(fr);
+		String line;
+		int vertices = Integer.parseInt(br.readLine());
+		IndexedWeightedGraph graph = new IndexedWeightedGraph(vertices);
+		while ((line = br.readLine()) != null) {
+			line = line.trim();
+			String[] split = line.split(" ");
+			graph.addEdge(Integer.parseInt(split[0]), Integer.parseInt(split[1]), Double.parseDouble(split[2]));
+		}
+		br.close();
+		return graph;
+	}
+
 }
