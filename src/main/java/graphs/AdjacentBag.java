@@ -3,6 +3,11 @@ package graphs;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 
+ * @author alexey
+ *
+ */
 public class AdjacentBag {
 	final List<Integer> adj;
 

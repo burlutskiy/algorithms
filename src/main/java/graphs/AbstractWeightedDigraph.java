@@ -1,6 +1,9 @@
 package graphs;
 
 import java.util.Iterator;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import utils.Pair;
 
@@ -25,11 +28,25 @@ public abstract class AbstractWeightedDigraph<V> extends AbstractDigraph<V, Pair
 		edges++;
 	}
 
-	@Override
 	protected AdjacentWeightedBad createAdjacentBag() {
 		return new AdjacentWeightedBad();
 	}
     
+	public SortedSet<Edge> sortedEdges(){
+		TreeSet<Edge> sortedSet = new TreeSet<>();
+		for (int v = 0; v < vertices; v++) {
+			AdjacentWeightedBad bag = adj.get(v);
+			Iterator<Integer> verteciesIterator = bag.adj.iterator();
+			Iterator<Double> weightsIterator = bag.weights.iterator();
+			while(verteciesIterator.hasNext()){
+				Integer w = verteciesIterator.next();
+				Double weight = weightsIterator.next();
+				sortedSet.add(new Edge(v, w, weight));
+			}
+		}
+		return sortedSet;
+	}
+	
 	public String toString() {
         StringBuilder s = new StringBuilder();
         s.append(vertices + " vertices, " + edges + " edges\n");
