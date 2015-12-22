@@ -1,9 +1,23 @@
 package uf;
 
+/**
+ * 
+ * @author alexey
+ *
+ *	lg*(N) Iterative logarithm complexity
+ *         x | lg* x<br>
+ *         (-, 1] | 0<br>
+ *         (1, 2] | 1<br>
+ *         (2, 4] | 2<br>
+ *         (4, 16] | 3<br>
+ *         (16, 65536] |4<br>
+ *         (65536, 2^65536] |5<br>
+ * 
+ */
 public class UF {
-	private int[] id; 
+	private int[] id;
 	private byte[] rank;
-	private int count; 
+	private int count;
 
 	public UF(int N) {
 		if (N < 0)
@@ -21,7 +35,7 @@ public class UF {
 		if (p < 0 || p >= id.length)
 			throw new IndexOutOfBoundsException();
 		while (p != id[p]) {
-			id[p] = id[id[p]]; // path compression by halving
+			id[p] = id[id[p]]; // path compression, pointing
 			p = id[p];
 		}
 		return p;

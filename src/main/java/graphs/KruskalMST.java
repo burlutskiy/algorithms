@@ -10,7 +10,7 @@ import uf.UF;
 /**
  * @author alexey
  *
- * O(N) = E*log(E) + E*log(V)
+ * O(N) = E*log(E) + E*log*(V), where log*(V) - iterated logarithm
  */
 public class KruskalMST<V> {
 	private List<Edge> mst; 

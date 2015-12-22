@@ -1,13 +1,13 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1383141749484" ID="ID_50399789" MODIFIED="1387218359219" STYLE="bubble" TEXT="Algorithms">
-<node CREATED="1383141758378" FOLDED="true" HGAP="32" ID="ID_589109986" MODIFIED="1447963108458" POSITION="right" TEXT="In-place algorithm" VSHIFT="32">
+<node CREATED="1383141758378" FOLDED="true" HGAP="32" ID="ID_589109986" MODIFIED="1450818854531" POSITION="right" TEXT="In-place algorithm" VSHIFT="32">
 <node CREATED="1383141840615" ID="ID_1443336954" MODIFIED="1383141855143" TEXT="In-place algorithm is an algorithm which transforms input using a data structure with a small, constant amount of extra storage space."/>
 </node>
 <node CREATED="1383141857967" HGAP="43" ID="ID_588941768" MODIFIED="1384975458553" POSITION="left" TEXT="Complexity" VSHIFT="-13"/>
 <node CREATED="1383141862820" HGAP="85" ID="ID_759298866" MODIFIED="1387296630921" POSITION="left" TEXT="Performance" VSHIFT="60"/>
 <node CREATED="1383141868610" HGAP="141" ID="ID_733435284" MODIFIED="1387296629640" POSITION="left" TEXT="Simplexity" VSHIFT="65"/>
-<node CREATED="1383141908886" HGAP="30" ID="ID_629346440" MODIFIED="1449238128418" POSITION="right" TEXT="Sorting Algorithms" VSHIFT="14">
+<node CREATED="1383141908886" FOLDED="true" HGAP="30" ID="ID_629346440" MODIFIED="1450818849212" POSITION="right" TEXT="Sorting Algorithms" VSHIFT="14">
 <node COLOR="#338800" CREATED="1383141925426" ID="ID_846124785" MODIFIED="1449238131362" TEXT="Bubble"/>
 <node COLOR="#338800" CREATED="1383141931107" ID="ID_1012100899" MODIFIED="1449238132187" TEXT="Comb"/>
 <node COLOR="#338800" CREATED="1383141945307" ID="ID_1799825412" MODIFIED="1449238132394" TEXT="Insertion"/>
@@ -50,13 +50,13 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1387216288897" FOLDED="true" HGAP="25" ID="ID_1822478219" MODIFIED="1447963104674" POSITION="right" TEXT="Parsing Algorithms" VSHIFT="20">
-<node CREATED="1387216308818" ID="ID_751307073" MODIFIED="1387216311693" TEXT="Shunting yard algorithm"/>
-<node CREATED="1387216318490" ID="ID_572336138" MODIFIED="1387216321333" TEXT="Recursive descent parser"/>
-<node CREATED="1387217839670" ID="ID_1961156975" MODIFIED="1387217887887" TEXT="Abstract syntax tree"/>
+<node CREATED="1387216288897" HGAP="25" ID="ID_1822478219" MODIFIED="1450818855648" POSITION="right" TEXT="Parsing Algorithms" VSHIFT="20">
+<node CREATED="1387216308818" HGAP="39" ID="ID_751307073" MODIFIED="1450818863817" TEXT="Shunting yard algorithm" VSHIFT="-5"/>
+<node CREATED="1387216318490" HGAP="28" ID="ID_572336138" MODIFIED="1450818858778" TEXT="Recursive descent parser" VSHIFT="9"/>
+<node CREATED="1387217839670" HGAP="35" ID="ID_1961156975" MODIFIED="1450818859795" TEXT="Abstract syntax tree" VSHIFT="14"/>
 </node>
 <node CREATED="1384975461522" HGAP="44" ID="ID_352589872" MODIFIED="1387296783855" POSITION="right" TEXT="Cache Algorithms" VSHIFT="15"/>
-<node CREATED="1366207444205" HGAP="114" ID="ID_1496022331" MODIFIED="1450149004532" POSITION="left" TEXT="Trees" VSHIFT="14">
+<node CREATED="1366207444205" HGAP="114" ID="ID_1496022331" MODIFIED="1450819104698" POSITION="left" TEXT="Trees" VSHIFT="14">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1447962643469" ID="ID_407864358" MODIFIED="1449760905080" STYLE="bubble" TEXT="Binary Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -215,7 +215,7 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1366207582853" HGAP="123" ID="ID_814180733" MODIFIED="1450130656540" POSITION="left" TEXT="Graphs" VSHIFT="20">
+<node CREATED="1366207582853" FOLDED="true" HGAP="123" ID="ID_814180733" MODIFIED="1450818843277" POSITION="left" TEXT="Graphs" VSHIFT="20">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449700078094" HGAP="53" ID="ID_381749142" MODIFIED="1449760937210" TEXT="Directed Graphs" VSHIFT="12">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -413,6 +413,271 @@
 <node COLOR="#338800" CREATED="1447963075206" HGAP="92" ID="ID_1506108160" MODIFIED="1449761069046" POSITION="left" TEXT="Lists" VSHIFT="20">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
+<node COLOR="#338800" CREATED="1450818944330" HGAP="76" ID="ID_1862388972" MODIFIED="1450819426495" POSITION="left" TEXT="Union-Find" VSHIFT="35">
+<node COLOR="#338800" CREATED="1450818954073" ID="ID_30669390" MODIFIED="1450819428534" TEXT="Quick-Find Algorithm">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1449240504883" HGAP="31" ID="ID_254863090" MODIFIED="1450819321919" VSHIFT="-15">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table class="infobox" style="font-size: 12.32px; border-spacing: 3px; color: black; margin-top: 0; margin-right: 0px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; clear: right; line-height: 1.5em; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(249, 249, 249)">
+      <tr>
+        <td style="vertical-align: top; text-align: left">
+          
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Average </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Space </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Find </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(1)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(1)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Union </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n</i>)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n</i>)</font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node COLOR="#338800" CREATED="1450818968328" ID="ID_1545734194" MODIFIED="1450819429079" TEXT="Quick-Union Algorithm">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1449240504883" ID="ID_1743839750" MODIFIED="1450819315386">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table class="infobox" style="font-size: 12.32px; border-spacing: 3px; color: black; margin-top: 0; margin-right: 0px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; clear: right; line-height: 1.5em; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(249, 249, 249)">
+      <tr>
+        <td style="vertical-align: top; text-align: left">
+          
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Average </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Space </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Find </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">tree height</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(n)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Union </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">tree height</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n</i>)</font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node COLOR="#338800" CREATED="1450818979856" ID="ID_475357559" MODIFIED="1450819429782" TEXT="Weighted Quick-Union Algorithm">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1449240504883" HGAP="31" ID="ID_424878782" MODIFIED="1450819392002" VSHIFT="-15">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table class="infobox" style="font-size: 12.32px; border-spacing: 3px; color: black; margin-top: 0; margin-right: 0px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; clear: right; line-height: 1.5em; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(249, 249, 249)">
+      <tr>
+        <td style="vertical-align: top; text-align: left">
+          
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Average </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Space </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Find </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Union </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node COLOR="#338800" CREATED="1450819029262" ID="ID_98128450" MODIFIED="1450820646924" TEXT="Weighted Quick-Union With Path Compression Algorithm">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="bookmark"/>
+<node CREATED="1449240504883" HGAP="37" ID="ID_1220097415" MODIFIED="1450819666427" VSHIFT="2">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table class="infobox" style="font-size: 12.32px; border-spacing: 3px; color: black; margin-top: 0; margin-right: 0px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; clear: right; line-height: 1.5em; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(249, 249, 249)">
+      <tr>
+        <td style="vertical-align: top; text-align: left">
+          
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Average </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Space </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(<i>n^2</i>)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Find </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Union </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(log(n))</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <p>
+            <font size="2">Union-Find</font>
+          </p>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <p>
+            <font size="2">O(N + M alpha*(M,N))</font>
+          </p>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <p>
+            <font size="2">O(N + M log*(N))</font>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1450819670584" HGAP="28" ID="ID_1980535870" MODIFIED="1450821523252" TEXT="log*(N) - iterative logarithm" VSHIFT="-5"/>
+<node CREATED="1450819693504" HGAP="39" ID="ID_962058214" MODIFIED="1450821522012" TEXT="alpha(M,N) - The inverse Ackermann hierarchy" VSHIFT="-5">
+<node CREATED="1450819722630" ID="ID_67208934" MODIFIED="1450819723355" TEXT="http://www.gabrielnivasch.org/fun/inverse-ackermann"/>
+<node CREATED="1450820578557" ID="ID_854210211" MODIFIED="1450820579417" TEXT="http://cgi.di.uoa.gr/~ewcg06/invited/Seidel.pdf"/>
+<node CREATED="1450821298696" ID="ID_1171346727" MODIFIED="1450821299427" TEXT="http://www2.hawaii.edu/~suthers/courses/ics311s14/Notes/Topic-16.html"/>
+</node>
+<node CREATED="1450821488067" ID="ID_864934821" MODIFIED="1450821518080" TEXT="M - Make-Set operation, basically is initialization of array"/>
+<node CREATED="1450821527113" ID="ID_5208475" MODIFIED="1450821552941" TEXT="N - number of Union-Find operations all together"/>
+</node>
+</node>
+<node CREATED="1450821618580" HGAP="16" ID="ID_715942800" MODIFIED="1450821624118" TEXT="http://algs4.cs.princeton.edu/15uf/" VSHIFT="3"/>
+</node>
 <node CREATED="1366208228409" HGAP="82" ID="ID_1038658720" MODIFIED="1449238183337" POSITION="left" TEXT="&#x420;&#x430;&#x441;&#x43f;&#x440;&#x435;&#x434;&#x435;&#x43b;&#x435;&#x43d;&#x43d;&#x44b;&#x435; &#x430;&#x43b;&#x433;&#x43e;&#x440;&#x438;&#x442;&#x43c;&#x44b;" VSHIFT="18">
 <node CREATED="1366208250767" ID="ID_630621076" MODIFIED="1366208263485" TEXT="consistent hasing"/>
 <node CREATED="1366208264392" ID="ID_386513668" MODIFIED="1366208269110" TEXT="gossip protocol"/>
@@ -424,11 +689,11 @@
 </node>
 <node CREATED="1366206438544" HGAP="50" ID="ID_106437397" MODIFIED="1422279615925" POSITION="right" TEXT="Algorithms" VSHIFT="3">
 <node CREATED="1450126590685" ID="ID_991317770" MODIFIED="1450126595810" TEXT="Rubic&apos;s cube">
-<node CREATED="1450126596908" ID="ID_1893968161" MODIFIED="1450126657900" TEXT="O(N^2)"/>
+<node CREATED="1450126596908" HGAP="24" ID="ID_1893968161" MODIFIED="1450818888183" TEXT="O(N^2)" VSHIFT="-3"/>
 <node CREATED="1450126603715" ID="ID_1119640688" MODIFIED="1450126684180" TEXT="MIT Damaine Bros, 2011 O(N^2/log(n))"/>
 </node>
 </node>
-<node CREATED="1387217983525" FOLDED="true" HGAP="50" ID="ID_18576043" MODIFIED="1447963100931" POSITION="right" TEXT="Multithreading" VSHIFT="-9">
+<node CREATED="1387217983525" HGAP="50" ID="ID_18576043" MODIFIED="1450818875644" POSITION="right" TEXT="Multithreading" VSHIFT="-9">
 <node CREATED="1382966945407" ID="ID_889736538" MODIFIED="1382966946111" TEXT="&#x41c;&#x43d;&#x43e;&#x433;&#x43e;&#x43f;&#x43e;&#x442;&#x43e;&#x447;&#x43d;&#x43e;&#x441;&#x442;&#x44c;: deadlock &#x438; &#x441;&#x43f;&#x43e;&#x441;&#x43e;&#x431;&#x44b; &#x435;&#x433;&#x43e; &#x43e;&#x431;&#x43d;&#x430;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x438;&#x44f;/&#x43f;&#x440;&#x435;&#x434;&#x43e;&#x442;&#x432;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x438;&#x44f;, livelock, starvation, &#x43f;&#x440;&#x438;&#x43c;&#x438;&#x442;&#x438;&#x432;&#x44b; &#x441;&#x438;&#x43d;&#x445;&#x440;&#x43e;&#x43d;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438;, &#x43a;&#x43b;&#x430;&#x441;&#x441;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;&#x438; (&#x447;&#x438;&#x442;&#x430;&#x442;&#x435;&#x43b;&#x438;-&#x43f;&#x438;&#x441;&#x430;&#x442;&#x435;&#x43b;&#x438;, &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x438;-&#x43f;&#x43e;&#x442;&#x440;&#x435;&#x431;&#x438;&#x442;&#x435;&#x43b;&#x438;, &#x43e;&#x431;&#x435;&#x434;&#x430;&#x44e;&#x449;&#x438;&#x435; &#x444;&#x438;&#x43b;&#x43e;&#x441;&#x43e;&#x444;&#x44b;). &#x410;&#x442;&#x43e;&#x43c;&#x430;&#x440;&#x43d;&#x44b;&#x435; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438; (compare-and-set) &#x438; &#x438;&#x445; &#x438;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;."/>
 <node CREATED="1387218022274" ID="ID_549253592" MODIFIED="1387218025868" TEXT="deadlocks"/>
 <node CREATED="1387218026946" ID="ID_276804576" MODIFIED="1387218030227" TEXT="livelock"/>
@@ -441,7 +706,7 @@
 <node CREATED="1387217233701" ID="ID_211611266" MODIFIED="1387217237388" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x442;&#x43e;&#x447;&#x435;&#x43a;, &#x43f;&#x43e;&#x43f;&#x430;&#x434;&#x430;&#x44e;&#x449;&#x438;&#x445; &#x432; &#x434;&#x438;&#x430;&#x43f;&#x430;&#x437;&#x43e;&#x43d;&#xa;"/>
 <node CREATED="1387217237388" ID="ID_1361747904" MODIFIED="1387217237404" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x435;&#x447;&#x435;&#x43d;&#x438;&#x439; &#x43e;&#x442;&#x440;&#x435;&#x437;&#x43a;&#x43e;&#x432;."/>
 </node>
-<node CREATED="1382966899487" FOLDED="true" ID="ID_134521864" MODIFIED="1447963103163" POSITION="right" TEXT="&#x41a;&#x43e;&#x43c;&#x431;&#x438;&#x43d;&#x430;&#x442;&#x43e;&#x440;&#x43d;&#x44b;&#x435; &#x430;&#x43b;&#x433;&#x43e;&#x440;&#x438;&#x442;&#x43c;&#x44b;&#xa;" VSHIFT="11">
+<node CREATED="1382966899487" ID="ID_134521864" MODIFIED="1450818895170" POSITION="right" TEXT="&#x41a;&#x43e;&#x43c;&#x431;&#x438;&#x43d;&#x430;&#x442;&#x43e;&#x440;&#x43d;&#x44b;&#x435; &#x430;&#x43b;&#x433;&#x43e;&#x440;&#x438;&#x442;&#x43c;&#x44b;&#xa;" VSHIFT="11">
 <node CREATED="1387217276450" ID="ID_273795159" MODIFIED="1387217279590" TEXT="&#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435; &#x441;&#x43b;&#x435;&#x434;&#x443;&#x44e;&#x449;&#x435;&#x439; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x442;&#x430;&#x43d;&#x43e;&#x432;&#x43a;&#x438;&#xa;"/>
 <node CREATED="1387217279590" ID="ID_1173024401" MODIFIED="1387217279590" TEXT="&#x432;&#x44b;&#x431;&#x43e;&#x440; &#x432;&#x441;&#x435;&#x445; &#x43f;&#x43e;&#x434;&#x43c;&#x43d;&#x43e;&#x436;&#x435;&#x441;&#x442;&#x432; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x440;&#x430;&#x437;&#x43c;&#x435;&#x440;&#x430;"/>
 <node CREATED="1387217295355" ID="ID_931301101" MODIFIED="1387217297262" TEXT="..."/>
@@ -462,20 +727,20 @@
 <node CREATED="1387217914683" ID="ID_619656687" MODIFIED="1387217966807" TEXT="Alignment of Queens"/>
 </node>
 <node CREATED="1387218360516" ID="ID_1359430717" MODIFIED="1387218396171" POSITION="right" TEXT="Categories">
-<node CREATED="1387218397249" FOLDED="true" HGAP="23" ID="ID_795698864" MODIFIED="1447963090556" TEXT="Simple recursive" VSHIFT="23">
+<node CREATED="1387218397249" HGAP="23" ID="ID_795698864" MODIFIED="1450818896889" TEXT="Simple recursive" VSHIFT="23">
 <node CREATED="1387218614697" ID="ID_1375676122" MODIFIED="1387218628899" TEXT="A simple recursive algorithm:&#xa;Solves the base cases directly&#xa;Recurs with a simpler subproblem&#xa;Does some extra work to convert the solution to the simpler subproblem into a solution to the given problem&#xa;I call these &#x201c;simple&#x201d; because several of the other algorithm types are inherently recursive&#xa;"/>
 <node CREATED="1387218638165" ID="ID_798384599" MODIFIED="1387230176769" TEXT="Examples">
 <node CREATED="1387218661399" HGAP="17" ID="ID_738607870" MODIFIED="1387230179237" TEXT="To count the number of elements in a list:&#xa;If the list is empty, return zero; otherwise,&#xa;Step past the first element, and count the remaining elements in the list&#xa;Add one to the result&#xa;To test if a value occurs in a list:&#xa;If the list is empty, return false; otherwise,&#xa;If the first thing in the list is the given value, return true; otherwise&#xa;Step past the first element, and test whether the value occurs in the remainder of the list&#xa;" VSHIFT="13"/>
 </node>
 </node>
-<node CREATED="1387218411186" FOLDED="true" HGAP="28" ID="ID_370923466" MODIFIED="1447963091499" TEXT="Backrtacking" VSHIFT="24">
+<node CREATED="1387218411186" HGAP="28" ID="ID_370923466" MODIFIED="1450818898801" TEXT="Backrtacking" VSHIFT="24">
 <node CREATED="1387295986828" ID="ID_1374968363" MODIFIED="1387295987719" TEXT="Backtracking algorithms are based on a depth-first recursive search A backtracking algorithm: Tests to see if a solution has been found, and if so, returns it; otherwise For each choice that can be made at this point, Make that choice Recur If the recursion returns a solution, return it If no choices remain, return failure "/>
 <node CREATED="1387296027687" HGAP="31" ID="ID_1292819205" MODIFIED="1447952215055" TEXT="Examples" VSHIFT="9">
 <arrowlink DESTINATION="ID_1138123096" ENDARROW="Default" ENDINCLINATION="-36;287;" ID="Arrow_ID_1757470467" STARTARROW="None" STARTINCLINATION="12;231;"/>
 <node CREATED="1387296031155" ID="ID_391071252" MODIFIED="1387296042999" TEXT="To color a map with no more than four colors:&#xa;color(Country n)&#xa;If all countries have been colored (n &gt; number of countries) return success; otherwise,&#xa;For each color c of four colors,&#xa;If country n is not adjacent to a country that has been colored c&#xa;Color country n with color c&#xa;recursivly color country n+1&#xa;If successful, return success&#xa;Return failure (if loop exits)&#xa;"/>
 </node>
 </node>
-<node CREATED="1387218418998" FOLDED="true" HGAP="26" ID="ID_701213410" MODIFIED="1447963092363" TEXT="Divide and conquer" VSHIFT="17">
+<node CREATED="1387218418998" HGAP="26" ID="ID_701213410" MODIFIED="1450818900449" TEXT="Divide and conquer" VSHIFT="17">
 <node CREATED="1387296087091" ID="ID_931079207" MODIFIED="1387296092013" TEXT="A divide and conquer algorithm consists of two parts:&#xa;Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively&#xa;Combine the solutions to the subproblems into a solution to the original problem&#xa;Traditionally, an algorithm is only called divide and conquer if it contains two or more recursive calls&#xa;"/>
 <node CREATED="1387296097091" ID="ID_1299581101" MODIFIED="1387296590438" TEXT="Examples">
 <arrowlink DESTINATION="ID_1198039621" ENDARROW="Default" ENDINCLINATION="1105;0;" ID="Arrow_ID_527707985" STARTARROW="None" STARTINCLINATION="1105;0;"/>
@@ -486,12 +751,12 @@
 </node>
 </node>
 <node CREATED="1387218425498" HGAP="24" ID="ID_71936428" MODIFIED="1387297200938" TEXT="Dynamic programming" VSHIFT="6"/>
-<node CREATED="1387218434389" FOLDED="true" HGAP="32" ID="ID_1220564495" MODIFIED="1447963094994" TEXT="Branch and bound" VSHIFT="11">
+<node CREATED="1387218434389" HGAP="32" ID="ID_1220564495" MODIFIED="1450818903302" TEXT="Branch and bound" VSHIFT="11">
 <node CREATED="1387297238562" ID="ID_1815456204" MODIFIED="1387297271733" TEXT="Branch and bound algorithms are generally used for optimization problems&#xa; - As the algorithm progresses, a tree of subproblems is formed&#xa; - The original problem is considered the &#x201c;root problem&#x201d;&#xa; - A method is used to construct an upper and lower bound for a given problem&#xa; - At each node, apply the bounding methods&#xa;  * If the bounds match, it is deemed a feasible solution to that particular subproblem&#xa;  * If bounds do not match, partition the problem represented by that node, and make the two subproblems into children nodes&#xa; - Continue, using the best known feasible solution to trim sections of the tree, until all nodes have been solved or trimmed"/>
 </node>
 <node CREATED="1387218446904" HGAP="33" ID="ID_1977393184" MODIFIED="1387296354319" TEXT="Brute force" VSHIFT="25"/>
 <node CREATED="1387218451779" HGAP="29" ID="ID_1313981552" MODIFIED="1387296352710" TEXT="Randomized" VSHIFT="35"/>
-<node CREATED="1366207682581" FOLDED="true" HGAP="27" ID="ID_816501557" MODIFIED="1447963096786" TEXT="Greedy algorithm" VSHIFT="-156">
+<node CREATED="1366207682581" HGAP="27" ID="ID_816501557" MODIFIED="1450818905135" TEXT="Greedy algorithm" VSHIFT="-156">
 <node CREATED="1366207698596" ID="ID_709640902" MODIFIED="1366207705752" TEXT="Kruskal"/>
 <node CREATED="1366207706518" ID="ID_933487602" MODIFIED="1366207708486" TEXT="Prim"/>
 <node CREATED="1366207708752" ID="ID_329063163" MODIFIED="1366207714595" TEXT="EDF scheduling"/>
