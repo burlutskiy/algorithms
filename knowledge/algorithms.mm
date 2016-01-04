@@ -215,9 +215,23 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1366207582853" FOLDED="true" HGAP="123" ID="ID_814180733" MODIFIED="1450818843277" POSITION="left" TEXT="Graphs" VSHIFT="20">
+<node CREATED="1366207582853" HGAP="123" ID="ID_814180733" MODIFIED="1451917747684" POSITION="left" TEXT="Graphs" VSHIFT="20">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1449700078094" HGAP="53" ID="ID_381749142" MODIFIED="1449760937210" TEXT="Directed Graphs" VSHIFT="12">
+<node CREATED="1449700078094" HGAP="53" ID="ID_381749142" MODIFIED="1451943241247" VSHIFT="12">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Directed Graphs
+    </p>
+    <p>
+      &#160;(Unweighted)
+    </p>
+  </body>
+</html>
+</richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1366207628975" HGAP="34" ID="ID_200001656" MODIFIED="1450727791327" TEXT="Topological Sort" VSHIFT="2">
 <node CREATED="1449762932812" HGAP="32" ID="ID_524611344" MODIFIED="1449763180137" TEXT="Precedence Scheduling" VSHIFT="-12">
@@ -253,7 +267,21 @@
 </node>
 <node CREATED="1449700505590" HGAP="49" ID="ID_512953833" MODIFIED="1450727811423" TEXT="Transitive Closure" VSHIFT="14"/>
 <node CREATED="1449700532644" HGAP="48" ID="ID_1733785869" MODIFIED="1450727809969" TEXT="PageRank" VSHIFT="19"/>
-<node CREATED="1449693229727" HGAP="52" ID="ID_542520731" MODIFIED="1449760938329" TEXT="Undirected Graphs" VSHIFT="28">
+<node CREATED="1449693229727" HGAP="52" ID="ID_542520731" MODIFIED="1451943307643" VSHIFT="28">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Undirected Graphs
+    </p>
+    <p>
+      (Unweighted)
+    </p>
+  </body>
+</html>
+</richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1366207586962" HGAP="28" ID="ID_505138465" MODIFIED="1450125426777" TEXT="Breadth-first search (BFS)" VSHIFT="-11">
 <node COLOR="#338800" CREATED="1449637086163" HGAP="39" ID="ID_1977548942" MODIFIED="1450125426086" TEXT="Path." VSHIFT="-28">
@@ -263,29 +291,6 @@
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449637274576" ID="ID_162638683" MODIFIED="1450125423612" TEXT="What is the shortest path between s and t ?"/>
 <node COLOR="#338800" CREATED="1450149188999" ID="ID_1982547500" MODIFIED="1450149207520" TEXT="Simple BFS">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1450149112439" ID="ID_1159217776" MODIFIED="1450149180300" TEXT="Dijkstra&apos;s Algorithm">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1450149355933" ID="ID_620014931" MODIFIED="1450149364799" TEXT="O(V^2)"/>
-<node CREATED="1450149368167" ID="ID_1139154631" MODIFIED="1450149378691" TEXT="1959"/>
-</node>
-<node CREATED="1450149553569" ID="ID_1449670774" MODIFIED="1450149554801" TEXT="Dijkstra&apos;s algorithm with Fibonacci heap">
-<node CREATED="1450149565932" ID="ID_698364918" MODIFIED="1450149567775" TEXT="O(E + V log V)&#x9;Fredman &amp; Tarjan 1984, Fredman &amp; Tarjan 1987"/>
-</node>
-<node CREATED="1450149139666" ID="ID_1676928936" MODIFIED="1450149180301" TEXT="Bellman-Ford Algorithm">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1450149165362" ID="ID_1268038329" MODIFIED="1450149180301" TEXT="A* Search Algorithm">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1450149237847" ID="ID_105386166" MODIFIED="1450149246528" TEXT="Floyd&#x2013;Warshall Algorithm ">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1450149258232" ID="ID_1716012033" MODIFIED="1450149263856" TEXT="Johnson&apos;s Algorithm ">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1450149278173" ID="ID_1071567266" MODIFIED="1450149284885" TEXT="Viterbi Algorithm ">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
@@ -350,18 +355,6 @@
 <node CREATED="1449760248323" ID="ID_363034030" MODIFIED="1449760258313" TEXT="McCarthy, 1960"/>
 </node>
 </node>
-<node CREATED="1366207616804" HGAP="60" ID="ID_416100782" MODIFIED="1450728783156" TEXT="Find Minimum Spanning Tree (MST)" VSHIFT="47">
-<node CREATED="1449637202283" ID="ID_821432006" MODIFIED="1449637203230" TEXT="What is the best way to connect all of the vertices?"/>
-<node CREATED="1450728783159" ID="ID_1833517067" MODIFIED="1450728856288" TEXT="A spanning tree of G is a subgraph T that is both a tree (connected and acyclic) and spanning (includesall of the vertices)" VSHIFT="23"/>
-<node CREATED="1450728874049" ID="ID_1739458360" MODIFIED="1450729840420" TEXT="Algorithms" VSHIFT="5">
-<node CREATED="1450728878432" ID="ID_1783066068" MODIFIED="1450728884261" TEXT="Brute Forse"/>
-</node>
-<node CREATED="1450729774045" HGAP="21" ID="ID_274982767" MODIFIED="1450729977279" TEXT="Greedy MST Algorithms" VSHIFT="12">
-<node CREATED="1450729843610" ID="ID_728485742" MODIFIED="1450730007277" TEXT="Kruskal&apos;s Algorithm"/>
-<node CREATED="1450729855033" ID="ID_1169477843" MODIFIED="1450730005236" TEXT="Prim&apos;s Algorithm"/>
-<node CREATED="1450729868529" ID="ID_7410875" MODIFIED="1450730002973" TEXT="Bruvkas&apos;s Algorithm"/>
-</node>
-</node>
 <node CREATED="1449637108021" HGAP="43" ID="ID_1348855484" MODIFIED="1450728767735" TEXT="Euler tour" VSHIFT="46">
 <node CREATED="1449637230373" ID="ID_1544600640" MODIFIED="1449637231262" TEXT="Is there a cycle that uses each edge exactly once?">
 <node CREATED="1449699227132" ID="ID_1255258659" MODIFIED="1449699255314" TEXT="Yes, if all vertices have even degree."/>
@@ -391,7 +384,64 @@
 </node>
 <node COLOR="#006699" CREATED="1449760855205" HGAP="33" ID="ID_1128000583" MODIFIED="1450149221438" TEXT="Multi-Source Shortes Paths" VSHIFT="19"/>
 </node>
-<node CREATED="1449870403550" ID="ID_666396324" MODIFIED="1449870404039" TEXT="http://www.personal.kent.edu/~rmuhamma/GraphTheory/MyGraphTheory/defEx.htm"/>
+<node CREATED="1449870403550" ID="ID_666396324" MODIFIED="1451942938234" TEXT="http://www.personal.kent.edu/~rmuhamma/GraphTheory/MyGraphTheory/defEx.htm" VSHIFT="17"/>
+</node>
+<node CREATED="1451942989317" HGAP="47" ID="ID_1258467134" MODIFIED="1451943322011" TEXT="Weighted Graphs" VSHIFT="11">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1451942999772" ID="ID_950974122" MODIFIED="1451943007816" TEXT="Shortest Paths">
+<node CREATED="1451943009819" ID="ID_770770472" MODIFIED="1451943017904" TEXT="Edge Relaxation"/>
+<node CREATED="1451943020123" ID="ID_1453143830" MODIFIED="1451943052638" TEXT="Shortest Path Tree( SPT)"/>
+<node CREATED="1450149112439" ID="ID_1159217776" MODIFIED="1450149180300" TEXT="Dijkstra&apos;s Algorithm">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1450149355933" ID="ID_620014931" MODIFIED="1450149364799" TEXT="O(V^2)"/>
+<node CREATED="1450149368167" ID="ID_1139154631" MODIFIED="1450149378691" TEXT="1959"/>
+</node>
+<node CREATED="1450149553569" ID="ID_1449670774" MODIFIED="1450149554801" TEXT="Dijkstra&apos;s algorithm with Fibonacci heap">
+<node CREATED="1450149565932" ID="ID_698364918" MODIFIED="1450149567775" TEXT="O(E + V log V)&#x9;Fredman &amp; Tarjan 1984, Fredman &amp; Tarjan 1987"/>
+</node>
+<node CREATED="1450149139666" ID="ID_1676928936" MODIFIED="1450149180301" TEXT="Bellman-Ford Algorithm">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1450149165362" ID="ID_1268038329" MODIFIED="1450149180301" TEXT="A* Search Algorithm">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1450149237847" ID="ID_105386166" MODIFIED="1450149246528" TEXT="Floyd&#x2013;Warshall Algorithm ">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1450149258232" ID="ID_1716012033" MODIFIED="1450149263856" TEXT="Johnson&apos;s Algorithm ">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1450149278173" ID="ID_1071567266" MODIFIED="1450149284885" TEXT="Viterbi Algorithm ">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+<node CREATED="1366207616804" HGAP="60" ID="ID_416100782" MODIFIED="1450728783156" TEXT="Find Minimum Spanning Tree (MST)" VSHIFT="47">
+<node CREATED="1449637202283" ID="ID_821432006" MODIFIED="1449637203230" TEXT="What is the best way to connect all of the vertices?"/>
+<node CREATED="1450728783159" ID="ID_1833517067" MODIFIED="1450728856288" TEXT="A spanning tree of G is a subgraph T that is both a tree (connected and acyclic) and spanning (includesall of the vertices)" VSHIFT="23"/>
+<node CREATED="1450728874049" ID="ID_1739458360" MODIFIED="1450729840420" TEXT="Algorithms" VSHIFT="5">
+<node CREATED="1450728878432" ID="ID_1783066068" MODIFIED="1450728884261" TEXT="Brute Forse"/>
+</node>
+<node CREATED="1450729774045" HGAP="21" ID="ID_274982767" MODIFIED="1450729977279" TEXT="Greedy MST Algorithms" VSHIFT="12">
+<node COLOR="#338800" CREATED="1450729843610" ID="ID_728485742" MODIFIED="1451917896715" TEXT="Kruskal&apos;s Algorithm">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1451918357872" ID="ID_242546026" MODIFIED="1451918497748" TEXT="Kruskal&apos;s algorithm processes the edges in order of their weight values (smallest to largest,  taking for the MST (coloring black) each edge that does not form a cycle with edges previously added, stopping after adding V-1 edges. The black edges form a forest of trees that evolves gradually into a single tree, the MST."/>
+</node>
+<node CREATED="1450729855033" HGAP="21" ID="ID_1169477843" MODIFIED="1451940218637" TEXT="Prim&apos;s Algorithm" VSHIFT="7">
+<node CREATED="1451918761009" ID="ID_1708873025" MODIFIED="1451918778989" TEXT="Jarnik 1930, Dijkstra 1957, Prim 1959"/>
+<node COLOR="#338800" CREATED="1451940088979" HGAP="24" ID="ID_439605766" MODIFIED="1451940213605" TEXT="Lazy" VSHIFT="2"/>
+<node COLOR="#ff0000" CREATED="1451940092466" HGAP="22" ID="ID_476663266" MODIFIED="1451940211598" TEXT="Eager" VSHIFT="3">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1451941162349" ID="ID_1072619485" MODIFIED="1451941180376" TEXT="return to this algorithm after studying heaps"/>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1450729868529" HGAP="16" ID="ID_7410875" MODIFIED="1451941235034" TEXT="Bruvkas&apos;s Algorithm" VSHIFT="2"/>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1451940428975" HGAP="68" ID="ID_1589900738" MODIFIED="1451943166840" TEXT="Euclidean MST" VSHIFT="-47"/>
+<node COLOR="#ff0000" CREATED="1451940537849" HGAP="77" ID="ID_1382450238" MODIFIED="1451941250016" TEXT="Clustering" VSHIFT="14">
+<node CREATED="1451940547089" ID="ID_1136755384" MODIFIED="1451940557732" TEXT="k-clustering"/>
+<node CREATED="1451940582422" ID="ID_1233862148" MODIFIED="1451940590563" TEXT="single link clustering"/>
+</node>
 </node>
 <node CREATED="1449693256662" HGAP="27" ID="ID_934883005" MODIFIED="1449693351403" TEXT="Internal Representation" VSHIFT="24">
 <node CREATED="1449693268293" ID="ID_1722720471" MODIFIED="1449693300952" TEXT="Set-Of-Edges graph">
@@ -767,10 +817,10 @@
 <node CREATED="1387296848962" ID="ID_448185933" MODIFIED="1387296876993" TEXT="An optimization problem is one in which you want to find, not just a solution, but the best solution&#xa;A &#x201c;greedy algorithm&#x201d; sometimes works well for optimization problems&#xa;A greedy algorithm works in phases: At each phase:&#xa; - You take the best you can get right now, without regard for future consequences&#xa; - You hope that by choosing a local optimum at each step, you will end up at a global optimum&#xa;"/>
 </node>
 </node>
-<node COLOR="#006699" CREATED="1449239759933" HGAP="24" ID="ID_1327640546" MODIFIED="1449239806986" POSITION="right" TEXT="https://en.wikipedia.org/wiki/List_of_algorithms" VSHIFT="18">
+<node COLOR="#006699" CREATED="1449239759933" HGAP="30" ID="ID_1327640546" MODIFIED="1451917731142" POSITION="right" TEXT="https://en.wikipedia.org/wiki/List_of_algorithms" VSHIFT="11">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#006699" CREATED="1449240191396" ID="ID_1212942459" MODIFIED="1449240199069" POSITION="right" TEXT="https://en.wikipedia.org/wiki/List_of_data_structures">
+<node COLOR="#006699" CREATED="1449240191396" HGAP="22" ID="ID_1212942459" MODIFIED="1451917729551" POSITION="right" TEXT="https://en.wikipedia.org/wiki/List_of_data_structures" VSHIFT="30">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>

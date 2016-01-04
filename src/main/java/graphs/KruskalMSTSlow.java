@@ -3,7 +3,7 @@ package graphs;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.SortedSet;
+import java.util.PriorityQueue;
 
 /**
  * @author alexey
@@ -16,8 +16,8 @@ public class KruskalMSTSlow<V> {
 	public KruskalMSTSlow(AbstractWeightedDigraph<V> graph) {
 		this.mst = new ArrayList<>(graph.vertices / 2);
 		IndexedGraph ig = new IndexedGraph(graph.vertices);
-		SortedSet<Edge> set = graph.sortedEdges();
-		Iterator<Edge> iterator = set.iterator();
+		PriorityQueue<Edge> pq = new PriorityQueue<>(graph.edges());
+		Iterator<Edge> iterator = pq.iterator();
 		while (iterator.hasNext()) {
 			Edge edge = iterator.next();
 			ConnectedComponents<Integer> cc = new ConnectedComponents<>(ig);

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package graphs;
 
 /**
@@ -35,9 +32,15 @@ public class Edge implements Comparable<Edge>{
 		return this.getWeight().compareTo(edge.getWeight());
 	}
 
+    public int other(int vertex) {
+        if      (vertex == v) return w;
+        else if (vertex == w) return v;
+        else throw new IllegalArgumentException("Illegal endpoint");
+    }
+
 	@Override
 	public String toString() {
-		return "Edge [v=" + v + ", w=" + w + ", weight=" + weight + "]";
+		return "[" + v + "," + w + "," + weight + "]";
 	}
 	
 }
