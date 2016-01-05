@@ -1,6 +1,7 @@
 package graphs;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -26,6 +27,7 @@ public class PrimsMSTTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testLargeEWG() throws Exception {
 		testEWG("largeEWG.txt");
 	}

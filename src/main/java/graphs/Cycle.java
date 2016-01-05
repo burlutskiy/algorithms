@@ -14,16 +14,16 @@ public class Cycle<V> {
 	private BitSet onStack;
 	private int[] edgeTo;
 	private Stack<V> cycle;
-	private final AbstractUnweightedDigraph<V> graph;
+	private final Graph<V> graph;
 
-	public Cycle(AbstractUnweightedDigraph<V> graph) {
-		this.marked = new BitSet(graph.vertices);
-		this.onStack = new BitSet(graph.vertices);
-		this.edgeTo = new int[graph.vertices];
+	public Cycle(Graph<V> graph) {
+		this.marked = new BitSet(graph.getVertices());
+		this.onStack = new BitSet(graph.getVertices());
+		this.edgeTo = new int[graph.getVertices()];
 		this.graph = graph;
 		if (hasSelfLoop())
 			return;
-		for (int v = 0; v < graph.vertices; v++) {
+		for (int v = 0; v < graph.getVertices(); v++) {
 			if (!marked.get(v)) {
 				dfs(v, -1);
 			}

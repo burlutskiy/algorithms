@@ -1,6 +1,3 @@
-/**
- * 
- */
 package graphs;
 
 import stacks.Stack;
@@ -10,16 +7,15 @@ import stacks.Stack;
  *
  *         Given a digraph, put the vertices in order such that all its directed
  *         edges point from a vertex earlier in the order to a vertex later in
- *         the order. Proposition. A digraph has a topological order if and only
- *         if it is a DAG. <br>
+ *         the order. Proposition. A digraph has a topological order iff it is a DAG. <br>
  *         Proposition. Reverse postorder in a DAG is a topological sort.<br>
  *         Proposition. With depth-first search, we can topologically sort a DAG
  *         in time proportional to V + E.<br>
  */
-public class TopologicalSort<V> {
+public class TopologicalOrder<V> {
 	private Stack<V> order;
 
-	public TopologicalSort(AbstractDigraph<V, ?, ?> graph) {
+	public TopologicalOrder(Graph<V> graph) {
 		final Stack<V> stack = new Stack<>();
 		GraphVisitor<V> visitor = new GraphVisitor<V>() {
 			@Override

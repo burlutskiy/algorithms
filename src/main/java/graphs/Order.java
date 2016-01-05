@@ -10,20 +10,20 @@ import java.util.BitSet;
  *            object
  */
 public class Order<V> {
-	final AbstractDigraph<V, ?, ?> graph;
+	final Graph<V> graph;
 	final BitSet marked;
 	final int edgeTo[];
 	final GraphVisitor<V> visitor;
 	final GraphVisitor.Direction direction;
 
-	public Order(AbstractDigraph<V, ?, ?> graph, GraphVisitor<V> visitor, GraphVisitor.Direction direction) {
+	public Order(Graph<V> graph, GraphVisitor<V> visitor, GraphVisitor.Direction direction) {
 		super();
 		this.graph = graph;
 		this.visitor = visitor;
 		this.direction = direction;
 		this.marked = new BitSet(graph.getVertices());
 		this.edgeTo = new int[graph.getVertices()];
-		for (int v = 0; v < graph.vertices; v++) {
+		for (int v = 0; v < graph.getVertices(); v++) {
 			if (!marked.get(v)) {
 				dfs(v);
 			}

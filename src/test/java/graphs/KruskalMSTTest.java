@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 import java.util.TreeSet;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -35,6 +36,7 @@ public class KruskalMSTTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testLargeEWG() throws Exception {
 		testEWG("largeEWG.txt");
 	}

@@ -26,8 +26,8 @@ public class StronglyConnectedComponents<V> {
 		this.marked = new BitSet(graph.vertices);
 		this.cc = new int[graph.vertices];
 		this.size = new int[graph.vertices];
-		TopologicalSort<V> toposort = new TopologicalSort<>(graph.reverse());
-		for (V v : toposort.order()) {
+		TopologicalOrder<V> order = new TopologicalOrder<>(graph.reverse());
+		for (V v : order.order()) {
 			int iv = graph.indexFor(v);
 			if (!marked.get(iv)) {
 				dfs(iv);

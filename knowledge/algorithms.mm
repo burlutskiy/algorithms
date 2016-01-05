@@ -389,30 +389,126 @@
 <node CREATED="1451942989317" HGAP="47" ID="ID_1258467134" MODIFIED="1451943322011" TEXT="Weighted Graphs" VSHIFT="11">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1451942999772" ID="ID_950974122" MODIFIED="1451943007816" TEXT="Shortest Paths">
-<node CREATED="1451943009819" ID="ID_770770472" MODIFIED="1451943017904" TEXT="Edge Relaxation"/>
-<node CREATED="1451943020123" ID="ID_1453143830" MODIFIED="1451943052638" TEXT="Shortest Path Tree( SPT)"/>
-<node CREATED="1450149112439" ID="ID_1159217776" MODIFIED="1450149180300" TEXT="Dijkstra&apos;s Algorithm">
+<node COLOR="#ff0000" CREATED="1450149165362" ID="ID_1268038329" MODIFIED="1452019621277" TEXT="A* Search Algorithm">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1450149355933" ID="ID_620014931" MODIFIED="1450149364799" TEXT="O(V^2)"/>
-<node CREATED="1450149368167" ID="ID_1139154631" MODIFIED="1450149378691" TEXT="1959"/>
 </node>
+<node COLOR="#ff0000" CREATED="1450149237847" ID="ID_105386166" MODIFIED="1452019621279" TEXT="Floyd&#x2013;Warshall Algorithm ">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#ff0000" CREATED="1450149258232" ID="ID_1716012033" MODIFIED="1452019621278" TEXT="Johnson&apos;s Algorithm ">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#ff0000" CREATED="1450149278173" ID="ID_1071567266" MODIFIED="1452019621278" TEXT="Viterbi Algorithm ">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1451944024561" ID="ID_668345762" MODIFIED="1451944210400">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: center">
+      General Shortes-Paths Algorithm
+    </p>
+    <p style="text-align: center">
+      (to compute SPT from s)
+    </p>
+  </body>
+</html>
+</richcontent>
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1451943009819" ID="ID_770770472" MODIFIED="1451944093787" TEXT="Idea is to relax any edge"/>
+<node CREATED="1450149112439" ID="ID_1159217776" MODIFIED="1452019256399">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Dijkstra's Algorithm
+    </p>
+    <p>
+      (nonnegative weights)
+    </p>
+  </body>
+</html>
+</richcontent>
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node COLOR="#338800" CREATED="1450149355933" ID="ID_620014931" MODIFIED="1452019607742" TEXT="O(V^2) 1959"/>
 <node CREATED="1450149553569" ID="ID_1449670774" MODIFIED="1450149554801" TEXT="Dijkstra&apos;s algorithm with Fibonacci heap">
-<node CREATED="1450149565932" ID="ID_698364918" MODIFIED="1450149567775" TEXT="O(E + V log V)&#x9;Fredman &amp; Tarjan 1984, Fredman &amp; Tarjan 1987"/>
+<node CREATED="1450149565932" ID="ID_698364918" MODIFIED="1452019237717">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      O(E + V log V)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Fredman &amp; Tarjan 1984, Fredman &amp; Tarjan 1987<br />which is not good as far as V &gt;&gt; E
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node CREATED="1450149139666" ID="ID_1676928936" MODIFIED="1450149180301" TEXT="Bellman-Ford Algorithm">
+</node>
+<node COLOR="#ff0000" CREATED="1452019257769" ID="ID_1755693421" MODIFIED="1452019606602" TEXT="Based On Binary Heap">
+<node CREATED="1452019271929" ID="ID_134624272" MODIFIED="1452019278597" TEXT="O(ElogV)"/>
+</node>
+<node CREATED="1451944162362" ID="ID_1637563542" MODIFIED="1451944207937">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: center">
+      Topological Sort Algorithm
+    </p>
+    <p style="text-align: center">
+      (no directed cycles)
+    </p>
+  </body>
+</html></richcontent>
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1452021811544" ID="ID_1274989209" MODIFIED="1452021832566">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: center">
+      Dijkstra's Algorithm<br />for DAG
+    </p>
+  </body>
+</html></richcontent>
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1452021636345" HGAP="19" ID="ID_1356122303" MODIFIED="1452021746467" TEXT="Single-Source Shortest Paths DAG Algorithm" VSHIFT="15">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1450149165362" ID="ID_1268038329" MODIFIED="1450149180301" TEXT="A* Search Algorithm">
+</node>
+</node>
+</node>
+<node CREATED="1451943020123" ID="ID_1453143830" MODIFIED="1451943052638" TEXT="Shortest Path Tree( SPT)">
+<node CREATED="1452023267931" ID="ID_1052863660" MODIFIED="1452023293055" TEXT="Proposition: A SPT exists iff no negative cycles"/>
+</node>
+<node CREATED="1450149139666" ID="ID_1676928936" MODIFIED="1451944137566">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Bellman-Ford Algorithm
+    </p>
+    <p>
+      (no negative cycles)
+    </p>
+  </body>
+</html>
+</richcontent>
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1452019158191" ID="ID_465159091" MODIFIED="1452019191507" TEXT="Initialize distTo[s] to 0 and all other distTo[] values to infinity. &#xa;Then, considering the digraph&apos;s edges in any order, and relax all edges. &#xa;Make V such passes.for (int pass = 0; pass &lt; G.V(); pass++)&#xa;   for (int v = 0; v &lt; G.V(); v++)&#xa;      for (DirectedEdge e : G.adj(v))&#xa;          relax(e);"/>
+<node CREATED="1452019372796" HGAP="23" ID="ID_486093339" MODIFIED="1452019892219" TEXT="Queue-based Bellman-Ford Algorithm" VSHIFT="14">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1450149237847" ID="ID_105386166" MODIFIED="1450149246528" TEXT="Floyd&#x2013;Warshall Algorithm ">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1450149258232" ID="ID_1716012033" MODIFIED="1450149263856" TEXT="Johnson&apos;s Algorithm ">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1450149278173" ID="ID_1071567266" MODIFIED="1450149284885" TEXT="Viterbi Algorithm ">
-<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
 <node CREATED="1366207616804" HGAP="60" ID="ID_416100782" MODIFIED="1450728783156" TEXT="Find Minimum Spanning Tree (MST)" VSHIFT="47">
