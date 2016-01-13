@@ -17,10 +17,10 @@ public class SortTests {
 		test(new RadixSort());
 	}
 
-	@Test
-	public void testCountingSort() {
-		test(new CountingSort());
-	}
+//	@Test
+//	public void testCountingSort() {
+//		test(new LSDSort());
+//	}
 
 	@Test
 	public void testQuickSort() {
