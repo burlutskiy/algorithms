@@ -60,7 +60,7 @@
 <node CREATED="1387217839670" HGAP="35" ID="ID_1961156975" MODIFIED="1450818859795" TEXT="Abstract syntax tree" VSHIFT="14"/>
 </node>
 <node COLOR="#ff0000" CREATED="1384975461522" HGAP="44" ID="ID_352589872" MODIFIED="1452700560438" POSITION="right" TEXT="Cache Algorithms" VSHIFT="15"/>
-<node COLOR="#990000" CREATED="1366207444205" FOLDED="true" HGAP="114" ID="ID_1496022331" MODIFIED="1452715686056" POSITION="left" TEXT="Trees" VSHIFT="14">
+<node COLOR="#990000" CREATED="1366207444205" HGAP="114" ID="ID_1496022331" MODIFIED="1453839389521" POSITION="left" TEXT="Trees" VSHIFT="14">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1447962643469" ID="ID_407864358" MODIFIED="1449760905080" STYLE="bubble" TEXT="Binary Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -234,8 +234,7 @@
       &#160;(Unweighted)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1366207628975" HGAP="34" ID="ID_200001656" MODIFIED="1450727791327" TEXT="Topological Sort" VSHIFT="2">
 <node CREATED="1449762932812" HGAP="32" ID="ID_524611344" MODIFIED="1452715686037" TEXT="Precedence Scheduling" VSHIFT="-12">
@@ -284,8 +283,7 @@
       (Unweighted)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1366207586962" HGAP="28" ID="ID_505138465" MODIFIED="1452715685993" TEXT="Breadth-first search (BFS)" VSHIFT="-11">
 <node COLOR="#338800" CREATED="1449637086163" HGAP="39" ID="ID_1977548942" MODIFIED="1452715685994" TEXT="Path." VSHIFT="-28">
@@ -418,8 +416,7 @@
       (to compute SPT from s)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1451943009819" ID="ID_770770472" MODIFIED="1451944093787" TEXT="Idea is to relax any edge"/>
 <node CREATED="1450149112439" ID="ID_1159217776" MODIFIED="1452715685956">
@@ -435,8 +432,7 @@
       (nonnegative weights)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1450149355933" ID="ID_620014931" MODIFIED="1452019607742" TEXT="O(V^2) 1959"/>
 <node CREATED="1450149553569" ID="ID_1449670774" MODIFIED="1452715685958" TEXT="Dijkstra&apos;s algorithm with Fibonacci heap">
@@ -505,8 +501,7 @@
       (no negative cycles)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1452019158191" ID="ID_465159091" MODIFIED="1452019191507" TEXT="Initialize distTo[s] to 0 and all other distTo[] values to infinity. &#xa;Then, considering the digraph&apos;s edges in any order, and relax all edges. &#xa;Make V such passes.for (int pass = 0; pass &lt; G.V(); pass++)&#xa;   for (int v = 0; v &lt; G.V(); v++)&#xa;      for (DirectedEdge e : G.adj(v))&#xa;          relax(e);"/>
 <node CREATED="1452019372796" HGAP="23" ID="ID_486093339" MODIFIED="1452019892219" TEXT="Queue-based Bellman-Ford Algorithm" VSHIFT="14">
@@ -635,8 +630,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1450818968328" ID="ID_1545734194" MODIFIED="1450819429079" TEXT="Quick-Union Algorithm">
@@ -694,8 +688,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1450818979856" ID="ID_475357559" MODIFIED="1450819429782" TEXT="Weighted Quick-Union Algorithm">
@@ -753,8 +746,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1450819029262" ID="ID_98128450" MODIFIED="1450820646924" TEXT="Weighted Quick-Union With Path Compression Algorithm">
@@ -830,8 +822,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1450819670584" HGAP="28" ID="ID_1980535870" MODIFIED="1450821523252" TEXT="log*(N) - iterative logarithm" VSHIFT="-5"/>
 <node CREATED="1450819693504" HGAP="39" ID="ID_962058214" MODIFIED="1452715685932" TEXT="alpha(M,N) - The inverse Ackermann hierarchy" VSHIFT="-5">
 <node CREATED="1450819722630" ID="ID_67208934" MODIFIED="1450819723355" TEXT="http://www.gabrielnivasch.org/fun/inverse-ackermann"/>
