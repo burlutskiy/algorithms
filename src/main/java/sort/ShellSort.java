@@ -1,11 +1,17 @@
 package sort;
 
-import java.util.Arrays;
+/**
+ * 
+ * @author alexey
+ *
+ */
+public class ShellSort extends AbstractSort {
 
-public class ShellSort implements SortAlgorithm {
+	public ShellSort(int[] a) {
+		super(a);
+	}
 
-	@Override
-	public void sort(int[] a) {
+	public void sort() {
 		final int n = a.length;
 		int h = 1;
 		// 3x+1: 1, 4, 13, 40
@@ -13,15 +19,9 @@ public class ShellSort implements SortAlgorithm {
 			h = h * 3 + 1;
 		for (; h > 0; h /= 3)
 			for (int i = h; i < n; i++)
-				for (int j = i; j >= h; j -= h)
+				for (int j = i; j >= h; j = decrease(j,h))
 					if (less(j, j - h, a))
 						swap(j, j - h, a);
 	}
 
-	public static void main(String[] args) {
-		ShellSort sort = new ShellSort();
-		int[] a = new int[] { 1, 2, 7, 6, 5, 4, 3, 9, 8, 0 };
-		sort.sort(a);
-		System.out.println(Arrays.toString(a));
-	}
 }

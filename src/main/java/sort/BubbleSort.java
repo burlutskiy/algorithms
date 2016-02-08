@@ -7,19 +7,15 @@ package sort;
  * 
  */
 public class BubbleSort extends AbstractSort {
-	public void sort(int[] a) {
+	public BubbleSort(int[] a) {
+		super(a);
+	}
+
+	public void sort() {
 		int n = a.length;
-		for (int i = 0; i < n; i++) {
-			for (int j = 1; j < n - i; j++) {
-				if (a[j - 1] > a[j]) {
-					int dumb = a[j - 1];
-					a[j - 1] = a[j];
-					a[j] = dumb;
-					stats.increaseSwaps();
-				}
-				stats.increasePasses();
-				stats.increaseComparisons();
-			}
-		}
+		for (int i = 0; i < n; i++)
+			for (int j = 1; j < n - i; j=increase(j)) 
+				if (less(j, j - 1, a)) 
+					swap(j-1,j,a);
 	}
 }

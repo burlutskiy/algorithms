@@ -1,11 +1,12 @@
 package sort;
 
-public class SmoothsSort implements SortAlgorithm {
+public class SmoothsSort extends AbstractSort{
 
-	@Override
-	public void sort(int[] a) {
-		// TODO Auto-generated method stub
+	public SmoothsSort(int[] a) {
+		super(a);
+	}
 
+	void sort() {
 	}
 
 }

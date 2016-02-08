@@ -1,11 +1,14 @@
 package sort;
 
-public class HeapSort implements SortAlgorithm {
+public class HeapSort extends AbstractSort {
 
-	@Override
-	public void sort(int[] a) {
-		// TODO Auto-generated method stub
-
+	public HeapSort(int[] a) {
+		super(a);
 	}
+
+	public void sort() {
+	}
+
+
 
 }

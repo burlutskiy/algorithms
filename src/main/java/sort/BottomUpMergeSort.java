@@ -1,8 +1,12 @@
 package sort;
 
-public class MergeSort extends AbstractSort {
-	@Override
-	public void sort(int[] a) {
+public class BottomUpMergeSort extends AbstractSort {
+
+	public BottomUpMergeSort(int[] a) {
+		super(a);
+	}
+
+	public void sort() {
 		int n = a.length;
 		int[] b = new int[n];
 		bottomUpSort(n, a, b);
@@ -14,8 +18,6 @@ public class MergeSort extends AbstractSort {
 				bottomUpMerge(a, i, Math.min(i + width, n), Math.min(i + 2 * width, n), b);
 			}
 //			System.arraycopy(b, 0, a, 0, b.length);
-			stats.increaseSwaps(b.length);
-			stats.increasePasses(b.length);
 		}
 	}
 
@@ -28,8 +30,6 @@ public class MergeSort extends AbstractSort {
 			} else { 
 				b[j] = a[i1++];
 			}
-			stats.increaseComparisons(3);
-			stats.increasePasses();
 		}
 	}
 }

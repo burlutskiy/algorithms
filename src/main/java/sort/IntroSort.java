@@ -1,11 +1,14 @@
 package sort;
 
-public class IntroSort implements SortAlgorithm {
+public class IntroSort extends AbstractSort {
 
-	@Override
-	public void sort(int[] a) {
-		// TODO Auto-generated method stub
-
+	public IntroSort(int[] a) {
+		super(a);
 	}
+
+	public void sort() {
+	}
+
+
 
 }

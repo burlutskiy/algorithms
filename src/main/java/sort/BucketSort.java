@@ -1,11 +1,13 @@
 package sort;
 
-public class BucketSort implements SortAlgorithm {
+public class BucketSort extends AbstractSort {
 
-	@Override
-	public void sort(int[] a) {
-		// TODO Auto-generated method stub
-
+	public BucketSort(int[] a) {
+		super(a);
 	}
+
+	public void sort() {
+	}
+
 
 }

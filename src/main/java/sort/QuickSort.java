@@ -1,11 +1,14 @@
 package sort;
 
-public class QuickSort implements SortAlgorithm {
+public class QuickSort extends AbstractSort {
 
-	@Override
-	public void sort(int[] a) {
-		// TODO Auto-generated method stub
-
+	public QuickSort(int[] a) {
+		super(a);
 	}
+
+	public void sort() {
+	}
+
+
 
 }

@@ -47,6 +47,11 @@ abstract class AbstractSort implements SortAlgorithm {
 		return --i;
 	}
 
+	int decrease(int i, int step) {
+		passesCount++;
+		return i-step;
+	}
+
 	public long getComparisonCount() {
 		return comparisonCount;
 	}

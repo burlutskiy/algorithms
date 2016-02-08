@@ -1,11 +1,13 @@
 package sort;
 
-public class OddEvenSort implements SortAlgorithm {
+public class OddEvenSort extends AbstractSort {
 
-	@Override
-	public void sort(int[] a) {
-		// TODO Auto-generated method stub
-
+	public OddEvenSort(int[] a) {
+		super(a);
 	}
+
+	public void sort() {
+	}
+
 
 }

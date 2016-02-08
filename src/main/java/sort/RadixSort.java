@@ -1,11 +1,12 @@
 package sort;
 
-public class RadixSort implements SortAlgorithm {
+public class RadixSort extends AbstractSort {
 
-	@Override
-	public void sort(int[] a) {
-		// TODO Auto-generated method stub
+	public RadixSort(int[] a) {
+		super(a);
+	}
 
+	public void sort() {
 	}
 
 }
