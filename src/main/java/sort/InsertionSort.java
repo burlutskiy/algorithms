@@ -7,16 +7,16 @@ package sort;
  * 
  */
 public class InsertionSort extends AbstractSort {
-	public void sort(int[] a) {
+	public InsertionSort(int[] a) {
+		super(a);
+	}
+
+	void sort() {
 		int n = a.length;
 		for (int i = 1; i < n; i++) {
-			for (int j = i; j > 0 && less(j, j - 1, a); j--) {
-				swap(j, j-1, a);
-				stats.increaseSwaps();
-				stats.increasePasses();
-				stats.increaseComparisons();
+			for (int j = i; j > 0 && less(j, j - 1, a); j = decrease(j)) {
+				swap(j - 1, j, a);
 			}
-			stats.increaseComparisons();
 		}
 	}
 }

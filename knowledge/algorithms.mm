@@ -30,8 +30,7 @@
       Two-Stack Algorithm<br />(E.W. Dijkstra)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -85,7 +84,7 @@
 <node CREATED="1387218113163" ID="ID_365635137" MODIFIED="1387218115694" TEXT="KMP"/>
 <node CREATED="1387218116694" ID="ID_1772116987" MODIFIED="1387218120053" TEXT="Rabin-Karp"/>
 </node>
-<node CREATED="1387218360516" FOLDED="true" ID="ID_1359430717" MODIFIED="1454514578369" POSITION="right" TEXT="Categories">
+<node CREATED="1387218360516" FOLDED="true" ID="ID_1359430717" MODIFIED="1454941549141" POSITION="right" TEXT="Categories">
 <node CREATED="1387218397249" HGAP="23" ID="ID_795698864" MODIFIED="1450818896889" TEXT="Simple recursive" VSHIFT="23">
 <node CREATED="1387218614697" ID="ID_1375676122" MODIFIED="1387218628899" TEXT="A simple recursive algorithm:&#xa;Solves the base cases directly&#xa;Recurs with a simpler subproblem&#xa;Does some extra work to convert the solution to the simpler subproblem into a solution to the given problem&#xa;I call these &#x201c;simple&#x201d; because several of the other algorithm types are inherently recursive&#xa;"/>
 <node CREATED="1387218638165" ID="ID_798384599" MODIFIED="1387230176769" TEXT="Examples">
@@ -130,6 +129,26 @@
 </node>
 <node COLOR="#006699" CREATED="1449239759933" HGAP="36" ID="ID_1327640546" MODIFIED="1454514570040" POSITION="left" TEXT="https://en.wikipedia.org/wiki/List_of_algorithms" VSHIFT="-61">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1453979318069" ID="ID_492314445" MODIFIED="1453979335444" POSITION="right" TEXT="Algorithm Analysis">
+<node CREATED="1453979338722" ID="ID_1487132199" MODIFIED="1453979341139" TEXT="Observe">
+<node CREATED="1453979361667" ID="ID_79837848" MODIFIED="1453979486830" TEXT="some features of natural world"/>
+</node>
+<node CREATED="1453979341592" ID="ID_1594098027" MODIFIED="1453979419440" TEXT="Hypotisize">
+<node CREATED="1453979421327" ID="ID_736759073" MODIFIED="1453979443943" TEXT="a model that is consistent with observations"/>
+</node>
+<node CREATED="1453979349067" ID="ID_663435214" MODIFIED="1453979353402" TEXT="Predict">
+<node CREATED="1453979449301" ID="ID_1783975523" MODIFIED="1453979474143" TEXT="events using the hipothesis"/>
+</node>
+<node CREATED="1453979353760" ID="ID_1554708892" MODIFIED="1453979357466" TEXT="Verify">
+<node CREATED="1453979491631" ID="ID_917353406" MODIFIED="1453979516669" TEXT="the predictions by making further observations"/>
+</node>
+<node CREATED="1453979357840" ID="ID_81590295" MODIFIED="1453979359986" TEXT="Validate">
+<node CREATED="1453979520468" ID="ID_1502817750" MODIFIED="1454804282475" TEXT="by repeating until the hypothesis and observations agree"/>
+</node>
+</node>
+<node CREATED="1454804282881" HGAP="24" ID="ID_1163848814" MODIFIED="1454804284680" POSITION="right" TEXT="Computational Geometry" VSHIFT="18">
+<node CREATED="1454804283839" ID="ID_921064621" MODIFIED="1454804284270" TEXT="3-Sum"/>
 </node>
 </node>
 </map>
