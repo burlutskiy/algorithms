@@ -24,10 +24,4 @@ abstract class AbstractSort implements SortAlgorithm {
 		System.out.println(String.format("%s: size=%d, passes=%d(n^%d), swaps=%d(n^%d)", getClass().getSimpleName(),
 				size, passes, i, swaps, j));
 	}
-	
-	void swap(int i, int j, int[] a){
-		a[i] = a[i] ^ a[j];
-		a[j] = a[i] ^ a[j];
-		a[i] = a[i] ^ a[j];
-	}
 }

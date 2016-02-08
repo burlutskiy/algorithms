@@ -15,7 +15,7 @@ public class CoctalSort extends AbstractSort {
 		stats.increasePasses();
 	}
 
-	private boolean less(int x, int y, int[] a) {
+	public boolean less(int x, int y, int[] a) {
 		stats.increaseComparisons();
 		return a[x] < a[y];
 	}

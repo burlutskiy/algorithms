@@ -36,9 +36,6 @@
 <node COLOR="#ff0000" CREATED="1383142022472" MODIFIED="1454514416351" POSITION="right" TEXT="Timsort">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1383142087715" MODIFIED="1454514416351" POSITION="right" TEXT="Shellsort">
-<font NAME="SansSerif" SIZE="12"/>
-</node>
 <node COLOR="#338800" CREATED="1383141925426" ID="ID_752388606" MODIFIED="1454514416351" POSITION="left" TEXT="Bubble"/>
 <node COLOR="#338800" CREATED="1383141931107" ID="ID_1303706530" MODIFIED="1454514416351" POSITION="left" TEXT="Comb"/>
 <node COLOR="#338800" CREATED="1383141945307" ID="ID_1903593955" MODIFIED="1454514416351" POSITION="left" TEXT="Insertion">
@@ -50,6 +47,76 @@
 <node CREATED="1454623001656" ID="ID_985165847" MODIFIED="1454623026292" TEXT="In iteration i, find index min of smallest remaining entry"/>
 <node CREATED="1454623026943" ID="ID_45870288" MODIFIED="1454623045308" TEXT="swap a[i] and a[min]"/>
 <node CREATED="1454623380659" ID="ID_626561665" MODIFIED="1454623390103" TEXT="N^2 / 2"/>
+</node>
+<node COLOR="#338800" CREATED="1383142087715" ID="ID_1158187149" MODIFIED="1454706697831" POSITION="left" TEXT="Shellsort">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1454700723933" ID="ID_1002169000" MODIFIED="1454706696751">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Move entries more then one position at a time by h-sorting the array,<br />an h-sorted array is h interleaved sorted subsequences.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1454701227600" ID="ID_1567007134" MODIFIED="1454706696752" TEXT="h-sorting">
+<node CREATED="1454701231247" HGAP="15" ID="ID_1600013244" MODIFIED="1454706696752" TEXT="Knuth 3x+1" VSHIFT="2">
+<node CREATED="1454706400576" HGAP="21" ID="ID_1037717617" MODIFIED="1454706696752" TEXT="" VSHIFT="2">
+<icon BUILTIN="hourglass"/>
+<node CREATED="1449240504883" HGAP="15" ID="ID_147837760" MODIFIED="1454706696752" VSHIFT="2">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table class="infobox" style="font-size: 12.32px; border-spacing: 3px; color: black; margin-top: 0; margin-right: 0px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; clear: right; line-height: 1.5em; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(249, 249, 249)">
+      <tr>
+        <td style="vertical-align: top; text-align: left">
+          
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Average </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Space </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(1)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(1)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Sort </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">??? </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(N^3/2)</font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1454706648082" ID="ID_512183384" MODIFIED="1454706696752" TEXT="Asymptotic growth rate?"/>
+<node CREATED="1454706665609" ID="ID_252395082" MODIFIED="1454706696752" TEXT="Best sequence of increments?"/>
+<node CREATED="1454706678464" ID="ID_440143848" MODIFIED="1454706696752" TEXT="Average-case performance?"/>
 </node>
 </node>
 </map>
