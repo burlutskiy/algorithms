@@ -1,11 +1,11 @@
-<map version="0.9.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1352972477138" ID="ID_773597506" MODIFIED="1352975255874" STYLE="bubble" TEXT="The Art of MP">
 <node CREATED="1352972697499" ID="ID_224943882" MODIFIED="1352972708749" POSITION="right" TEXT="a fable">
 <node CREATED="1352972712530" ID="ID_650192461" MODIFIED="1352972724983" TEXT="Bob has a dog"/>
 <node CREATED="1352972726046" ID="ID_709708173" MODIFIED="1352972733358" TEXT="Alice has a cat"/>
 <node CREATED="1352972752468" ID="ID_346422935" MODIFIED="1352972783108" TEXT="The yard is located between them"/>
-<node CREATED="1352976590852" ID="ID_99137963" MODIFIED="1352976638961" TEXT="Code">
+<node CREATED="1352976590852" ID="ID_99137963" MODIFIED="1454512973535" TEXT="Code">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -180,10 +180,10 @@
       while(can == 1);
     </p>
     <p>
-      System.out.println(&quot;pets are on yard&quot;);
+      System.out.println("pets are on yard");
     </p>
     <p>
-      System.out.println(&quot;food consumed&quot;);
+      System.out.println("food consumed");
     </p>
     <p>
       can = 1;
@@ -198,7 +198,7 @@
       while(can == 0);
     </p>
     <p>
-      System.out.println(&quot;food is on the yard&quot;);
+      System.out.println("food is on the yard");
     </p>
     <p>
       can = 0;
@@ -261,10 +261,9 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node CREATED="1352978283144" ID="ID_546445889" MODIFIED="1352978303097" TEXT="Mutual Exclusion: Bob and the pets are never in the yard together. &#x2; &#xa;&#xa;Starvation-freedom: If Bob is always willing to feed, and the pets are always famished, then the pets will eat infinitely often. &#x2; &#xa;&#xa;Producer&#x2013;Consumer: The pets will not enter the yard unless there is food, and Bob will never provide more food if there is unconsumed food."/>
+<node CREATED="1352978283144" ID="ID_546445889" MODIFIED="1352978303097" TEXT="Mutual Exclusion: Bob and the pets are never in the yard together.  &#xa;&#xa;Starvation-freedom: If Bob is always willing to feed, and the pets are always famished, then the pets will eat infinitely often.  &#xa;&#xa;Producer&#x2013;Consumer: The pets will not enter the yard unless there is food, and Bob will never provide more food if there is unconsumed food."/>
 </node>
 <node CREATED="1352978949429" HGAP="14" ID="ID_1524350998" MODIFIED="1352978952914" POSITION="left" TEXT="The Readers&#x2013;Writers Problem" VSHIFT="22">
 <node CREATED="1352978969398" ID="ID_1032960150" MODIFIED="1352979022242" TEXT="the problem">
@@ -324,8 +323,7 @@
       Alice consumes them.
     &lt;/p&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-</richcontent>
+&lt;/html&gt;</richcontent>
 </node>
 <node CREATED="1352978990992" ID="ID_335478271" MODIFIED="1352979004617" TEXT="there some ways to avoid waiting">
 <richcontent TYPE="NOTE"><html>
@@ -337,13 +335,13 @@
       If this problem is so easy to solve, then why do we bring it up? Both themutual
     </p>
     <p>
-      exclusion and producer&#8211;consumer protocols require waiting: if one participant is
+      exclusion and producer&#x2013;consumer protocols require waiting: if one participant is
     </p>
     <p>
       subjected to an unexpected delay, so is the other. In the context of shared multiprocessor
     </p>
     <p>
-      memory, a solution to the readers&#8211;writers problem is a way of allowing
+      memory, a solution to the readers&#x2013;writers problem is a way of allowing
     </p>
     <p>
       a thread to capture an instantaneous view of several memory locations. Capturing
@@ -355,7 +353,7 @@
       these locations while they are being read, is a powerful tool that can be used
     </p>
     <p>
-      for backups, debugging, and in many other situations. Surprisingly, the readers&#8211;
+      for backups, debugging, and in many other situations. Surprisingly, the readers&#x2013;
     </p>
     <p>
       writers problem does have solutions that do not require waiting. We examine
@@ -364,8 +362,7 @@
       several such solutions later on.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1352979109555" ID="ID_1392809255" MODIFIED="1352979456339" POSITION="right" TEXT="Amdahl&#x2019;s Law">
@@ -374,12 +371,12 @@
     
   </head>
   <body>
-    S = 1/(1-p+p/n) &#160; 
+    S = 1/(1-p+p/n) &#xa0; 
 
     <table cellspacing="0" style="width: 324pt" width="432" cellpadding="0" border="0" str="#DEFAULT" x="#DEFAULT">
       <tr>
         <td>
-          =1/((100-$A4)/100 +$A4/(100*B$2)) <col span="6" style="width: 54pt" width="72" />
+          =1/((100-$A4)/100 +$A4/(100*B$2)) <col span="6" style="width: 54pt" width="72"/>
         </td>
       </tr>
       <tr height="21" style="height: 15.75pt">
@@ -1444,8 +1441,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1352979457167" ID="ID_340162949" MODIFIED="1352979543027" POSITION="left" TEXT="The Dining Philosophers Problem" VSHIFT="18">
 <node CREATED="1352979473948" ID="ID_1179194745" MODIFIED="1352979486495" TEXT="E.W. Dijkstra"/>
@@ -1516,7 +1512,7 @@
       }
     </p>
     <p>
-      System.out.println(&quot;Ph&quot; + y + &quot; consuming the food with chopsticks: &quot;+ y + &quot; &quot; + mod(y-1, 5));
+      System.out.println("Ph" + y + " consuming the food with chopsticks: "+ y + " " + mod(y-1, 5));
     </p>
     <p>
       
@@ -1600,7 +1596,7 @@
       }
     </p>
     <p>
-      }, &quot;T&quot;+i);
+      }, "T"+i);
     </p>
     <p>
       thread[i].start();
@@ -1621,10 +1617,10 @@
       {
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int result = x % y;
+      &#xa0;&#xa0;&#xa0;&#xa0;int result = x % y;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;return result &lt; 0? result + y : result;
+      &#xa0;&#xa0;&#xa0;&#xa0;return result &lt; 0? result + y : result;
     </p>
     <p>
       }
@@ -1669,10 +1665,10 @@
       * 5. victim=0; // i'm victim, i will wait ---
     </p>
     <p>
-      *&#160;&#160;6. --- victim=1; //no, i'm victim, i will wait
+      *&#xa0;&#xa0;6. --- victim=1; //no, i'm victim, i will wait
     </p>
     <p>
-      *&#160;&#160;7. out wait for flag[0] will 0
+      *&#xa0;&#xa0;7. out wait for flag[0] will 0
     </p>
     <p>
       */
@@ -1687,7 +1683,7 @@
       int j = 1 - i;
     </p>
     <p>
-      flag[i] = true; // I&#8217;m interested
+      flag[i] = true; // I&#x2019;m interested
     </p>
     <p>
       victim = i; // you go first
@@ -1708,14 +1704,13 @@
       int i = ThreadID.get();
     </p>
     <p>
-      flag[i] = false; // I&#8217;m not interested
+      flag[i] = false; // I&#x2019;m not interested
     </p>
     <p>
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1353066122610" HGAP="35" ID="ID_22990724" MODIFIED="1353068516660" TEXT="The Filter Lock" VSHIFT="21">
@@ -1736,8 +1731,9 @@
       called a spin lock, and repeatedly testing the lock is called spinning
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1125124554" ENDARROW="Default" ENDINCLINATION="97;0;" ID="Arrow_ID_1213693734" SOURCE="ID_1801180038" STARTARROW="None" STARTINCLINATION="79;15;"/>
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1125124554" ENDARROW="Default" ENDINCLINATION="65;0;" ID="Arrow_ID_25645444" SOURCE="ID_22990724" STARTARROW="None" STARTINCLINATION="65;0;"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1353068538753" ID="ID_1809376675" MODIFIED="1353068539941" TEXT="Spinning is sensible when you expect the lock delay to be short."/>
 <node CREATED="1353068847521" HGAP="26" ID="ID_284150638" MODIFIED="1353070747424" TEXT="Test-And-Set Locks" VSHIFT="19">
@@ -1958,13 +1954,13 @@
       a thread A. The first time thread B reads the lock it takes a cache miss, forcing B
     </p>
     <p>
-      to block while the value is loaded into B&#8217;s cache. As long as A holds the lock,
+      to block while the value is loaded into B&#x2019;s cache. As long as A holds the lock,
     </p>
     <p>
       B repeatedly rereads the value, but hits in the cache every time. B thus produces
     </p>
     <p>
-      no bus traffic, and does not slow down other threads&#8217; memory accesses.
+      no bus traffic, and does not slow down other threads&#x2019; memory accesses.
     </p>
     <p>
       Moreover, a thread that releases a lock is not delayed by threads spinning on
@@ -1982,7 +1978,7 @@
       releases the lock by writing false to the lock variable, which immediately invalidates
     </p>
     <p>
-      the spinners&#8217; cached copies. Each one takes a cache miss, rereads the new
+      the spinners&#x2019; cached copies. Each one takes a cache miss, rereads the new
     </p>
     <p>
       value, and they all (more-or-less simultaneously) call getAndSet() to acquire the
@@ -2028,8 +2024,7 @@
       Thread.yield();
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1353073396019" ID="ID_1589724471" MODIFIED="1353073435379" TEXT="Queue Locks">
@@ -2040,7 +2035,7 @@
   </head>
   <body>
     <p>
-      The <b>ALock</b>&#160;improves on BackoffLock because it reduces invalidations to a minimum,
+      The <b>ALock</b>&#xa0;improves on BackoffLock because it reduces invalidations to a minimum,
     </p>
     <p>
       and minimizes the interval between when a lock is freed by one thread and
@@ -2067,8 +2062,7 @@
       if a thread accesses only one lock at a time.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -2082,7 +2076,7 @@
       The alternative is to suspend yourself and
     </p>
     <p>
-      ask the operating system&#8217;s scheduler to schedule another thread on your processor,
+      ask the operating system&#x2019;s scheduler to schedule another thread on your processor,
     </p>
     <p>
       which is sometimes called blocking. Because switching from one thread to
@@ -2094,8 +2088,7 @@
       be long.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>

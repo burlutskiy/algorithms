@@ -10,8 +10,7 @@
       Interview<br />Areas
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1453837902703" HGAP="17" ID="ID_1560750361" MODIFIED="1453843569195" POSITION="right" TEXT="Computer Science" VSHIFT="-2">
 <font NAME="SansSerif" SIZE="12"/>
@@ -27,17 +26,18 @@
 <node CREATED="1453837929120" ID="ID_1578153516" LINK="The%20Art%20of%20MP.mm" MODIFIED="1453843569731" STYLE="bubble" TEXT="Multiprocessor Programming">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1453837959250" ID="ID_516406158" LINK="Patterns.mm" MODIFIED="1453843570179" STYLE="bubble" TEXT="Design And Architectural Patterns">
-<font NAME="SansSerif" SIZE="12"/>
-</node>
 <node CREATED="1453839770796" ID="ID_935632985" MODIFIED="1453843570484" STYLE="bubble" TEXT="Object-Oriented Programming">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1453839798461" ID="ID_1485255747" MODIFIED="1453843576963" STYLE="bubble" TEXT="Dynamic Programming">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1453838690769" ID="ID_522370032" MODIFIED="1453843570924" STYLE="bubble" TEXT="Databases">
+<node CREATED="1453838690769" HGAP="27" ID="ID_522370032" MODIFIED="1454514192255" STYLE="bubble" TEXT="Databases" VSHIFT="5">
 <font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1454513766557" ID="ID_22297102" MODIFIED="1454513770331" TEXT="Patterns">
+<node CREATED="1454513775787" ID="ID_329933003" LINK="Design%20Patterns.mm" MODIFIED="1454513969724" TEXT="Design Patterns"/>
+<node CREATED="1454513780044" ID="ID_681004027" LINK="Arhitectural%20Patterns.mm" MODIFIED="1454513985862" TEXT="Arhitectural Patterns"/>
 </node>
 </node>
 <node CREATED="1453838661273" HGAP="28" ID="ID_1586477342" LINK="Behaviour%20Quesions.mm" MODIFIED="1453843569192" POSITION="right" TEXT="Behavior Questions" VSHIFT="-5">
