@@ -17,7 +17,7 @@ public class BottomUpMergeSort extends AbstractSort {
 			for (int i = 0; i < n; i = i + 2 * width) {
 				bottomUpMerge(a, i, Math.min(i + width, n), Math.min(i + 2 * width, n), b);
 			}
-//			System.arraycopy(b, 0, a, 0, b.length);
+			System.arraycopy(b, 0, a, 0, b.length);
 		}
 	}
 

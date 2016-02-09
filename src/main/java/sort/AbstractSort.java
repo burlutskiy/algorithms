@@ -30,10 +30,14 @@ abstract class AbstractSort implements SortAlgorithm {
 		return a[i] < a[j];
 	}
 
-	void swap(int i, int j, int[] a) {
+	static void static_swap(int i, int j, int[] a) {
 		a[i] = a[i] ^ a[j];
 		a[j] = a[i] ^ a[j];
 		a[i] = a[i] ^ a[j];
+		
+	}
+	void swap(int i, int j, int[] a) {
+		static_swap(i, j, a);
 		exchangesCount++;
 	}
 
