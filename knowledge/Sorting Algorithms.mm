@@ -1,9 +1,70 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#ff0000" CREATED="1383141908886" HGAP="30" ID="ID_841643229" LINK="algorithms.mm" MODIFIED="1454969672691" STYLE="bubble" TEXT="Sorting Algorithms" VSHIFT="14">
-<node COLOR="#ff0000" CREATED="1383141978529" ID="ID_1564714775" MODIFIED="1454514416349" POSITION="right" TEXT="Quick">
+<node COLOR="#338800" CREATED="1383141978529" ID="ID_1564714775" MODIFIED="1455233958848" POSITION="right" TEXT="QuickSort">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1454862301909" ID="ID_1711380197" MODIFIED="1454862602187" TEXT="1.39NlnN compares and 1/3NlnN exchanges"/>
+<node CREATED="1455202232929" ID="ID_1583465517" MODIFIED="1455202238261" TEXT="Basic plan">
+<node CREATED="1455202239049" ID="ID_324275114" MODIFIED="1455202241949" TEXT="Shuffle"/>
+<node CREATED="1455202242384" ID="ID_582827045" MODIFIED="1455202244421" TEXT="Partition">
+<node CREATED="1455202326572" ID="ID_11535907" MODIFIED="1455202577810">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Phase I
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1455202585333" ID="ID_1436462834" MODIFIED="1455202598070" TEXT="repeat until i crosses j "/>
+<node CREATED="1455202598070" ID="ID_201393815" MODIFIED="1455202854322" TEXT="scan i from left to right so long as a[i] &lt; a[lo] "/>
+<node CREATED="1455202603670" ID="ID_490813238" MODIFIED="1455202617801">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      scan j from right to left so long as a[j] &gt; a[lo]
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1455202617802" ID="ID_993583734" MODIFIED="1455202617806">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      exchage a[i] with a[j]
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1455202577815" ID="ID_100078503" MODIFIED="1455202577819">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Phase II
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1455202628098" HGAP="19" ID="ID_1261721131" MODIFIED="1455202640732" TEXT="exchange a[lo] with a[j]" VSHIFT="5"/>
+</node>
+</node>
+<node CREATED="1455202245872" ID="ID_608803591" MODIFIED="1455202247133" TEXT="Sort"/>
+</node>
 </node>
 <node COLOR="#ff0000" CREATED="1383141981042" ID="ID_794687715" MODIFIED="1454969831979" POSITION="right" TEXT="Radix" VSHIFT="14">
 <font NAME="SansSerif" SIZE="12"/>
@@ -144,7 +205,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1455132041135" ID="ID_177382510" MODIFIED="1455132059556">
+<node CREATED="1455132041135" HGAP="21" ID="ID_177382510" MODIFIED="1455201938332" VSHIFT="4">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -181,15 +242,85 @@
 <node CREATED="1454706665609" ID="ID_252395082" MODIFIED="1454706696752" TEXT="Best sequence of increments?"/>
 <node CREATED="1454706678464" ID="ID_440143848" MODIFIED="1454706696752" TEXT="Average-case performance?"/>
 </node>
-<node CREATED="1454861947789" HGAP="22" ID="ID_834591398" MODIFIED="1454969720160" POSITION="right" TEXT="MergeSort" VSHIFT="21">
+<node COLOR="#338800" CREATED="1454861947789" HGAP="22" ID="ID_834591398" MODIFIED="1455202020581" POSITION="right" TEXT="MergeSort" VSHIFT="21">
+<node COLOR="#338800" CREATED="1454862268694" HGAP="17" ID="ID_822957419" MODIFIED="1455202025421" TEXT="BottomUp" VSHIFT="14"/>
+<node COLOR="#338800" CREATED="1455201948513" ID="ID_511033344" MODIFIED="1455202026061" TEXT="TopDown">
+<node CREATED="1455202048819" ID="ID_1376389779" MODIFIED="1455202093701">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      There is a cutoff for short subarrays<br />
+    </p>
+    <p>
+      if(hi &lt;= lo + CUTOFF - 1) {InsertionSort.sort(aux, lo, hi); return;}
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1454706400576" HGAP="21" ID="ID_649337676" MODIFIED="1454706696752" TEXT="" VSHIFT="2">
+<icon BUILTIN="hourglass"/>
+<node CREATED="1449240504883" HGAP="15" ID="ID_787055199" MODIFIED="1455201995826" VSHIFT="2">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table class="infobox" style="font-size: 12.32px; border-spacing: 3px; color: black; margin-top: 0; margin-right: 0px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; clear: right; line-height: 1.5em; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(249, 249, 249)">
+      <tr>
+        <td style="vertical-align: top; text-align: left">
+          
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Average </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Space </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(N)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(N)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Sort </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">O(NlogN) </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(NlogN)</font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1455202003790" ID="ID_349356241" MODIFIED="1455202139620" TEXT="Common Properties">
 <node CREATED="1454862189873" ID="ID_1136494626" MODIFIED="1455057971733" TEXT="NlogN compares"/>
 <node CREATED="1454862199049" ID="ID_1993930090" MODIFIED="1455057971366" TEXT="6NlogN array access"/>
 <node CREATED="1454862212407" ID="ID_1184616565" MODIFIED="1454862221516" TEXT="inplace ? - not discovered"/>
 <node CREATED="1454862244280" ID="ID_662736012" MODIFIED="1454862246425" TEXT="best case">
 <node CREATED="1454862247194" ID="ID_1414471506" MODIFIED="1454862258090" TEXT="1/2NlogN"/>
 </node>
-<node CREATED="1454862268694" HGAP="17" ID="ID_822957419" MODIFIED="1454969611091" TEXT="BottomUp MergeSort" VSHIFT="14">
 <node CREATED="1454862280015" ID="ID_1741409750" MODIFIED="1454862286000" TEXT="logN passes"/>
+<node CREATED="1455202111616" ID="ID_487251991" MODIFIED="1455202122291" TEXT="common merge method impl">
+<node CREATED="1455202122975" ID="ID_1155433083" MODIFIED="1455202132077" TEXT="&#x9;protected void merge(int a[], int aux[], int lo, int mid, int hi) {&#xa;&#x9;&#x9;int i = lo, j = mid + 1, k = lo;&#xa;&#x9;&#x9;while (i &lt;= mid &amp;&amp; j &lt;= hi) {&#xa;&#x9;&#x9;&#x9;if(less(i, j, a))&#xa;&#x9;&#x9;&#x9;&#x9;aux[k] = a[i++];&#xa;&#x9;&#x9;&#x9;else&#xa;&#x9;&#x9;&#x9;&#x9;aux[k] = a[j++];&#xa;&#x9;&#x9;&#x9;k = increase(k);&#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;if(i &lt;= mid)&#xa;&#x9;&#x9;&#x9;System.arraycopy(a, i, aux, k, mid - i + 1);&#xa;&#x9;&#x9;if(j &lt;= hi)&#xa;&#x9;&#x9;&#x9;System.arraycopy(a, j, aux, k, hi - j + 1);&#xa;&#x9;}&#xa;"/>
+</node>
 </node>
 </node>
 </node>

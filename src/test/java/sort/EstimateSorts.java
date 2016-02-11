@@ -22,6 +22,11 @@ public class EstimateSorts {
 	}
 
 	@Test
+	public void estimateQuickSort() {
+		estimateSortAlgorithm(QuickSort.class);
+	}
+
+	@Test
 	public void estimateInsertionSort() {
 		estimateSortAlgorithm(InsertionSort.class, 16);
 	}

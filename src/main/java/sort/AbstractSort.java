@@ -1,5 +1,7 @@
 package sort;
 
+import java.util.Random;
+
 abstract class AbstractSort implements SortAlgorithm {
 	private long comparisonCount;
 	private long exchangesCount;
@@ -31,6 +33,8 @@ abstract class AbstractSort implements SortAlgorithm {
 	}
 
 	static void static_swap(int i, int j, int[] a) {
+		if(i == j)
+			return;
 		a[i] = a[i] ^ a[j];
 		a[j] = a[i] ^ a[j];
 		a[i] = a[i] ^ a[j];
@@ -41,6 +45,16 @@ abstract class AbstractSort implements SortAlgorithm {
 		exchangesCount++;
 	}
 
+    public static void shuffle(int[] a) {
+        if (a == null) throw new NullPointerException("argument array is null");
+        Random random = new Random(System.currentTimeMillis());
+        int n = a.length;
+        for (int i = 0; i < n; i++) {
+            int r = i + random.nextInt(n-i);
+           	static_swap(i, r, a);
+        }
+    }
+    
 	int increase(int i) {
 		passesCount++;
 		return ++i;

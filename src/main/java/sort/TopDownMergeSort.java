@@ -19,10 +19,10 @@ public class TopDownMergeSort extends MergeSort {
 	}
 	
 	private void sort(int[] a, int[] aux, int lo, int hi){
-//		if(hi <= lo + CUTOFF - 1){
-//			InsertionSort.sort(aux, lo, hi);
-//			return;
-//		}
+		if(hi <= lo + CUTOFF - 1){
+			InsertionSort.sort(aux, lo, hi);
+			return;
+		}
 		if(hi <= lo)
 			return;
 		int mid = lo + (hi - lo) / 2;
@@ -31,7 +31,4 @@ public class TopDownMergeSort extends MergeSort {
 		merge(a, aux, lo, mid, hi);
 	}
 	
-	public static void main(String[] args) {
-		TopDownMergeSort sort = new TopDownMergeSort(new int[]{14, 29, 12, 32, 99, 97, 92, 79, 65, 74, 55, 96});
-	}
 }
