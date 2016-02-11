@@ -49,6 +49,25 @@
 </node>
 <node CREATED="1454862080531" ID="ID_645197312" MODIFIED="1454862097207" TEXT="Number of exchanges = number of inversions"/>
 <node CREATED="1454862101943" ID="ID_914770773" MODIFIED="1454862121075" TEXT="Number of compares = Number of inversions + N - 1"/>
+<node CREATED="1455132118281" ID="ID_1997697343" MODIFIED="1455132125570">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      for (int i = lo; i &lt; hi - lo + 1; i++)
+    </p>
+    <p>
+      for (int j = i; j &gt; 0 &amp;&amp; a[j] &lt; a[j - 1]; j--)
+    </p>
+    <p>
+      static_swap(j - 1, j, a);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node COLOR="#338800" CREATED="1383141948272" ID="ID_1471186986" MODIFIED="1454514416351" POSITION="left" TEXT="Coctail"/>
 <node COLOR="#338800" CREATED="1383141975362" ID="ID_1864298248" MODIFIED="1454514416351" POSITION="left" TEXT="Selection">
@@ -125,6 +144,37 @@
 </html></richcontent>
 </node>
 </node>
+<node CREATED="1455132041135" ID="ID_177382510" MODIFIED="1455132059556">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: left">
+      while (h &lt; n / 3)
+    </p>
+    <p style="text-align: left">
+      h = h * 3 + 1;
+    </p>
+    <p style="text-align: left">
+      for (; h &gt; 0; h /= 3)
+    </p>
+    <p style="text-align: left">
+      for (int i = h; i &lt; n; i++)
+    </p>
+    <p style="text-align: left">
+      for (int j = i; j &gt;= h; j = decrease(j,h))
+    </p>
+    <p style="text-align: left">
+      if (less(j, j - h, a))
+    </p>
+    <p style="text-align: left">
+      swap(j, j - h, a);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 </node>
 <node CREATED="1454706648082" ID="ID_512183384" MODIFIED="1454706696752" TEXT="Asymptotic growth rate?"/>
@@ -132,8 +182,8 @@
 <node CREATED="1454706678464" ID="ID_440143848" MODIFIED="1454706696752" TEXT="Average-case performance?"/>
 </node>
 <node CREATED="1454861947789" HGAP="22" ID="ID_834591398" MODIFIED="1454969720160" POSITION="right" TEXT="MergeSort" VSHIFT="21">
-<node CREATED="1454862189873" ID="ID_1136494626" MODIFIED="1454862198490" TEXT="NlogN compares"/>
-<node CREATED="1454862199049" ID="ID_1993930090" MODIFIED="1454862208546" TEXT="6NlogN array access"/>
+<node CREATED="1454862189873" ID="ID_1136494626" MODIFIED="1455057971733" TEXT="NlogN compares"/>
+<node CREATED="1454862199049" ID="ID_1993930090" MODIFIED="1455057971366" TEXT="6NlogN array access"/>
 <node CREATED="1454862212407" ID="ID_1184616565" MODIFIED="1454862221516" TEXT="inplace ? - not discovered"/>
 <node CREATED="1454862244280" ID="ID_662736012" MODIFIED="1454862246425" TEXT="best case">
 <node CREATED="1454862247194" ID="ID_1414471506" MODIFIED="1454862258090" TEXT="1/2NlogN"/>

@@ -18,7 +18,7 @@ public class EstimateSorts {
 
 	@Test
 	public void estimateMergeSort() {
-		estimateSortAlgorithm(MergeSort.class);
+		estimateSortAlgorithm(TopDownMergeSort.class);
 	}
 
 	@Test

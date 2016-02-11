@@ -93,8 +93,8 @@ public class SortTests {
 	}
 
 	@Test
-	public void testMergeSort() {
-		test(MergeSort.class);
+	public void testTopDownMergeSort() {
+		test(TopDownMergeSort.class);
 	}
 
 	private void test(Class<? extends AbstractSort> clazz) {
