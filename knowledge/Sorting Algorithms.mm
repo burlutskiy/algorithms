@@ -3,6 +3,7 @@
 <node COLOR="#ff0000" CREATED="1383141908886" HGAP="30" ID="ID_841643229" LINK="algorithms.mm" MODIFIED="1454969672691" STYLE="bubble" TEXT="Sorting Algorithms" VSHIFT="14">
 <node COLOR="#338800" CREATED="1383141978529" ID="ID_1564714775" MODIFIED="1455233958848" POSITION="right" TEXT="QuickSort">
 <font NAME="SansSerif" SIZE="12"/>
+<node COLOR="#338800" CREATED="1455652157314" ID="ID_160524231" MODIFIED="1455652179738" TEXT="2-way Randomized QuickSort">
 <node CREATED="1454862301909" ID="ID_1711380197" MODIFIED="1454862602187" TEXT="1.39NlnN compares and 1/3NlnN exchanges"/>
 <node CREATED="1455202232929" ID="ID_1583465517" MODIFIED="1455202238261" TEXT="Basic plan">
 <node CREATED="1455202239049" ID="ID_324275114" MODIFIED="1455202241949" TEXT="Shuffle"/>
@@ -17,8 +18,8 @@
       Phase I
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+<node CREATED="1455290165924" ID="ID_160826033" MODIFIED="1455290204828" TEXT="pick an element lo = pivot"/>
 <node CREATED="1455202585333" ID="ID_1436462834" MODIFIED="1455202598070" TEXT="repeat until i crosses j "/>
 <node CREATED="1455202598070" ID="ID_201393815" MODIFIED="1455202854322" TEXT="scan i from left to right so long as a[i] &lt; a[lo] "/>
 <node CREATED="1455202603670" ID="ID_490813238" MODIFIED="1455202617801">
@@ -31,8 +32,7 @@
       scan j from right to left so long as a[j] &gt; a[lo]
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1455202617802" ID="ID_993583734" MODIFIED="1455202617806">
 <richcontent TYPE="NODE"><html>
@@ -44,8 +44,7 @@
       exchage a[i] with a[j]
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1455202577815" ID="ID_100078503" MODIFIED="1455202577819">
@@ -58,12 +57,99 @@
       Phase II
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1455202628098" HGAP="19" ID="ID_1261721131" MODIFIED="1455202640732" TEXT="exchange a[lo] with a[j]" VSHIFT="5"/>
 </node>
 </node>
 <node CREATED="1455202245872" ID="ID_608803591" MODIFIED="1455202247133" TEXT="Sort"/>
+</node>
+<node CREATED="1454706400576" HGAP="21" ID="ID_322402936" MODIFIED="1454706696752" TEXT="" VSHIFT="2">
+<icon BUILTIN="hourglass"/>
+<node CREATED="1449240504883" HGAP="15" ID="ID_808415201" MODIFIED="1455286209208" VSHIFT="2">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table class="infobox" style="font-size: 12.32px; border-spacing: 3px; color: black; margin-top: 0; margin-right: 0px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; clear: right; line-height: 1.5em; font-family: sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgb(249, 249, 249)">
+      <tr>
+        <td style="vertical-align: top; text-align: left">
+          
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Average </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Space </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(1)</font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(1)</font>
+        </td>
+      </tr>
+      <tr>
+        <th style="vertical-align: top; text-align: left">
+          <font size="2">Sort </font>
+        </th>
+        <td style="vertical-align: top; text-align: left">
+          <font size="2">O(NlgN) </font>
+        </td>
+        <td style="vertical-align: top; text-align: left">
+          <font face="Nimbus Roman No9 L, Times New Roman, Times, serif" size="2">O(NlgN)</font>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1455286214023" ID="ID_859490319" MODIFIED="1455286220171" TEXT="Worst Case">
+<node CREATED="1455286224375" ID="ID_383655063" MODIFIED="1455286231387" TEXT="Number of compares is quadratic"/>
+<node CREATED="1455286234214" ID="ID_1265993683" MODIFIED="1455286247474" TEXT="Cn ~ 1/2N^2"/>
+</node>
+<node CREATED="1455286257573" ID="ID_466327179" MODIFIED="1455286260387" TEXT="Average Case">
+<node CREATED="1455286264508" ID="ID_1985958050" MODIFIED="1455286271625" TEXT="Cn ~ 1.39NlgN"/>
+<node CREATED="1455286274044" ID="ID_971678765" MODIFIED="1455286287184" TEXT="39% more compares then merge sort"/>
+<node CREATED="1455286291571" ID="ID_726383930" MODIFIED="1455286309782" TEXT="But faster then MergeSort in practice because of less data movement"/>
+</node>
+<node CREATED="1455651050515" ID="ID_1203390239" MODIFIED="1455651054672" TEXT="Best Case">
+<node CREATED="1455651055378" ID="ID_671004467" MODIFIED="1455651087479" TEXT="In the best case, the number of compares to 3-way quicksort an array of N keys (not necessarily distinct) is ~ N"/>
+<node CREATED="1455656544767" ID="ID_127316960" MODIFIED="1455656545460" TEXT="In the best case, the number of compares to quicksort an array of N distinct keys is ~ N lg N."/>
+<node CREATED="1455659162923" ID="ID_417745982" MODIFIED="1455659163718" TEXT="The number of compares to 3-way quicksort an array of N equal keys is ~ N."/>
+<node CREATED="1455659183296" ID="ID_1016673659" MODIFIED="1455659183869" TEXT="The number of partitioning steps to 3-way quicksort an array of N items is no more than the number of distinct keys."/>
+</node>
+<node CREATED="1455661360301" ID="ID_1471328993" MODIFIED="1455661363657" TEXT="Other facts">
+<node CREATED="1455661364556" ID="ID_483838278" MODIFIED="1455661365313" TEXT="The number of compares is ~ N lg N. The 2-way partitioning algorithm stops the scan on equal keys, so each passioning step divides the array in half."/>
+</node>
+</node>
+</node>
+<node CREATED="1455652180770" ID="ID_928335345" MODIFIED="1455652193285" TEXT="3-way QuickSort">
+<node CREATED="1455652463040" ID="ID_947763944" MODIFIED="1455652482436" TEXT="Let v = a[lo]"/>
+<node CREATED="1455652361630" ID="ID_94603230" MODIFIED="1455652425327" TEXT="Scan i from left to right">
+<node CREATED="1455652370487" ID="ID_777858926" MODIFIED="1455652383298" TEXT="a[i] &lt; v ">
+<node CREATED="1455652384022" ID="ID_1537699433" MODIFIED="1455652402001" TEXT="exchange a[lt] with a[i]"/>
+<node CREATED="1455652402853" ID="ID_131384050" MODIFIED="1455652410688" TEXT="increment both lt and i"/>
+</node>
+<node CREATED="1455652412731" ID="ID_255360953" MODIFIED="1455652525488" TEXT="a[i] &gt; v">
+<node CREATED="1455652426915" ID="ID_1241554043" MODIFIED="1455652447646" TEXT="exchange a[gt] with a[i]"/>
+<node CREATED="1455652448201" ID="ID_1554877852" MODIFIED="1455652786995" TEXT="decrement gt"/>
+</node>
+<node CREATED="1455652526837" ID="ID_436994701" MODIFIED="1455652530609" TEXT="a[i] == v">
+<node CREATED="1455652532086" HGAP="21" ID="ID_224500829" MODIFIED="1455652537919" TEXT="increment i" VSHIFT="3"/>
+</node>
+</node>
+<node CREATED="1455652351769" ID="ID_1087327921" MODIFIED="1455652502034" TEXT="Maintain Invariant">
+<node CREATED="1455652503342" ID="ID_1986838573" MODIFIED="1455652517586" TEXT=" &lt; v ; =v ; &gt; v"/>
+</node>
+<node CREATED="1455661331479" ID="ID_1431651183" MODIFIED="1455661385638" TEXT="Facts">
+<node CREATED="1455661385627" ID="ID_1831006874" MODIFIED="1455661387415" TEXT="3-way quicksort makes a linear number of compares in cases where the standard version of quicksort makes a linearithmic number of compares ,e.g., N equal keys."/>
+</node>
 </node>
 </node>
 <node COLOR="#ff0000" CREATED="1383141981042" ID="ID_794687715" MODIFIED="1454969831979" POSITION="right" TEXT="Radix" VSHIFT="14">
@@ -126,8 +212,7 @@
       static_swap(j - 1, j, a);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1383141948272" ID="ID_1471186986" MODIFIED="1454514416351" POSITION="left" TEXT="Coctail"/>
@@ -233,8 +318,7 @@
       swap(j, j - h, a);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -258,8 +342,7 @@
       if(hi &lt;= lo + CUTOFF - 1) {InsertionSort.sort(aux, lo, hi); return;}
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1454706400576" HGAP="21" ID="ID_649337676" MODIFIED="1454706696752" TEXT="" VSHIFT="2">
@@ -306,8 +389,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1455202003790" ID="ID_349356241" MODIFIED="1455202139620" TEXT="Common Properties">

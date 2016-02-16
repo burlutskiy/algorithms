@@ -6,8 +6,6 @@ package sort;
  *
  */
 public class TopDownMergeSort extends MergeSort {
-	private static final int CUTOFF = 7;
-
 	public TopDownMergeSort(int[] a) {
 		super(a);
 	}
@@ -23,8 +21,6 @@ public class TopDownMergeSort extends MergeSort {
 			InsertionSort.sort(aux, lo, hi);
 			return;
 		}
-		if(hi <= lo)
-			return;
 		int mid = lo + (hi - lo) / 2;
 		sort(aux, a, lo, mid);
 		sort(aux, a, mid + 1, hi);

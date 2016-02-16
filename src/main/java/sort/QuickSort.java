@@ -47,7 +47,7 @@ public class QuickSort extends AbstractSort {
 	}
 
 	public static void main(String[] args) {
-		int[] a = new int[] { 5, 1, 7, 3, 2, 4, 0 };
+		int[] a = new int[] { 1,0,0,1,0,1,1,1,2,2, };
 		QuickSort sort = new QuickSort(a);
 		System.out.println(Arrays.toString(sort.sortedArray()));
 	}

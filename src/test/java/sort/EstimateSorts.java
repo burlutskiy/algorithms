@@ -18,27 +18,31 @@ public class EstimateSorts {
 
 	@Test
 	public void estimateMergeSort() {
-		estimateSortAlgorithm(TopDownMergeSort.class);
+		estimateSortAlgorithm(TopDownMergeSort.class, 23, 26);
 	}
 
 	@Test
 	public void estimateQuickSort() {
-		estimateSortAlgorithm(QuickSort.class);
+		estimateSortAlgorithm(QuickSort.class, 23, 26);
 	}
 
 	@Test
 	public void estimateInsertionSort() {
-		estimateSortAlgorithm(InsertionSort.class, 16);
+		estimateSortAlgorithm(InsertionSort.class, MIN_POW, 16);
 	}
 
 	private void estimateSortAlgorithm(Class<? extends AbstractSort> clazz) {
-		estimateSortAlgorithm(clazz, MAX_POW);
+		estimateSortAlgorithm(clazz, MIN_POW, MAX_POW);
+	}
+
+	private void estimateSortAlgorithm(Class<? extends AbstractSort> clazz, int max) {
+		estimateSortAlgorithm(clazz, MIN_POW, max);
 	}
 	
-	private void estimateSortAlgorithm(Class<? extends AbstractSort> clazz, int max) {
-		SortTestUtil.estimate(clazz, MIN_POW, max, new RandomIntArrayGenerator());
-		SortTestUtil.estimate(clazz, MIN_POW, max, new ReverseIntArrayGenerator());
-		SortTestUtil.estimate(clazz, MIN_POW, max, new SortedIntArrayGenerator());
+	private void estimateSortAlgorithm(Class<? extends AbstractSort> clazz, int min, int max) {
+		SortTestUtil.estimate(clazz, min, max, new RandomIntArrayGenerator());
+		SortTestUtil.estimate(clazz, min, max, new ReverseIntArrayGenerator());
+		SortTestUtil.estimate(clazz, min, max, new SortedIntArrayGenerator());
 	}
 
 }

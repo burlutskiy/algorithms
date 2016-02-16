@@ -3,6 +3,7 @@ package sort;
 import java.util.Random;
 
 abstract class AbstractSort implements SortAlgorithm {
+	protected static final int CUTOFF = 7;
 	private long comparisonCount;
 	private long exchangesCount;
 	private long passesCount;
