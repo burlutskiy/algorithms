@@ -1,7 +1,7 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#ff0000" CREATED="1383141908886" HGAP="30" ID="ID_841643229" LINK="algorithms.mm" MODIFIED="1454969672691" STYLE="bubble" TEXT="Sorting Algorithms" VSHIFT="14">
-<node COLOR="#338800" CREATED="1383141978529" ID="ID_1564714775" MODIFIED="1455233958848" POSITION="right" TEXT="QuickSort">
+<node COLOR="#338800" CREATED="1383141978529" FOLDED="true" ID="ID_1564714775" MODIFIED="1455822147606" POSITION="right" TEXT="QuickSort">
 <font NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1455652157314" ID="ID_160524231" MODIFIED="1455652179738" TEXT="2-way Randomized QuickSort">
 <node CREATED="1454862301909" ID="ID_1711380197" MODIFIED="1454862602187" TEXT="1.39NlnN compares and 1/3NlnN exchanges"/>
@@ -151,6 +151,7 @@
 <node CREATED="1455661385627" ID="ID_1831006874" MODIFIED="1455661387415" TEXT="3-way quicksort makes a linear number of compares in cases where the standard version of quicksort makes a linearithmic number of compares ,e.g., N equal keys."/>
 </node>
 </node>
+<node CREATED="1455822094704" ID="ID_121464316" MODIFIED="1455822101917" TEXT="UNSTABLE"/>
 </node>
 <node COLOR="#ff0000" CREATED="1383141981042" ID="ID_794687715" MODIFIED="1454969831979" POSITION="right" TEXT="Radix" VSHIFT="14">
 <font NAME="SansSerif" SIZE="12"/>
@@ -162,22 +163,59 @@
 <node COLOR="#ff0000" CREATED="1383141983304" MODIFIED="1454514416350" POSITION="right" TEXT="Bucket">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1383142001421" ID="ID_682904616" MODIFIED="1454514416350" POSITION="right" TEXT="Heap">
+<node COLOR="#ff0000" CREATED="1383142001421" HGAP="22" ID="ID_682904616" MODIFIED="1455822264329" POSITION="right" TEXT="HeapSort" VSHIFT="6">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1455821650825" ID="ID_131459045" MODIFIED="1455822264329" TEXT="Heap construction uses &#x2264; 2 N compares and exchanges.  "/>
+<node CREATED="1455821693922" ID="ID_753824084" MODIFIED="1455822264329" TEXT="Heapsort uses &#x2264; 2 N lg N compares and exchanges."/>
+<node CREATED="1455821817690" ID="ID_1123115631" MODIFIED="1455822264329" TEXT="Significance">
+<node CREATED="1455821826692" ID="ID_1594210798" MODIFIED="1455822264329" TEXT=" In-place sorting algorithm with N log N worst-case. "/>
+<node CREATED="1455821834964" ID="ID_756209873" MODIFIED="1455822264329">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Mergesort: no, linear extra space.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1455821862268" ID="ID_884255899" MODIFIED="1455822264330">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Quicksort: no, quadratic time in worst case.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1455821935378" ID="ID_1767795429" MODIFIED="1455822264330" TEXT="Bottom Line">
+<node CREATED="1455821899644" ID="ID_1837103752" MODIFIED="1455822264330" TEXT="Heapsort is optimal for both time and space, but: Inner loop longer than quicksort&#x2019;s. "/>
+<node CREATED="1455821911142" ID="ID_1673242132" MODIFIED="1455822264330" TEXT="Makes poor use of cache memory. "/>
+<node CREATED="1455821907785" ID="ID_1689590958" MODIFIED="1455822264330" TEXT="Not stable."/>
+</node>
+<node CREATED="1455822082065" ID="ID_416883519" MODIFIED="1455822264330" TEXT="UNSTABLE"/>
+</node>
+<node COLOR="#ff0000" CREATED="1383142003575" HGAP="23" ID="ID_398273523" MODIFIED="1455821084707" POSITION="right" TEXT="Intro" VSHIFT="7">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1383142003575" MODIFIED="1454514416350" POSITION="right" TEXT="Intro">
+<node COLOR="#ff0000" CREATED="1383142007101" HGAP="22" ID="ID_1088219627" MODIFIED="1455824546198" POSITION="right" TEXT="Odd-even" VSHIFT="6">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1383142007101" MODIFIED="1454514416350" POSITION="right" TEXT="Odd-even">
+<node COLOR="#ff0000" CREATED="1383142012719" HGAP="21" ID="ID_1330112177" MODIFIED="1455824545649" POSITION="right" TEXT="Cycle" VSHIFT="4">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1383142012719" MODIFIED="1454514416351" POSITION="right" TEXT="Cycle">
+<node COLOR="#ff0000" CREATED="1383142015965" HGAP="22" ID="ID_344271449" MODIFIED="1455824544998" POSITION="right" TEXT="Smoothsort" VSHIFT="6">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1383142015965" MODIFIED="1454514416351" POSITION="right" TEXT="Smoothsort">
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node COLOR="#ff0000" CREATED="1383142022472" MODIFIED="1454514416351" POSITION="right" TEXT="Timsort">
+<node COLOR="#ff0000" CREATED="1383142022472" HGAP="23" ID="ID_1533322279" MODIFIED="1455824542670" POSITION="right" TEXT="Timsort" VSHIFT="9">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 <node COLOR="#338800" CREATED="1383141925426" ID="ID_752388606" MODIFIED="1454514416351" POSITION="left" TEXT="Bubble"/>
@@ -221,7 +259,7 @@
 <node CREATED="1454623026943" ID="ID_45870288" MODIFIED="1454623045308" TEXT="swap a[i] and a[min]"/>
 <node CREATED="1454969631363" ID="ID_1084023030" MODIFIED="1454969633483" TEXT="N(N-1)/2 compares "/>
 </node>
-<node COLOR="#338800" CREATED="1383142087715" ID="ID_1158187149" MODIFIED="1454969669939" POSITION="left" TEXT="Shellsort">
+<node COLOR="#338800" CREATED="1383142087715" ID="ID_1158187149" MODIFIED="1455824460537" POSITION="left" TEXT="Shellsort">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1454700723933" ID="ID_1002169000" MODIFIED="1454706696751">
 <richcontent TYPE="NODE"><html>
@@ -326,9 +364,9 @@
 <node CREATED="1454706665609" ID="ID_252395082" MODIFIED="1454706696752" TEXT="Best sequence of increments?"/>
 <node CREATED="1454706678464" ID="ID_440143848" MODIFIED="1454706696752" TEXT="Average-case performance?"/>
 </node>
-<node COLOR="#338800" CREATED="1454861947789" HGAP="22" ID="ID_834591398" MODIFIED="1455202020581" POSITION="right" TEXT="MergeSort" VSHIFT="21">
+<node COLOR="#338800" CREATED="1454861947789" HGAP="22" ID="ID_834591398" MODIFIED="1455822254930" POSITION="right" TEXT="MergeSort" VSHIFT="21">
 <node COLOR="#338800" CREATED="1454862268694" HGAP="17" ID="ID_822957419" MODIFIED="1455202025421" TEXT="BottomUp" VSHIFT="14"/>
-<node COLOR="#338800" CREATED="1455201948513" ID="ID_511033344" MODIFIED="1455202026061" TEXT="TopDown">
+<node COLOR="#338800" CREATED="1455201948513" HGAP="25" ID="ID_511033344" MODIFIED="1455824686054" TEXT="TopDown" VSHIFT="11">
 <node CREATED="1455202048819" ID="ID_1376389779" MODIFIED="1455202093701">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -345,7 +383,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1454706400576" HGAP="21" ID="ID_649337676" MODIFIED="1454706696752" TEXT="" VSHIFT="2">
+<node CREATED="1454706400576" HGAP="28" ID="ID_649337676" MODIFIED="1455824684966" TEXT="" VSHIFT="12">
 <icon BUILTIN="hourglass"/>
 <node CREATED="1449240504883" HGAP="15" ID="ID_787055199" MODIFIED="1455201995826" VSHIFT="2">
 <richcontent TYPE="NODE"><html>
@@ -393,6 +431,7 @@
 </node>
 </node>
 <node CREATED="1455202003790" ID="ID_349356241" MODIFIED="1455202139620" TEXT="Common Properties">
+<node CREATED="1455822070802" ID="ID_911533782" MODIFIED="1455822075645" TEXT="STABLE"/>
 <node CREATED="1454862189873" ID="ID_1136494626" MODIFIED="1455057971733" TEXT="NlogN compares"/>
 <node CREATED="1454862199049" ID="ID_1993930090" MODIFIED="1455057971366" TEXT="6NlogN array access"/>
 <node CREATED="1454862212407" ID="ID_1184616565" MODIFIED="1454862221516" TEXT="inplace ? - not discovered"/>
@@ -403,6 +442,19 @@
 <node CREATED="1455202111616" ID="ID_487251991" MODIFIED="1455202122291" TEXT="common merge method impl">
 <node CREATED="1455202122975" ID="ID_1155433083" MODIFIED="1455202132077" TEXT="&#x9;protected void merge(int a[], int aux[], int lo, int mid, int hi) {&#xa;&#x9;&#x9;int i = lo, j = mid + 1, k = lo;&#xa;&#x9;&#x9;while (i &lt;= mid &amp;&amp; j &lt;= hi) {&#xa;&#x9;&#x9;&#x9;if(less(i, j, a))&#xa;&#x9;&#x9;&#x9;&#x9;aux[k] = a[i++];&#xa;&#x9;&#x9;&#x9;else&#xa;&#x9;&#x9;&#x9;&#x9;aux[k] = a[j++];&#xa;&#x9;&#x9;&#x9;k = increase(k);&#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;if(i &lt;= mid)&#xa;&#x9;&#x9;&#x9;System.arraycopy(a, i, aux, k, mid - i + 1);&#xa;&#x9;&#x9;if(j &lt;= hi)&#xa;&#x9;&#x9;&#x9;System.arraycopy(a, j, aux, k, hi - j + 1);&#xa;&#x9;}&#xa;"/>
 </node>
+</node>
+</node>
+<node CREATED="1455822150215" ID="ID_1666135818" MODIFIED="1455822209961" POSITION="left" TEXT="Reference">
+<node CREATED="1455822206787" MODIFIED="1455822206787">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="Sorting Algorithms_6648747486860319506.jpeg" />
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>

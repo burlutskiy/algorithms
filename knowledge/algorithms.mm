@@ -17,7 +17,46 @@
 <node COLOR="#ff0000" CREATED="1384975461522" HGAP="41" ID="ID_352589872" MODIFIED="1454514557521" POSITION="right" TEXT="Cache Algorithms" VSHIFT="11"/>
 <node COLOR="#338800" CREATED="1454514294892" HGAP="31" ID="ID_646590742" LINK="Trees.mm" MODIFIED="1455737610929" POSITION="left" TEXT="Trees" VSHIFT="1"/>
 <node COLOR="#338800" CREATED="1454514242382" HGAP="32" ID="ID_1088369080" LINK="Graphs.mm" MODIFIED="1455737611503" POSITION="left" TEXT="Graphs"/>
-<node COLOR="#338800" CREATED="1447963052613" HGAP="33" ID="ID_1791595887" MODIFIED="1454514486029" POSITION="left" TEXT="Stacks" VSHIFT="2">
+<node CREATED="1455821044949" HGAP="39" ID="ID_1048172056" MODIFIED="1455821060861" POSITION="left" TEXT="Heaps" VSHIFT="7">
+<node CREATED="1455819312519" ID="ID_626744140" MODIFIED="1455819470707" TEXT="Binary Heap">
+<node CREATED="1455819253802" HGAP="26" ID="ID_714682978" MODIFIED="1455819398117" TEXT="logN" VSHIFT="2"/>
+<node CREATED="1455819471470" ID="ID_186135270" MODIFIED="1455819491489" TEXT="Array representation of a heap-ordered complete binary tree"/>
+<node CREATED="1455831855975" ID="ID_1319891592" MODIFIED="1455831878491" TEXT="Proposition. &#xa;&#x30fb;Parent of node at k is at k/2. &#xa;&#x30fb;Children of node at k are at 2k and 2k+1."/>
+<node CREATED="1455820050484" ID="ID_1101677795" MODIFIED="1455820329470">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Insert
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1455820329472" ID="ID_1255677989" MODIFIED="1455820347457">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      1+logN compares
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1455820333052" ID="ID_1330606573" MODIFIED="1455820336649" TEXT="Delete">
+<node CREATED="1455820339180" ID="ID_1466934791" MODIFIED="1455820351128" TEXT="2logN compares"/>
+</node>
+</node>
+<node CREATED="1455820591510" ID="ID_1718729774" MODIFIED="1455820600698" TEXT="Fibonacii Heap">
+<node CREATED="1455820606421" ID="ID_446915327" MODIFIED="1455820609529" TEXT="Insert">
+<node CREATED="1455820612988" ID="ID_784954391" MODIFIED="1455820624001" TEXT="O(1)"/>
+</node>
+</node>
+</node>
+<node COLOR="#338800" CREATED="1447963052613" HGAP="33" ID="ID_1791595887" MODIFIED="1455821099060" POSITION="left" TEXT="Stacks" VSHIFT="11">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1447963125361" ID="ID_346154062" MODIFIED="1449238179271" TEXT="Solving Hanoi Towers"/>
 <node CREATED="1454515030924" ID="ID_400991449" MODIFIED="1454515047248" TEXT="Arithmetic Expression Evaluation">
@@ -37,6 +76,45 @@
 </node>
 <node COLOR="#338800" CREATED="1447963071798" HGAP="34" ID="ID_363199567" MODIFIED="1454514544746" POSITION="left" TEXT="Queues">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node COLOR="#338800" CREATED="1455818173118" ID="ID_82927373" MODIFIED="1455820550777" TEXT="Priority Queue">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1455818586706" ID="ID_895757739" MODIFIED="1455818590543" TEXT="Applications">
+<node CREATED="1455818531870" ID="ID_1342653226" MODIFIED="1455818542527" TEXT="Event-driven simulation. [customers in a line, colliding particles] "/>
+<node CREATED="1455818542528" ID="ID_1680940964" MODIFIED="1455818599718" TEXT="Numerical computation. [reducing roundoff error] "/>
+<node CREATED="1455818547400" ID="ID_471491690" MODIFIED="1455818601286" TEXT="Data compression. [Huffman codes] "/>
+<node CREATED="1455818553351" ID="ID_653648080" MODIFIED="1455818602614" TEXT="Graph searching. [Dijkstra&apos;s algorithm, Prim&apos;s algorithm] "/>
+<node CREATED="1455818557439" ID="ID_1669793374" MODIFIED="1455818604110" TEXT="Number theory. [sum of powers] "/>
+<node CREATED="1455818563471" ID="ID_878067671" MODIFIED="1455818605741" TEXT="Artificial intelligence. [A* search] "/>
+<node CREATED="1455818567271" ID="ID_496758793" MODIFIED="1455818606991" TEXT="Statistics. [maintain largest M values in a sequence] "/>
+<node CREATED="1455818570598" ID="ID_125455448" MODIFIED="1455818609718" TEXT="Operating systems. [load balancing, interrupt handling] "/>
+<node CREATED="1455818575126" ID="ID_844184926" MODIFIED="1455818614801">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Discrete optimization. [bin packing, scheduling]
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1455818582675" ID="ID_1171961286" MODIFIED="1455818618158">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Spam filtering. [Bayesian spam filter]
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
 </node>
 <node COLOR="#338800" CREATED="1447963075206" HGAP="37" ID="ID_1506108160" MODIFIED="1454514543578" POSITION="left" TEXT="Lists">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -70,11 +148,6 @@
 <node CREATED="1387217233701" ID="ID_211611266" MODIFIED="1387217237388" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x442;&#x43e;&#x447;&#x435;&#x43a;, &#x43f;&#x43e;&#x43f;&#x430;&#x434;&#x430;&#x44e;&#x449;&#x438;&#x445; &#x432; &#x434;&#x438;&#x430;&#x43f;&#x430;&#x437;&#x43e;&#x43d;&#xa;"/>
 <node CREATED="1387217237388" ID="ID_1361747904" MODIFIED="1387217237404" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x435;&#x447;&#x435;&#x43d;&#x438;&#x439; &#x43e;&#x442;&#x440;&#x435;&#x437;&#x43a;&#x43e;&#x432;."/>
 </node>
-<node CREATED="1382966899487" ID="ID_134521864" MODIFIED="1450818895170" POSITION="right" TEXT="&#x41a;&#x43e;&#x43c;&#x431;&#x438;&#x43d;&#x430;&#x442;&#x43e;&#x440;&#x43d;&#x44b;&#x435; &#x430;&#x43b;&#x433;&#x43e;&#x440;&#x438;&#x442;&#x43c;&#x44b;&#xa;" VSHIFT="11">
-<node CREATED="1387217276450" ID="ID_273795159" MODIFIED="1387217279590" TEXT="&#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435; &#x441;&#x43b;&#x435;&#x434;&#x443;&#x44e;&#x449;&#x435;&#x439; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x442;&#x430;&#x43d;&#x43e;&#x432;&#x43a;&#x438;&#xa;"/>
-<node CREATED="1387217279590" ID="ID_1173024401" MODIFIED="1387217279590" TEXT="&#x432;&#x44b;&#x431;&#x43e;&#x440; &#x432;&#x441;&#x435;&#x445; &#x43f;&#x43e;&#x434;&#x43c;&#x43d;&#x43e;&#x436;&#x435;&#x441;&#x442;&#x432; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x440;&#x430;&#x437;&#x43c;&#x435;&#x440;&#x430;"/>
-<node CREATED="1387217295355" ID="ID_931301101" MODIFIED="1387217297262" TEXT="..."/>
-</node>
 <node COLOR="#ff0000" CREATED="1382966911799" HGAP="36" ID="ID_292645896" MODIFIED="1454514526723" POSITION="left" TEXT="Probability Algorithms" VSHIFT="-14">
 <node CREATED="1387218263581" HGAP="21" ID="ID_1085156163" MODIFIED="1455737602267" TEXT=": &#x441;&#x43b;&#x443;&#x447;&#x430;&#x439;&#x43d;&#x430;&#x44f; &#x432;&#x44b;&#x431;&#x43e;&#x440;&#x43a;&#x430; (&#x432; &#x442;&#x43e;&#x43c; &#x447;&#x438;&#x441;&#x43b;&#x435; &#x438;&#x437; &#x43f;&#x43e;&#x442;&#x43e;&#x43a;&#x430;), &#x43f;&#x435;&#x440;&#x435;&#x43c;&#x435;&#x448;&#x438;&#x432;&#x430;&#x43d;&#x438;&#x435;." VSHIFT="1"/>
 </node>
@@ -85,7 +158,7 @@
 <node CREATED="1387218113163" ID="ID_365635137" MODIFIED="1387218115694" TEXT="KMP"/>
 <node CREATED="1387218116694" ID="ID_1772116987" MODIFIED="1387218120053" TEXT="Rabin-Karp"/>
 </node>
-<node CREATED="1387218360516" FOLDED="true" ID="ID_1359430717" MODIFIED="1454941549141" POSITION="right" TEXT="Categories">
+<node CREATED="1387218360516" FOLDED="true" HGAP="35" ID="ID_1359430717" MODIFIED="1455821114722" POSITION="right" TEXT="Categories" VSHIFT="18">
 <node CREATED="1387218397249" HGAP="23" ID="ID_795698864" MODIFIED="1450818896889" TEXT="Simple recursive" VSHIFT="23">
 <node CREATED="1387218614697" ID="ID_1375676122" MODIFIED="1387218628899" TEXT="A simple recursive algorithm:&#xa;Solves the base cases directly&#xa;Recurs with a simpler subproblem&#xa;Does some extra work to convert the solution to the simpler subproblem into a solution to the given problem&#xa;I call these &#x201c;simple&#x201d; because several of the other algorithm types are inherently recursive&#xa;"/>
 <node CREATED="1387218638165" ID="ID_798384599" MODIFIED="1387230176769" TEXT="Examples">
