@@ -118,8 +118,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1456021318236" ID="ID_1863586716" MODIFIED="1456021325279" TEXT="Some facts">
@@ -216,20 +215,51 @@
 <node CREATED="1449638274130" MODIFIED="1454514325910" TEXT="https://www.cs.princeton.edu/~rs/talks/LLRB/LLRB.pdf"/>
 </node>
 </node>
-<node CREATED="1447965971779" MODIFIED="1454514325910" TEXT="B-Tree">
+<node CREATED="1447965971779" ID="ID_246804981" MODIFIED="1454514325910" TEXT="B-Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1449501759802" MODIFIED="1454514325910" TEXT="2-3-4-Tree">
+<node CREATED="1449501759802" ID="ID_1129730424" MODIFIED="1454514325910" TEXT="2-3-4-Tree">
 <node COLOR="#999999" CREATED="1449501787520" HGAP="29" MODIFIED="1454514325910" TEXT="2-3-4 trees are B-trees of order 4" VSHIFT="9">
 <font NAME="SansSerif" SIZE="10"/>
 </node>
 </node>
+<node CREATED="1456179853782" ID="ID_1946878058" MODIFIED="1456179856682" TEXT="Def.">
+<node CREATED="1456179827636" ID="ID_1424938007" MODIFIED="1456179840855" TEXT="B-tree. Generalize 2-3 trees by allowing up to M - 1 key-link pairs per node. "/>
+<node CREATED="1456179840859" ID="ID_1483441422" MODIFIED="1456179864704" TEXT="At least 2 key-link pairs at root. "/>
+<node CREATED="1456179864705" ID="ID_1830014288" MODIFIED="1456179868033" TEXT="At least M / 2 key-link pairs in other nodes. "/>
+<node CREATED="1456179868033" ID="ID_1086919989" MODIFIED="1456179884209">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      External nodes contain client keys.
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
-<node COLOR="#ff0000" CREATED="1448997224737" MODIFIED="1454514325910" TEXT="Splay Tree">
+<node CREATED="1456179884211" ID="ID_30322669" MODIFIED="1456179884214">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Internal nodes contain copies of keys to guide search.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1448997224737" ID="ID_410730909" MODIFIED="1454514325910" TEXT="Splay Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1448997234954" MODIFIED="1454514325910" TEXT="AVL Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1449501807157" MODIFIED="1454514325910" TEXT="Georgy Adelson Velskii and Yevgeniy Landis"/>
+<node CREATED="1449501807157" ID="ID_525663783" MODIFIED="1454514325910" TEXT="Georgy Adelson Velskii and Yevgeniy Landis"/>
 </node>
 </node>
 </node>

@@ -107,4 +107,14 @@ public class LLRedBlackTree <K extends Comparable<K>, V> extends AbstractBST<K, 
 		return sb.toString();
 	}
 
+	public static void main(String[] args) {
+		LLRedBlackTree<Integer, Integer> tree = new LLRedBlackTree<>();
+//		String[] s = "47 21 93 16 24 71 95 13 20 70 72 94 50".split(" ");
+		String[] s = "23 11 56 10 20 34 92 15 32 40".split(" ");
+		for (int i = 0; i < s.length; i++) {
+			int k = Integer.parseInt(s[i]);
+			tree.put(k, k);
+		}
+		System.out.println(tree);
+	}
 }
