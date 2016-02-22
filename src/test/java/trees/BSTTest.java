@@ -99,12 +99,10 @@ public class BSTTest {
 	@Test
 	public void testDeleteMin2() {
 		tree = new BST<>();
-		tree.put(3, 3);
-		tree.put(1, 1);
-		tree.put(6, 6);
-		tree.put(5, 5);
-		tree.put(7, 7);
-		tree.root.right = tree.deleteMin(tree.root.right);
+		tree = new BST<>();
+		addToTree(tree, "69 90 74 91");
+		tree.deleteMin();
+		
 	}
 	
 	@Test
@@ -161,6 +159,16 @@ public class BSTTest {
 	}
 
 	@Test
+	public void testIsNotBST2() {
+		tree = new BST<>();
+		tree.put(20, 20);
+		tree.put(51, 51);
+		tree.put(61, 61);
+		tree.root.right.left = new TreeNode<>(null, null, 1, 11);
+		Assert.assertFalse(tree.isBST());
+	}
+
+	@Test
 	public void testTraversePreOrder() {
 		tree.traversePreOrder(visitor);
 		System.out.println();
@@ -200,9 +208,41 @@ public class BSTTest {
 		tree.put(3, 3);
 		tree.put(5, 5);
 		tree.put(7, 7);
-		tree.traversePostOrder(visitor);
+		tree.traverseBreadthFirst(visitor);
+	}
+	
+	@Test
+	public void testTraverseBreadthSearch() {
+		tree = new BST<>();
+		addToTree(tree, "56 91 25 84 15 97 63 77 82 37");
+		tree.traverseBreadthFirst(visitor);
+		System.out.println();
+		System.out.println(tree);
 	}
 
+	private void addToTree(BST<Integer, Integer> tree, String str) {
+		String[] numbers = str.split(" ");
+		for (String number : numbers) {
+			int num = Integer.parseInt(number);
+			tree.put(num, num);
+		}
+	}
+
+	@Test
+	public void testDeleteHabbard() {
+		tree = new BST<>();
+		String[] numbers = "63 41 80 10 52 70 34 49 58 65 76 54".split(" ");
+		for (String number : numbers) {
+			int num = Integer.parseInt(number);
+			tree.put(num, num);
+		}
+		tree.remove(65);
+		tree.remove(80);
+		tree.remove(41);
+		tree.traverseBreadthFirst(visitor);
+		System.out.println("\n"+tree);
+	}
+		
 	@Test
 	public void testRotateCW() {
 		tree.rotateRight(tree.root, tree.root.left);

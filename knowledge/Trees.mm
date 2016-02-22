@@ -30,10 +30,7 @@
 </node>
 <node CREATED="1447962893223" HGAP="39" ID="ID_1247494738" MODIFIED="1454514325897" TEXT="Double a tree" VSHIFT="-51"/>
 </node>
-<node COLOR="#ff0000" CREATED="1382966750712" HGAP="26" ID="ID_1185546908" MODIFIED="1454514325897" POSITION="right" TEXT="K-Dimentinal Tree" VSHIFT="3">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1366207459547" HGAP="22" ID="ID_21637313" MODIFIED="1454514348789" POSITION="right" TEXT="Binary Search Tree" VSHIFT="127">
+<node CREATED="1366207459547" HGAP="23" ID="ID_21637313" MODIFIED="1456015158151" POSITION="right" TEXT="Binary Search Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1366207465844" MODIFIED="1454514325898" TEXT="Insert"/>
 <node CREATED="1366207476687" MODIFIED="1454514325898" TEXT="Search">
@@ -42,9 +39,11 @@
 <node COLOR="#338800" CREATED="1366207602242" MODIFIED="1454514325898" TEXT="Depth-first search (DFS)"/>
 </node>
 <node COLOR="#338800" CREATED="1366207480499" MODIFIED="1454514325898" TEXT="Delete">
-<node CREATED="1447962948896" MODIFIED="1454514325899" TEXT="T. Hibbard">
-<node CREATED="1447962950457" HGAP="27" MODIFIED="1454514325899" TEXT="successor" VSHIFT="6"/>
-<node CREATED="1447962953297" MODIFIED="1454514325899" TEXT="predecessor" VSHIFT="9"/>
+<node CREATED="1447962948896" ID="ID_124995927" MODIFIED="1454514325899" TEXT="T. Hibbard">
+<node COLOR="#338800" CREATED="1447962950457" HGAP="27" ID="ID_1616953705" MODIFIED="1456013893707" TEXT="successor" VSHIFT="6">
+<node CREATED="1456014002091" ID="ID_659720297" MODIFIED="1456014003569" TEXT="min(node.right)"/>
+</node>
+<node CREATED="1447962953297" ID="ID_1307523026" MODIFIED="1454514325899" TEXT="predecessor" VSHIFT="9"/>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1447952668858" HGAP="136" MODIFIED="1454514325899" TEXT="Delete Max" VSHIFT="42"/>
@@ -59,7 +58,89 @@
 <node CREATED="1449761000635" HGAP="119" ID="ID_505019423" MODIFIED="1454514360916" TEXT="Select" VSHIFT="-5"/>
 <node CREATED="1447962969505" HGAP="130" ID="ID_717904079" MODIFIED="1454514361917" TEXT="Floor" VSHIFT="-2"/>
 <node CREATED="1447962973898" HGAP="144" MODIFIED="1454514325900" TEXT="Ceiling" VSHIFT="9"/>
-<node CREATED="1366207510685" HGAP="57" ID="ID_706019558" MODIFIED="1454514369156" TEXT="Balanced Binary Search Trees" VSHIFT="-5">
+<node CREATED="1456008582737" ID="ID_1276929919" MODIFIED="1456009654543" TEXT="A BST is a binary tree in symetric order.">
+<node CREATED="1449240504883" HGAP="15" ID="ID_787055199" MODIFIED="1456010652235" VSHIFT="2">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <table style="word-spacing: 0px; font-weight: normal; text-indent: 0px; font-family: sans-serif; margin-top: 0; font-size: 12.32px; padding-right: 0; background-color: rgb(249, 249, 249); padding-left: 0; font-style: normal; clear: right; line-height: 1.5em; font-variant: normal; padding-bottom: 0; text-transform: none; white-space: normal; text-align: start; padding-top: 0; margin-right: 0px; letter-spacing: normal; margin-bottom: 0; color: black; border-spacing: 3px; margin-left: 0" class="infobox">
+      <tr>
+        <td style="text-align: left; vertical-align: top">
+          
+        </td>
+        <td style="text-align: left; vertical-align: top">
+          <font size="2">Average </font>
+        </td>
+        <td style="text-align: left; vertical-align: top">
+          <font size="2">Worst case </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="text-align: left; vertical-align: top">
+          <font size="2">Search </font>
+        </th>
+        <td style="text-align: left; vertical-align: top">
+          <font size="2">1.39logN </font>
+        </td>
+        <td style="text-align: left; vertical-align: top">
+          <font size="2">N </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="text-align: left; vertical-align: top">
+          <font size="2">Insert </font>
+        </th>
+        <td style="text-align: left; vertical-align: top">
+          <font size="2">1.39logN </font>
+        </td>
+        <td style="text-align: left; vertical-align: top">
+          <font size="2">N </font>
+        </td>
+      </tr>
+      <tr>
+        <th style="text-align: left; vertical-align: top">
+          <p>
+            <font size="2">Delete </font>
+          </p>
+        </th>
+        <td style="text-align: left; vertical-align: top">
+          <p>
+            <font size="2">sqrt(N)</font>
+          </p>
+        </td>
+        <td style="text-align: left; vertical-align: top">
+          <p>
+            <font size="2">N</font>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1456021318236" ID="ID_1863586716" MODIFIED="1456021325279" TEXT="Some facts">
+<node CREATED="1456021326101" ID="ID_1080013427" MODIFIED="1456021338965" TEXT="Given a binary tree with keys in the nodes, it is possible to determine whether the binary tree is a BST in linear time."/>
+<node CREATED="1456021352532" ID="ID_1289460360" MODIFIED="1456021353724" TEXT="Given either the preorder or postorder traversal of a BST containing N distinct keys, it is possible to reconstruct the shape of the BST."/>
+<node CREATED="1456021364506" ID="ID_894437815" MODIFIED="1456021365220" TEXT="Given a BST, it is possible to obtain a sorted list of the keys in linear time."/>
+<node CREATED="1456022560019" ID="ID_348963170" MODIFIED="1456022561235" TEXT="Proposition. If N distinct keys are inserted into a BST in random order, the expected number of compares for a search/insert is ~ 2 ln N. Pf. 1-1 correspondence with quicksort partitioning."/>
+<node CREATED="1456022577346" ID="ID_1516539877" MODIFIED="1456022578019" TEXT="[Reed, 2003] If N distinct keys are inserted in random order, expected height of tree is ~ 4.311 ln N."/>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1382966756962" HGAP="25" ID="ID_351293037" MODIFIED="1456015147340" POSITION="left" TEXT="Interval Tree" VSHIFT="21">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#ff0000" CREATED="1449240274823" HGAP="27" ID="ID_583768813" MODIFIED="1456015149160" POSITION="left" TEXT="Fusion Tree" VSHIFT="16">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#ff0000" CREATED="1382966750712" HGAP="26" ID="ID_1185546908" MODIFIED="1454514325897" POSITION="left" TEXT="K-Dimentinal Tree" VSHIFT="3">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1366207510685" HGAP="26" ID="ID_706019558" MODIFIED="1456022633484" POSITION="right" TEXT="Balanced Binary Search Trees" VSHIFT="28">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1366207522044" FOLDED="true" ID="ID_82038873" MODIFIED="1454514370261" TEXT="Red-Black Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449240504883" MODIFIED="1454514325901">
@@ -150,13 +231,6 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449501807157" MODIFIED="1454514325910" TEXT="Georgy Adelson Velskii and Yevgeniy Landis"/>
 </node>
-</node>
-</node>
-<node COLOR="#ff0000" CREATED="1449240274823" HGAP="29" ID="ID_583768813" MODIFIED="1454514346484" POSITION="right" TEXT="Fusion Tree" VSHIFT="-126">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node COLOR="#ff0000" CREATED="1382966756962" ID="ID_351293037" MODIFIED="1454514325897" POSITION="left" TEXT="Interval Tree">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
 </map>

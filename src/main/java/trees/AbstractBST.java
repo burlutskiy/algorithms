@@ -6,6 +6,7 @@ import java.util.Queue;
 import java.util.Stack;
 
 import utils.Pair;
+import utils.Reference;
 
 /**
  * @author alexey
@@ -196,6 +197,14 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		visitor.visitNode(node, depth);
 	}
 
+	protected N successor (N node){
+		return min(node.right);
+	}
+
+	protected N predecessor (N node){
+		return max(node.left);
+	}
+	
 	public void traverseBreadthFirst(TreeVisitor<K,V,N> visitor) {
 		Queue<Pair<N, Integer>> queue = new LinkedList<>();
 		queue.add(new Pair<N, Integer>(root, 0));
@@ -211,9 +220,34 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 	}
 	
 	public boolean isBST() {
-		return isBST(root);
+		return isBST(root, new Reference<K>(min(root).key));
 	}
-
+	
+	/**
+	 * O(N) - linear
+	 * @param node
+	 * @param max
+	 * @return
+	 */
+	private boolean isBST(N node, Reference<K> max){
+		if (node == null)
+			return true;
+		if(!isBST(node.left, max))
+				return false;
+		if(less(node.key, max.value))
+			return false;
+		max.value = node.key;
+		if(!isBST(node.right, max))
+			return false;
+		return true;
+	}
+	
+	/**
+	 * O(NlogN) - linearithmic
+	 * @param node
+	 * @return
+	 */
+	@Deprecated
 	private boolean isBST(N node) {
 		if (node == null)
 			return true;
