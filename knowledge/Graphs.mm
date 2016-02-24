@@ -12,8 +12,7 @@
       Weighted<br />Graphs
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1451942999772" MODIFIED="1454514249587" TEXT="Shortest Paths">
 <node COLOR="#ff0000" CREATED="1450149165362" MODIFIED="1454514249587" TEXT="A* Search Algorithm">
@@ -25,7 +24,7 @@
 <node COLOR="#ff0000" CREATED="1450149258232" MODIFIED="1454514249587" TEXT="Johnson&apos;s Algorithm ">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1450149278173" MODIFIED="1454514249587" TEXT="Viterbi Algorithm ">
+<node COLOR="#ff0000" CREATED="1450149278173" ID="ID_443653580" MODIFIED="1456179314254" TEXT="Viterbi Algorithm ">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1451944024561" MODIFIED="1454514249587">
@@ -44,7 +43,7 @@
 </html></richcontent>
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1451943009819" MODIFIED="1454514249589" TEXT="Idea is to relax any edge"/>
-<node CREATED="1450149112439" MODIFIED="1454514249589">
+<node CREATED="1450149112439" ID="ID_1019210105" MODIFIED="1454514249589">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -59,8 +58,8 @@
   </body>
 </html></richcontent>
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<node COLOR="#338800" CREATED="1450149355933" MODIFIED="1454514249590" TEXT="O(V^2) 1959"/>
-<node CREATED="1450149553569" MODIFIED="1454514249590" TEXT="Dijkstra&apos;s algorithm with Fibonacci heap">
+<node COLOR="#338800" CREATED="1450149355933" ID="ID_596691636" MODIFIED="1454514249590" TEXT="O(V^2) 1959"/>
+<node CREATED="1450149553569" ID="ID_48922720" MODIFIED="1454514249590" TEXT="Dijkstra&apos;s algorithm with Fibonacci heap">
 <node CREATED="1450149565932" MODIFIED="1454514249590">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -74,10 +73,10 @@
 </html></richcontent>
 </node>
 </node>
-<node COLOR="#ff0000" CREATED="1452019257769" MODIFIED="1454514249594" TEXT="Based On Binary Heap">
+<node COLOR="#ff0000" CREATED="1452019257769" ID="ID_803134291" MODIFIED="1454514249594" TEXT="Based On Binary Heap">
 <node CREATED="1452019271929" MODIFIED="1454514249594" TEXT="O(ElogV)"/>
 </node>
-<node CREATED="1451944162362" MODIFIED="1454514249594">
+<node CREATED="1451944162362" ID="ID_127037109" MODIFIED="1454514249594">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -111,7 +110,7 @@
 </node>
 </node>
 <node CREATED="1451943020123" MODIFIED="1454514249597" TEXT="Shortest Path Tree( SPT)">
-<node CREATED="1452023267931" MODIFIED="1454514249597" TEXT="Proposition: A SPT exists iff no negative cycles"/>
+<node CREATED="1452023267931" ID="ID_339052047" MODIFIED="1454514249597" TEXT="Proposition: A SPT exists iff no negative cycles"/>
 </node>
 <node CREATED="1450149139666" MODIFIED="1454514249597">
 <richcontent TYPE="NODE"><html>
@@ -128,7 +127,7 @@
   </body>
 </html></richcontent>
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1452019158191" MODIFIED="1454514249598" TEXT="Initialize distTo[s] to 0 and all other distTo[] values to infinity. &#xa;Then, considering the digraph&apos;s edges in any order, and relax all edges. &#xa;Make V such passes.for (int pass = 0; pass &lt; G.V(); pass++)&#xa;   for (int v = 0; v &lt; G.V(); v++)&#xa;      for (DirectedEdge e : G.adj(v))&#xa;          relax(e);"/>
+<node CREATED="1452019158191" ID="ID_1462946293" MODIFIED="1454514249598" TEXT="Initialize distTo[s] to 0 and all other distTo[] values to infinity. &#xa;Then, considering the digraph&apos;s edges in any order, and relax all edges. &#xa;Make V such passes.for (int pass = 0; pass &lt; G.V(); pass++)&#xa;   for (int v = 0; v &lt; G.V(); v++)&#xa;      for (DirectedEdge e : G.adj(v))&#xa;          relax(e);"/>
 <node CREATED="1452019372796" HGAP="23" MODIFIED="1454514249600" TEXT="Queue-based Bellman-Ford Algorithm" VSHIFT="14">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>

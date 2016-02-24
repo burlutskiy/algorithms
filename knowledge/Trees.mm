@@ -140,7 +140,7 @@
 </node>
 <node CREATED="1366207510685" HGAP="26" ID="ID_706019558" MODIFIED="1456022633484" POSITION="right" TEXT="Balanced Binary Search Trees" VSHIFT="28">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1366207522044" FOLDED="true" ID="ID_82038873" MODIFIED="1454514370261" TEXT="Red-Black Tree">
+<node CREATED="1366207522044" ID="ID_82038873" MODIFIED="1456353182796" TEXT="Red-Black Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449240504883" MODIFIED="1454514325901">
 <richcontent TYPE="NODE"><html>
@@ -208,15 +208,38 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1449240704479" MODIFIED="1454514325909" TEXT="Left-Leaning Red&#x2013;Black Tree">
+<node CREATED="1449240704479" ID="ID_1861908801" MODIFIED="1454514325909" TEXT="Left-Leaning Red&#x2013;Black Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449240722038" MODIFIED="1454514325909" TEXT="Robert Sedgewick 2008"/>
-<node CREATED="1449253951853" MODIFIED="1454514325909" TEXT="https://www.cs.princeton.edu/~rs/talks/LLRB/RedBlack.pdf"/>
-<node CREATED="1449638274130" MODIFIED="1454514325910" TEXT="https://www.cs.princeton.edu/~rs/talks/LLRB/LLRB.pdf"/>
+<node CREATED="1449253951853" ID="ID_1410981283" MODIFIED="1454514325909" TEXT="https://www.cs.princeton.edu/~rs/talks/LLRB/RedBlack.pdf"/>
+<node CREATED="1449638274130" ID="ID_394538206" MODIFIED="1454514325910" TEXT="https://www.cs.princeton.edu/~rs/talks/LLRB/LLRB.pdf"/>
+<node CREATED="1456353202666" MODIFIED="1456353202666">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="Trees_1978182819346407138.jpeg" />
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 </node>
 <node CREATED="1447965971779" ID="ID_246804981" MODIFIED="1454514325910" TEXT="B-Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1456352028486" ID="ID_1396554250" MODIFIED="1456352033417" TEXT="2-3 Tree">
+<node CREATED="1456352035980" ID="ID_1375471998" MODIFIED="1456352181644" TEXT="Maintain perfect ballance">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1456352070054" ID="ID_682019239" MODIFIED="1456352089372" TEXT="Every path from top to null link has the same lenght"/>
+</node>
+<node CREATED="1456352096535" ID="ID_1638720593" MODIFIED="1456352106148" TEXT="Allow 1 or 2 keys per node">
+<node CREATED="1456352106912" ID="ID_1698610833" MODIFIED="1456352111277" TEXT="2-node">
+<node CREATED="1456352114224" ID="ID_1434253794" MODIFIED="1456352123101" TEXT="one key, two children"/>
+<node CREATED="1456352123688" ID="ID_1580806486" MODIFIED="1456352134454" TEXT="two keys, three children"/>
+</node>
+</node>
+</node>
 <node CREATED="1449501759802" ID="ID_1129730424" MODIFIED="1454514325910" TEXT="2-3-4-Tree">
 <node COLOR="#999999" CREATED="1449501787520" HGAP="29" MODIFIED="1454514325910" TEXT="2-3-4 trees are B-trees of order 4" VSHIFT="9">
 <font NAME="SansSerif" SIZE="10"/>
