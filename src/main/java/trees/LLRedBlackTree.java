@@ -3,6 +3,7 @@ package trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import edu.princeton.cs.algs4.RedBlackBST;
 import utils.Pair;
 
 public class LLRedBlackTree <K extends Comparable<K>, V> extends AbstractBST<K, V, RedBlackNode<K, V>> {
@@ -24,11 +25,16 @@ public class LLRedBlackTree <K extends Comparable<K>, V> extends AbstractBST<K, 
 	}
 
 	protected RedBlackNode<K, V> balance(RedBlackNode<K, V> h) {
-		if (isRed(h.left) && isRed(h.left.left) || (isRed(h.left) && isRed(h.left.right)))
-			h = rotateRight(h);
-		if(isRed(h.right) && isRed(h.right.right) || (isRed(h.right) && isRed(h.right.left)))
-			h = rotateLeft(h);
+        if (isRed(h.right) && !isRed(h.left))      h = rotateLeft(h);
+        if (isRed(h.left)  &&  isRed(h.left.left)) h = rotateRight(h);
+		if (isRed(h.left)  &&  isRed(h.right)) flipColors(h);
 		return h;
+	}
+
+	private void flipColors(RedBlackNode<K, V> node) {
+		node.color = true;
+		node.left.color = false;
+		node.right.color = false;
 	}
 
 	private RedBlackNode<K, V> rotateRight(RedBlackNode<K, V> h) {
@@ -105,16 +111,5 @@ public class LLRedBlackTree <K extends Comparable<K>, V> extends AbstractBST<K, 
 			}
 		}
 		return sb.toString();
-	}
-
-	public static void main(String[] args) {
-		LLRedBlackTree<Integer, Integer> tree = new LLRedBlackTree<>();
-//		String[] s = "47 21 93 16 24 71 95 13 20 70 72 94 50".split(" ");
-		String[] s = "23 11 56 10 20 34 92 15 32 40".split(" ");
-		for (int i = 0; i < s.length; i++) {
-			int k = Integer.parseInt(s[i]);
-			tree.put(k, k);
-		}
-		System.out.println(tree);
 	}
 }
