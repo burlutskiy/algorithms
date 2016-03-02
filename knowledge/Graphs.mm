@@ -15,13 +15,13 @@
 </html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1451942999772" MODIFIED="1454514249587" TEXT="Shortest Paths">
-<node COLOR="#ff0000" CREATED="1450149165362" MODIFIED="1454514249587" TEXT="A* Search Algorithm">
+<node COLOR="#ff0000" CREATED="1450149165362" ID="ID_1310461840" MODIFIED="1454514249587" TEXT="A* Search Algorithm">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1450149237847" MODIFIED="1454514249587" TEXT="Floyd&#x2013;Warshall Algorithm ">
+<node COLOR="#ff0000" CREATED="1450149237847" ID="ID_757212372" MODIFIED="1454514249587" TEXT="Floyd&#x2013;Warshall Algorithm ">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#ff0000" CREATED="1450149258232" MODIFIED="1454514249587" TEXT="Johnson&apos;s Algorithm ">
+<node COLOR="#ff0000" CREATED="1450149258232" ID="ID_265954261" MODIFIED="1454514249587" TEXT="Johnson&apos;s Algorithm ">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
 <node COLOR="#ff0000" CREATED="1450149278173" ID="ID_443653580" MODIFIED="1456179314254" TEXT="Viterbi Algorithm ">
@@ -345,7 +345,7 @@
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node COLOR="#ff0000" CREATED="1449639067665" HGAP="31" MODIFIED="1454514249586" TEXT="Maze Exploration" VSHIFT="-22">
+<node COLOR="#ff0000" CREATED="1449639067665" HGAP="35" ID="ID_693552109" MODIFIED="1456496455652" TEXT="Maze Exploration" VSHIFT="3">
 <node CREATED="1449639081785" MODIFIED="1454514249587" TEXT="Tremaux maze exploration algorithm">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>

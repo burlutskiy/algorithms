@@ -1,7 +1,7 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#ff0000" CREATED="1383141908886" HGAP="30" ID="ID_841643229" LINK="algorithms.mm" MODIFIED="1454969672691" STYLE="bubble" TEXT="Sorting Algorithms" VSHIFT="14">
-<node COLOR="#338800" CREATED="1383141978529" FOLDED="true" ID="ID_1564714775" MODIFIED="1455822147606" POSITION="right" TEXT="QuickSort">
+<node COLOR="#338800" CREATED="1383141978529" ID="ID_1564714775" MODIFIED="1456927161151" POSITION="right" TEXT="QuickSort">
 <font NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1455652157314" ID="ID_160524231" MODIFIED="1455652179738" TEXT="2-way Randomized QuickSort">
 <node CREATED="1454862301909" ID="ID_1711380197" MODIFIED="1454862602187" TEXT="1.39NlnN compares and 1/3NlnN exchanges"/>
@@ -179,8 +179,7 @@
       Mergesort: no, linear extra space.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1455821862268" ID="ID_884255899" MODIFIED="1455822264330">
 <richcontent TYPE="NODE"><html>
@@ -192,8 +191,7 @@
       Quicksort: no, quadratic time in worst case.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1455821935378" ID="ID_1767795429" MODIFIED="1455822264330" TEXT="Bottom Line">
@@ -453,8 +451,7 @@
   <body>
     <img src="Sorting Algorithms_6648747486860319506.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
