@@ -22,7 +22,7 @@ public class CycleTest {
 		g.addEdge(3, 0);
 		Cycle<Integer> cycle = new Cycle<>(g);
 		Assert.assertTrue(cycle.hasCycle());
-		AssertGraph.assertEquals(cycle.cycle(), Arrays.asList(new Integer[]{0,1,2,3,0}));
+		AssertUtils.assertEquals(cycle.cycle(), Arrays.asList(new Integer[]{0,1,2,3,0}));
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class CycleTest {
 		Cycle<Integer> cycle = new Cycle<>(g);
 		Assert.assertTrue(cycle.hasCycle());
 		Assert.assertTrue(cycle.hasSelfLoop());
-		AssertGraph.assertEquals(cycle.cycle(), Arrays.asList(new Integer[]{1,1}));
+		AssertUtils.assertEquals(cycle.cycle(), Arrays.asList(new Integer[]{1,1}));
 	}
 
 	@Test

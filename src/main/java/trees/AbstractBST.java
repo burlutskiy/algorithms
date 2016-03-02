@@ -197,6 +197,7 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 		visitor.visitNode(node, depth);
 	}
 
+	
 	protected N successor (N node){
 		return min(node.right);
 	}
@@ -282,7 +283,7 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 	public int size() {
 		return size;
 	}
-
+	
 	public String toString() {
 		final int n = height();
 		final StringBuilder sb = new StringBuilder();

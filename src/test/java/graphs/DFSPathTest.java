@@ -20,7 +20,7 @@ public class DFSPathTest {
 		g.addEdge(7, 0);
 		DFSPaths<Integer> path = new DFSPaths<>(g, 0);
 		Assert.assertTrue(path.hasPathTo(6));
-		AssertGraph.assertEquals(path.pathTo(6), Arrays.asList(new Integer[]{0,1,2,3,4,5,6,7,0}));
+		AssertUtils.assertEquals(path.pathTo(6), Arrays.asList(new Integer[]{0,1,2,3,4,5,6,7,0}));
 	}
 
 }

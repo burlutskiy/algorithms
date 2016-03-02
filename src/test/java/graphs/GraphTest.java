@@ -47,7 +47,7 @@ public class GraphTest {
 		Paths<String> pathsFrom = graph.pathsFrom(MOSCOW);
 		Iterable<String> pathTo = pathsFrom.pathTo(PHILADELPHIA);
 		Iterable<String> asList = Arrays.asList(new String[]{MOSCOW, NEW_YORK, LAS_VEGAS, LONDON, PARIS, PHILADELPHIA});
-		AssertGraph.assertEquals(pathTo, asList);
+		AssertUtils.assertEquals(pathTo, asList);
 		System.out.println(pathsFrom);
 	}
 

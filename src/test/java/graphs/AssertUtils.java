@@ -11,7 +11,7 @@ import org.junit.Assert;
  * @author alexey
  *
  */
-public class AssertGraph {
+public class AssertUtils {
 
 	public static <V> void assertEquals(Iterable<V> iter1, Iterable<V> iter2){
 		Iterator<V> iterator = iter2.iterator();

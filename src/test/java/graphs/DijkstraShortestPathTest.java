@@ -22,7 +22,7 @@ public class DijkstraShortestPathTest {
 		graph.addEdge(4, 5, 1);
 		DijkstraShortestPath<Integer> sp = new DijkstraShortestPath<>(graph, 0);
 		Assert.assertEquals(6., sp.distTo(5));
-		AssertGraph.assertEquals(sp.pathTo(5), Arrays.asList(new Integer[] { 0, 2, 1, 3, 5 }));
+		AssertUtils.assertEquals(sp.pathTo(5), Arrays.asList(new Integer[] { 0, 2, 1, 3, 5 }));
 	}
 
 }

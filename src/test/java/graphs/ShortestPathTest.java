@@ -20,7 +20,7 @@ public class ShortestPathTest {
 		g.addEdge(7, 0);
 		ShortestPath<Integer> path = new ShortestPath<>(g, 0);
 		Assert.assertTrue(path.hasPathTo(6));
-		AssertGraph.assertEquals(path.pathTo(6), Arrays.asList(new Integer[]{0,7,6}));
+		AssertUtils.assertEquals(path.pathTo(6), Arrays.asList(new Integer[]{0,7,6}));
 	}
 
 }

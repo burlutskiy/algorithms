@@ -53,7 +53,7 @@ public class BipartiteTest {
 		g.addEdge(1, 3);
 		Bipartite<Integer> bipartite = new Bipartite<>(g);
 		Assert.assertFalse(bipartite.isBipartite());
-		AssertGraph.assertEquals(bipartite.oddCycle(), Arrays.asList(new Integer[]{1,2,3,1}));
+		AssertUtils.assertEquals(bipartite.oddCycle(), Arrays.asList(new Integer[]{1,2,3,1}));
 	}
 
 }

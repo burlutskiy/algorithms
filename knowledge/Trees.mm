@@ -2,9 +2,6 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node COLOR="#990000" CREATED="1366207444205" HGAP="114" ID="ID_576007995" LINK="algorithms.mm" MODIFIED="1454514325894" STYLE="bubble" TEXT="Trees" VSHIFT="14">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node COLOR="#ff0000" CREATED="1382966761040" ID="ID_1787598862" MODIFIED="1454514342494" POSITION="left" TEXT="Quad Tree">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-</node>
 <node CREATED="1447962643469" ID="ID_334347111" MODIFIED="1454514325894" POSITION="left" STYLE="bubble" TEXT="Binary Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1366207499279" HGAP="21" ID="ID_1952880802" MODIFIED="1454514387531" TEXT="Rotation" VSHIFT="2">
@@ -58,7 +55,7 @@
 <node CREATED="1449761000635" HGAP="119" ID="ID_505019423" MODIFIED="1454514360916" TEXT="Select" VSHIFT="-5"/>
 <node CREATED="1447962969505" HGAP="130" ID="ID_717904079" MODIFIED="1454514361917" TEXT="Floor" VSHIFT="-2"/>
 <node CREATED="1447962973898" HGAP="144" MODIFIED="1454514325900" TEXT="Ceiling" VSHIFT="9"/>
-<node CREATED="1456008582737" FOLDED="true" ID="ID_1276929919" MODIFIED="1456496413771" TEXT="A BST is a binary tree in symetric order.">
+<node CREATED="1456008582737" ID="ID_1276929919" MODIFIED="1456931527760" TEXT="A BST is a binary tree in symetric order.">
 <node CREATED="1449240504883" HGAP="15" ID="ID_787055199" MODIFIED="1456010652235" VSHIFT="2">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -121,7 +118,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1456021318236" FOLDED="true" ID="ID_1863586716" MODIFIED="1456496412532" TEXT="Some facts">
+<node CREATED="1456021318236" ID="ID_1863586716" MODIFIED="1456931525932" TEXT="Some facts">
 <node CREATED="1456021326101" ID="ID_1080013427" MODIFIED="1456021338965" TEXT="Given a binary tree with keys in the nodes, it is possible to determine whether the binary tree is a BST in linear time."/>
 <node CREATED="1456021352532" ID="ID_1289460360" MODIFIED="1456021353724" TEXT="Given either the preorder or postorder traversal of a BST containing N distinct keys, it is possible to reconstruct the shape of the BST."/>
 <node CREATED="1456021364506" ID="ID_894437815" MODIFIED="1456021365220" TEXT="Given a BST, it is possible to obtain a sorted list of the keys in linear time."/>
@@ -129,13 +126,7 @@
 <node CREATED="1456022577346" ID="ID_1516539877" MODIFIED="1456022578019" TEXT="[Reed, 2003] If N distinct keys are inserted in random order, expected height of tree is ~ 4.311 ln N."/>
 </node>
 </node>
-<node COLOR="#ff0000" CREATED="1382966756962" HGAP="25" ID="ID_351293037" MODIFIED="1456015147340" POSITION="left" TEXT="Interval Tree" VSHIFT="21">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-</node>
 <node COLOR="#ff0000" CREATED="1449240274823" HGAP="27" ID="ID_583768813" MODIFIED="1456015149160" POSITION="left" TEXT="Fusion Tree" VSHIFT="16">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node COLOR="#ff0000" CREATED="1382966750712" HGAP="26" ID="ID_1185546908" MODIFIED="1454514325897" POSITION="left" TEXT="K-Dimentinal Tree" VSHIFT="3">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 <node COLOR="#338800" CREATED="1366207510685" HGAP="26" ID="ID_706019558" MODIFIED="1456496406936" POSITION="right" TEXT="Balanced Binary Search Trees" VSHIFT="28">
@@ -221,8 +212,7 @@
   <body>
     <img src="Trees_1978182819346407138.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -259,8 +249,7 @@
       External nodes contain client keys.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1456179884211" ID="ID_30322669" MODIFIED="1456179884214">
 <richcontent TYPE="NODE"><html>
@@ -272,8 +261,7 @@
       Internal nodes contain copies of keys to guide search.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -283,6 +271,21 @@
 <node CREATED="1448997234954" MODIFIED="1454514325910" TEXT="AVL Tree">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1449501807157" ID="ID_525663783" MODIFIED="1454514325910" TEXT="Georgy Adelson Velskii and Yevgeniy Landis"/>
+</node>
+</node>
+<node CREATED="1456888782626" HGAP="27" ID="ID_1992735820" MODIFIED="1456888824341" POSITION="left" TEXT="Space-Partitioning Trees" VSHIFT="17">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node COLOR="#ff0000" CREATED="1382966750712" HGAP="35" ID="ID_1936260245" MODIFIED="1456931573620" TEXT="Kd Tree" VSHIFT="4">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#ff0000" CREATED="1382966761040" HGAP="31" ID="ID_1279718411" MODIFIED="1456931570508" TEXT="Quad Tree" VSHIFT="4">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#ff0000" CREATED="1456888855928" HGAP="33" ID="ID_1076405775" MODIFIED="1456931571932" TEXT="BSP Tree" VSHIFT="-1">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#ff0000" CREATED="1382966756962" HGAP="31" ID="ID_351293037" MODIFIED="1456931572549" TEXT="Interval Tree" VSHIFT="-2">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
 </node>
