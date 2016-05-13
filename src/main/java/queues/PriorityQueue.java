@@ -47,12 +47,12 @@ public class PriorityQueue<T extends Comparable<T>> implements Iterable<T> {
 	 * @param k
 	 */
 	void sink(int k) {
-		while (2 * k + 2 < size) {
-			int child = succsessor(2 * k + 1, 2 * k + 2);
-			if (less(k, child)) {
+		while (2 * k + 2 <= size) {
+			int inx = 2 * k;
+			int child = inx + 2 < size ? succsessor(inx + 1, inx + 2) : inx + 1;
+			if (less(k, child))
 				swap(k, child);
-			}
-			k = child;
+			k = child; 
 		}
 	}
 

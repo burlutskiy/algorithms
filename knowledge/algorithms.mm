@@ -15,11 +15,23 @@
 </node>
 <node CREATED="1382966883675" HGAP="24" ID="ID_1339218351" MODIFIED="1456497862648" TEXT="&#x41f;&#x440;&#x43e;&#x441;&#x442;&#x440;&#x430;&#x43d;&#x441;&#x442;&#x432;&#x435;&#x43d;&#x43d;&#x44b;&#x435; &#x430;&#x43b;&#x433;&#x43e;&#x440;&#x438;&#x442;&#x43c;&#x44b;&#xa;" VSHIFT="-5">
 <node CREATED="1387217220279" ID="ID_1414683619" MODIFIED="1387217230701" TEXT="&#x432;&#x44b;&#x43f;&#x443;&#x43a;&#x43b;&#x430;&#x44f; &#x43e;&#x431;&#x43e;&#x43b;&#x43e;&#x447;&#x43a;&#x430;&#xa;"/>
-<node CREATED="1387217230701" ID="ID_548224961" MODIFIED="1387217233701" TEXT="&#x43d;&#x430;&#x445;&#x43e;&#x436;&#x434;&#x435;&#x43d;&#x438;&#x435; &#x442;&#x43e;&#x447;&#x43a;&#x438; &#x431;&#x43b;&#x438;&#x436;&#x430;&#x439;&#x448;&#x435;&#x439; &#x43a; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x439;&#xa;"/>
-<node CREATED="1387217233701" ID="ID_211611266" MODIFIED="1387217237388" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x442;&#x43e;&#x447;&#x435;&#x43a;, &#x43f;&#x43e;&#x43f;&#x430;&#x434;&#x430;&#x44e;&#x449;&#x438;&#x445; &#x432; &#x434;&#x438;&#x430;&#x43f;&#x430;&#x437;&#x43e;&#x43d;&#xa;"/>
-<node CREATED="1387217237388" ID="ID_1361747904" MODIFIED="1387217237404" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x435;&#x447;&#x435;&#x43d;&#x438;&#x439; &#x43e;&#x442;&#x440;&#x435;&#x437;&#x43a;&#x43e;&#x432;."/>
 </node>
-<node CREATED="1456498242102" ID="ID_1095704503" MODIFIED="1456498274664" TEXT="1-Dimentional Range Search Algorithm">
+<node CREATED="1456498242102" ID="ID_1095704503" MODIFIED="1456945329492" TEXT="1d Range Search">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1387217233701" HGAP="27" ID="ID_211611266" MODIFIED="1456945414278" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x442;&#x43e;&#x447;&#x435;&#x43a;, &#x43f;&#x43e;&#x43f;&#x430;&#x434;&#x430;&#x44e;&#x449;&#x438;&#x445; &#x432; &#x434;&#x438;&#x430;&#x43f;&#x430;&#x437;&#x43e;&#x43d;&#xa;" VSHIFT="2"/>
+</node>
+<node CREATED="1456945238698" ID="ID_1823471324" MODIFIED="1456945337005" TEXT="2d Orthogonal Line Segment Intersection Search">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1387217237388" ID="ID_1361747904" MODIFIED="1456945410925" TEXT="&#x43f;&#x43e;&#x438;&#x441;&#x43a; &#x43f;&#x435;&#x440;&#x435;&#x441;&#x435;&#x447;&#x435;&#x43d;&#x438;&#x439; &#x43e;&#x442;&#x440;&#x435;&#x437;&#x43a;&#x43e;&#x432;." VSHIFT="2"/>
+</node>
+<node CREATED="1456945287110" ID="ID_1262310576" MODIFIED="1456945343905" TEXT="Kd Range Search">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1387217230701" ID="ID_548224961" MODIFIED="1456945392781" TEXT="&#x43d;&#x430;&#x445;&#x43e;&#x436;&#x434;&#x435;&#x43d;&#x438;&#x435; &#x442;&#x43e;&#x447;&#x43a;&#x438; &#x431;&#x43b;&#x438;&#x436;&#x430;&#x439;&#x448;&#x435;&#x439; &#x43a; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x439;&#xa;" VSHIFT="2"/>
+</node>
+<node CREATED="1456945347529" ID="ID_1494171657" MODIFIED="1456945376186" TEXT="1d Interval Search">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1456945356628" ID="ID_1609906972" MODIFIED="1456945373508" TEXT="2d Orthogonal Rectangle Intersection">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
@@ -84,7 +96,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#338800" CREATED="1447963071798" FOLDED="true" HGAP="34" ID="ID_363199567" MODIFIED="1456496209899" POSITION="left" TEXT="Queues">
+<node COLOR="#338800" CREATED="1447963071798" HGAP="34" ID="ID_363199567" MODIFIED="1459202346756" POSITION="left" TEXT="Queues">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1455818173118" ID="ID_82927373" MODIFIED="1455820550777" TEXT="Priority Queue">
 <font NAME="SansSerif" SIZE="12"/>
@@ -107,8 +119,7 @@
       Discrete optimization. [bin packing, scheduling]
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1455818582675" ID="ID_1171961286" MODIFIED="1455818618158">
 <richcontent TYPE="NODE"><html>
@@ -120,8 +131,7 @@
       Spam filtering. [Bayesian spam filter]
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -144,6 +154,9 @@
 <node CREATED="1387218026946" ID="ID_276804576" MODIFIED="1387218030227" TEXT="livelock"/>
 <node CREATED="1387218034743" ID="ID_173189550" MODIFIED="1456498128970" TEXT="starvation"/>
 <node CREATED="1387218045352" ID="ID_1280763259" MODIFIED="1456498152291" TEXT="atomics"/>
+<node CREATED="1463144603825" ID="ID_306396720" MODIFIED="1463144610240" TEXT="disruptor">
+<node CREATED="1463144640258" ID="ID_1990079176" MODIFIED="1463144641262" TEXT="http://martinfowler.com/articles/lmax.html"/>
+</node>
 </node>
 <node COLOR="#ff0000" CREATED="1382966911799" HGAP="36" ID="ID_292645896" MODIFIED="1454514526723" POSITION="left" TEXT="Probability Algorithms" VSHIFT="-14">
 <node CREATED="1387218263581" HGAP="21" ID="ID_1085156163" MODIFIED="1455737602267" TEXT=": &#x441;&#x43b;&#x443;&#x447;&#x430;&#x439;&#x43d;&#x430;&#x44f; &#x432;&#x44b;&#x431;&#x43e;&#x440;&#x43a;&#x430; (&#x432; &#x442;&#x43e;&#x43c; &#x447;&#x438;&#x441;&#x43b;&#x435; &#x438;&#x437; &#x43f;&#x43e;&#x442;&#x43e;&#x43a;&#x430;), &#x43f;&#x435;&#x440;&#x435;&#x43c;&#x435;&#x448;&#x438;&#x432;&#x430;&#x43d;&#x438;&#x435;." VSHIFT="1"/>
