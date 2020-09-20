@@ -10,8 +10,7 @@
       Algorithm<br />Analysis
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1453979338722" MODIFIED="1456496574174" POSITION="right" TEXT="Observe">
 <node CREATED="1453979361667" MODIFIED="1456496574174" TEXT="some features of natural world"/>
 </node>
@@ -51,12 +50,12 @@
 </node>
 </node>
 <node CREATED="1387218425498" HGAP="29" ID="ID_71936428" MODIFIED="1456496721344" TEXT="Dynamic programming"/>
-<node CREATED="1387218434389" FOLDED="true" HGAP="31" ID="ID_1220564495" MODIFIED="1456496722832" TEXT="Branch and bound" VSHIFT="2">
+<node CREATED="1387218434389" FOLDED="true" HGAP="31" ID="ID_1220564495" MODIFIED="1463144779640" TEXT="Branch and bound" VSHIFT="2">
 <node CREATED="1387297238562" ID="ID_1815456204" MODIFIED="1387297271733" TEXT="Branch and bound algorithms are generally used for optimization problems&#xa; - As the algorithm progresses, a tree of subproblems is formed&#xa; - The original problem is considered the &#x201c;root problem&#x201d;&#xa; - A method is used to construct an upper and lower bound for a given problem&#xa; - At each node, apply the bounding methods&#xa;  * If the bounds match, it is deemed a feasible solution to that particular subproblem&#xa;  * If bounds do not match, partition the problem represented by that node, and make the two subproblems into children nodes&#xa; - Continue, using the best known feasible solution to trim sections of the tree, until all nodes have been solved or trimmed"/>
 </node>
 <node CREATED="1387218446904" HGAP="33" ID="ID_1977393184" MODIFIED="1456496723856" TEXT="Brute force" VSHIFT="-3"/>
 <node CREATED="1387218451779" HGAP="32" ID="ID_1313981552" MODIFIED="1456496709432" TEXT="Randomized" VSHIFT="-3"/>
-<node CREATED="1366207682581" FOLDED="true" HGAP="31" ID="ID_816501557" MODIFIED="1456496711343" TEXT="Greedy algorithm" VSHIFT="-160">
+<node CREATED="1366207682581" FOLDED="true" HGAP="31" ID="ID_816501557" MODIFIED="1463144781520" TEXT="Greedy algorithm" VSHIFT="-160">
 <node CREATED="1366207698596" ID="ID_709640902" MODIFIED="1366207705752" TEXT="Kruskal"/>
 <node CREATED="1366207706518" HGAP="26" ID="ID_933487602" MODIFIED="1456496683414" TEXT="Prim" VSHIFT="3"/>
 <node CREATED="1366207708752" HGAP="23" ID="ID_329063163" MODIFIED="1456496685414" TEXT="EDF scheduling" VSHIFT="4"/>

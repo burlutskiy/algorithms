@@ -33,6 +33,11 @@ abstract class AbstractSort implements SortAlgorithm {
 		return a[i] < a[j];
 	}
 
+	boolean less(int i, int j) {
+		comparisonCount++;
+		return a[i] < a[j];
+	}
+
 	static void static_swap(int i, int j, int[] a) {
 		if(i == j)
 			return;
@@ -42,6 +47,11 @@ abstract class AbstractSort implements SortAlgorithm {
 		
 	}
 	void swap(int i, int j, int[] a) {
+		static_swap(i, j, a);
+		exchangesCount++;
+	}
+
+	void swap(int i, int j) {
 		static_swap(i, j, a);
 		exchangesCount++;
 	}
