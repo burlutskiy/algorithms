@@ -66,7 +66,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#338800" CREATED="1447963052613" FOLDED="true" HGAP="35" ID="ID_1791595887" MODIFIED="1456496294053" POSITION="left" TEXT="Stacks" VSHIFT="5">
+<node COLOR="#338800" CREATED="1447963052613" HGAP="35" ID="ID_1791595887" MODIFIED="1457187233714" POSITION="left" TEXT="Stacks" VSHIFT="5">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1447963125361" ID="ID_346154062" MODIFIED="1449238179271" TEXT="Solving Hanoi Towers"/>
 <node CREATED="1454515030924" ID="ID_400991449" MODIFIED="1454515047248" TEXT="Arithmetic Expression Evaluation">
@@ -84,7 +84,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#338800" CREATED="1447963071798" FOLDED="true" HGAP="34" ID="ID_363199567" MODIFIED="1456496209899" POSITION="left" TEXT="Queues">
+<node COLOR="#338800" CREATED="1447963071798" HGAP="34" ID="ID_363199567" MODIFIED="1457187223380" POSITION="left" TEXT="Queues">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node COLOR="#338800" CREATED="1455818173118" ID="ID_82927373" MODIFIED="1455820550777" TEXT="Priority Queue">
 <font NAME="SansSerif" SIZE="12"/>
@@ -107,8 +107,7 @@
       Discrete optimization. [bin packing, scheduling]
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1455818582675" ID="ID_1171961286" MODIFIED="1455818618158">
 <richcontent TYPE="NODE"><html>
@@ -120,8 +119,7 @@
       Spam filtering. [Bayesian spam filter]
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>

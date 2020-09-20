@@ -3,7 +3,7 @@ package sort;
 /**
  * http://en.wikipedia.org/wiki/Bubble_sort
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  * 
  */
 public class BubbleSort extends AbstractSort {

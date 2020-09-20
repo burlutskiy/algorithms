@@ -11,7 +11,7 @@ package strings;
  * you can perform this operation in place.) EXAMPLE Input:
  * "Mr John Smith Output: "Mr%20Dohn%20Smith"
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  */
 public class ShiftWordsInString {
 

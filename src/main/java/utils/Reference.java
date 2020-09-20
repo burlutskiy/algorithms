@@ -4,7 +4,7 @@
 package utils;
 
 /**
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class Reference<T> {

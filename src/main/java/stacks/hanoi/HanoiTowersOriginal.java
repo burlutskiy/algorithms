@@ -22,7 +22,7 @@ import stacks.ThreeStacksBasedOnOneArray.StackIndex;
  * 
  * https://en.wikipedia.org/wiki/Tower_of_Hanoi
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  */
 public class HanoiTowersOriginal extends HanoiTowers {
 	public HanoiTowersOriginal(int depth) {

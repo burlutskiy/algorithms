@@ -10,7 +10,7 @@ import utils.Reference;
 
 /**
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  */
 public class LinkedList<T extends Comparable<T>> implements List<T> {
 	Node<T> root;

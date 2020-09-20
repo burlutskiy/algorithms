@@ -10,7 +10,7 @@ import utils.Pair;
  * AVLTree version based on AVLNode with height. Height is revalued every alteration on the tree.
  * Consumes more memory then AVLTreeV1 but more faster on put/delete operations.
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class AVLTreeV2<K extends Comparable<K>, V> extends AbstractAVLTree<K, V, AVLNode<K, V>> {

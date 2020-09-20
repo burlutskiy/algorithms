@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * http://en.wikipedia.org/wiki/Comparison_sort
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class SortTests {

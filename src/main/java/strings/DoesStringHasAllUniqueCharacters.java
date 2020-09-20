@@ -6,7 +6,7 @@ import java.util.BitSet;
  * Implement an algorithm to determine if a string has all unique characters. 
  * What if you cannot use additional data structures?
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class DoesStringHasAllUniqueCharacters {

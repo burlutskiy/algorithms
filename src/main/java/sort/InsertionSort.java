@@ -3,7 +3,7 @@ package sort;
 /**
  * http://en.wikipedia.org/wiki/Insertion_sort
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  * 
  */
 public class InsertionSort extends AbstractSort {

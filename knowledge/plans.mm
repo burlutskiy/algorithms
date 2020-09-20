@@ -1,4 +1,4 @@
-<map version="0.9.0">
+<map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1317631859794" ID="ID_634622355" MODIFIED="1372413223682" STYLE="bubble">
 <richcontent TYPE="NODE"><html>
@@ -7,7 +7,7 @@
   </head>
   <body>
     <p>
-      <font size="4">&#1062;&#1077;&#1083;&#1080;</font>
+      <font size="4">&#x426;&#x435;&#x43b;&#x438;</font>
     </p>
   </body>
 </html></richcontent>
@@ -28,7 +28,7 @@
   </head>
   <body>
     <p>
-      <strike>2. &#1055;&#1088;&#1080;&#1079;&#1085;&#1072;&#1085;&#1080;&#1077; &#1076;&#1088;&#1091;&#1079;&#1077;&#1081;.</strike>
+      <strike>2. &#x41f;&#x440;&#x438;&#x437;&#x43d;&#x430;&#x43d;&#x438;&#x435; &#x434;&#x440;&#x443;&#x437;&#x435;&#x439;.</strike>
     </p>
   </body>
 </html></richcontent>
@@ -41,7 +41,7 @@
   </head>
   <body>
     <p>
-      <strike>3. &#1055;&#1088;&#1080;&#1079;&#1085;&#1072;&#1085;&#1080;&#1077; &#1087;&#1088;&#1086;&#1092; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1089;&#1090;&#1074;&#1072;</strike>
+      <strike>3. &#x41f;&#x440;&#x438;&#x437;&#x43d;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x440;&#x43e;&#x444; &#x441;&#x43e;&#x43e;&#x431;&#x449;&#x435;&#x441;&#x442;&#x432;&#x430;</strike>
     </p>
   </body>
 </html></richcontent>
@@ -139,6 +139,7 @@
 </node>
 </node>
 <node CREATED="1317646083860" HGAP="293" ID="ID_1685869110" MODIFIED="1372422837139" POSITION="left" TEXT="&#x421;&#x430;&#x43c;&#x43e;&#x440;&#x435;&#x430;&#x43b;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44f;" VSHIFT="-27">
+<linktarget COLOR="#cccccc" DESTINATION="ID_1685869110" ENDARROW="Default" ENDINCLINATION="299;-33;" ID="Arrow_ID_1928246764" SOURCE="ID_1226071476" STARTARROW="None" STARTINCLINATION="357;92;"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1317646170798" HGAP="18" ID="ID_47390287" MODIFIED="1371462805902" STYLE="fork" TEXT="&#x417;&#x430;&#x447;&#x435;&#x43c;" VSHIFT="19">
 <font NAME="SansSerif" SIZE="12"/>
@@ -191,7 +192,7 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1371462341320" HGAP="48" ID="ID_1724174470" MODIFIED="1372422770778" TEXT="&#x41a;&#x432;&#x430;&#x440;&#x438;&#x440;&#x430; &#x41a;&#x43e;&#x43f;&#x44b;&#x43b;&#x43e;&#x432;&#x430; 9" VSHIFT="-11">
+<node COLOR="#338800" CREATED="1371462341320" FOLDED="true" HGAP="48" ID="ID_1724174470" MODIFIED="1516064296672" TEXT="&#x41a;&#x432;&#x430;&#x440;&#x438;&#x440;&#x430; &#x41a;&#x43e;&#x43f;&#x44b;&#x43b;&#x43e;&#x432;&#x430; 9" VSHIFT="-11">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1317653327866" ID="ID_379910574" MODIFIED="1371462805902" STYLE="fork" TEXT="&#x417;&#x430;&#x434;&#x430;&#x447;&#x438;">
 <font NAME="SansSerif" SIZE="12"/>
@@ -201,11 +202,15 @@
 </node>
 <node CREATED="1371462371554" HGAP="62" ID="ID_436698034" MODIFIED="1372422782247" TEXT="2. &#x421;&#x434;&#x435;&#x43b;&#x430;&#x442;&#x44c; &#x440;&#x435;&#x43c;&#x43e;&#x43d;&#x442;" VSHIFT="12">
 <arrowlink DESTINATION="ID_1629660593" ENDARROW="Default" ENDINCLINATION="22;0;" ID="Arrow_ID_1534987272" STARTARROW="None" STARTINCLINATION="22;0;"/>
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_436698034" ENDARROW="Default" ENDINCLINATION="24;0;" ID="Arrow_ID_40653275" SOURCE="ID_1760079816" STARTARROW="None" STARTINCLINATION="24;0;"/>
 </node>
 <node CREATED="1371462379850" HGAP="58" ID="ID_1629660593" MODIFIED="1372422784169" TEXT="3. &#x41f;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44c; &#x436;&#x438;&#x43b;&#x44c;&#x446;&#x43e;&#x432;" VSHIFT="16">
 <arrowlink DESTINATION="ID_1021221933" ENDARROW="Default" ENDINCLINATION="59;0;" ID="Arrow_ID_345852388" STARTARROW="None" STARTINCLINATION="59;0;"/>
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1629660593" ENDARROW="Default" ENDINCLINATION="22;0;" ID="Arrow_ID_1534987272" SOURCE="ID_436698034" STARTARROW="None" STARTINCLINATION="22;0;"/>
 </node>
-<node CREATED="1371462388350" HGAP="87" ID="ID_1021221933" MODIFIED="1372422786356" TEXT="&#x41f;&#x440;&#x43e;&#x444;&#x438;&#x442; :)" VSHIFT="18"/>
+<node CREATED="1371462388350" HGAP="87" ID="ID_1021221933" MODIFIED="1372422786356" TEXT="&#x41f;&#x440;&#x43e;&#x444;&#x438;&#x442; :)" VSHIFT="18">
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1021221933" ENDARROW="Default" ENDINCLINATION="59;0;" ID="Arrow_ID_345852388" SOURCE="ID_1629660593" STARTARROW="None" STARTINCLINATION="59;0;"/>
+</node>
 </node>
 </node>
 </node>
@@ -267,6 +272,7 @@
 </node>
 </node>
 <node CREATED="1371461336408" HGAP="96" ID="ID_1464195855" MODIFIED="1372413612708" POSITION="right" TEXT="&#x41f;&#x435;&#x440;&#x435;&#x435;&#x437;&#x434; &#x432; &#x421;&#x438;&#x43b;&#x438;&#x43a;&#x43e;&#x43d;&#x43e;&#x432;&#x443;&#x44e; &#x414;&#x43e;&#x43b;&#x438;&#x43d;&#x443;" VSHIFT="-8">
+<linktarget COLOR="#b0b0b0" DESTINATION="ID_1464195855" ENDARROW="Default" ENDINCLINATION="693;35;" ID="Arrow_ID_1148932275" SOURCE="ID_1838758399" STARTARROW="None" STARTINCLINATION="822;73;"/>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1317646170798" HGAP="34" ID="ID_1844007715" MODIFIED="1371465569347" STYLE="fork" TEXT="&#x417;&#x430;&#x447;&#x435;&#x43c;" VSHIFT="-7">
 <font NAME="SansSerif" SIZE="12"/>
@@ -278,10 +284,10 @@
   </head>
   <body>
     <p>
-      &#1055;&#1054;&#1050;&#1040; &#1053;&#1045; &#1047;&#1053;&#1040;&#1070; &#1053;&#1054; &#1055;&#1056;&#1045;&#1044;&#1055;&#1054;&#1051;&#1040;&#1043;&#1040;&#1070; &#1063;&#1058;&#1054;
+      &#x41f;&#x41e;&#x41a;&#x410; &#x41d;&#x415; &#x417;&#x41d;&#x410;&#x42e; &#x41d;&#x41e; &#x41f;&#x420;&#x415;&#x414;&#x41f;&#x41e;&#x41b;&#x410;&#x413;&#x410;&#x42e; &#x427;&#x422;&#x41e;
     </p>
     <p>
-      &#1058;&#1040;&#1052; &#1041;&#1059;&#1044;&#1045;&#1058; &#1055;&#1056;&#1054;&#1065;&#1045; &#1057;&#1054;&#1047;&#1044;&#1040;&#1058;&#1068; &#1041;&#1048;&#1047;&#1053;&#1045;&#1057;
+      &#x422;&#x410;&#x41c; &#x411;&#x423;&#x414;&#x415;&#x422; &#x41f;&#x420;&#x41e;&#x429;&#x415; &#x421;&#x41e;&#x417;&#x414;&#x410;&#x422;&#x42c; &#x411;&#x418;&#x417;&#x41d;&#x415;&#x421;
     </p>
   </body>
 </html></richcontent>
@@ -315,7 +321,7 @@
 </node>
 <node CREATED="1372413600567" ID="ID_287974260" MODIFIED="1372414646234" TEXT="&#x41f;&#x440;&#x430;&#x432;&#x430; &#x428;&#x43a;&#x438;&#x43f;&#x435;&#x440;&#x441;&#x43a;&#x438;&#x435;" VSHIFT="8"/>
 </node>
-<node CREATED="1372413232542" HGAP="78" ID="ID_894160162" MODIFIED="1372415170419" POSITION="right" TEXT="&#x41a;&#x432;&#x430;&#x434;&#x440;&#x43e;&#x446;&#x438;&#x43a;&#x43b;" VSHIFT="-17">
+<node CREATED="1372413232542" HGAP="78" ID="ID_894160162" MODIFIED="1516064322094" POSITION="right" TEXT="&#x41a;&#x432;&#x430;&#x434;&#x440;&#x43e;&#x446;&#x438;&#x43a;&#x43b;" VSHIFT="-17">
 <node CREATED="1317646170798" HGAP="34" ID="ID_36685113" MODIFIED="1372422547413" STYLE="fork" TEXT="&#x417;&#x430;&#x447;&#x435;&#x43c;" VSHIFT="-7">
 <font NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="help"/>

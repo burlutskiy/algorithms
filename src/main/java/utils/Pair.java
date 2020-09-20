@@ -2,7 +2,7 @@ package utils;
 
 /**
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class Pair<F, S> {

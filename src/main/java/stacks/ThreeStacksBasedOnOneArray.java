@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Describe how you could use a single array to implement three stacks.
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class ThreeStacksBasedOnOneArray {

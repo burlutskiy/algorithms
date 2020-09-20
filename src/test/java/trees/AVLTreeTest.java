@@ -8,7 +8,7 @@ import org.junit.Test;
 
 /**
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class AVLTreeTest {

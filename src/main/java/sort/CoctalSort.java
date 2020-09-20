@@ -3,7 +3,7 @@ package sort;
 /**
  * http://en.wikipedia.org/wiki/Cocktail_sort#Differences_from_bubble_sort
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  * 
  */
 public class CoctalSort extends AbstractSort {

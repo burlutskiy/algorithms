@@ -3,7 +3,7 @@ package strings;
 import javax.print.attribute.Size2DSyntax;
 
 /**
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class OneIsARotationOfTheAnother {

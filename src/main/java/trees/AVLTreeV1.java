@@ -4,7 +4,7 @@ package trees;
  * 
  * Pure AVLTree implementation.
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class AVLTreeV1<K extends Comparable<K>, V> extends AbstractAVLTree<K, V, TreeNode<K, V>> {

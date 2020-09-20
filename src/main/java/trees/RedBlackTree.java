@@ -7,7 +7,7 @@ import utils.Pair;
 
 /**
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class RedBlackTree<K extends Comparable<K>, V> extends AbstractBST<K, V, RedBlackNode<K, V>> {

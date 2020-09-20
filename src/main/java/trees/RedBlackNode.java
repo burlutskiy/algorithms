@@ -1,7 +1,7 @@
 package trees;
 
 /**
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class RedBlackNode<K extends Comparable<K>, V> extends Node<K, V, RedBlackNode<K, V>> {

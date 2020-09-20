@@ -8,7 +8,7 @@ import java.util.List;
  *
  * Recursive implementation of binary search tree
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class BST<K extends Comparable<K>, V> extends AbstractBST<K, V, TreeNode<K, V>> {

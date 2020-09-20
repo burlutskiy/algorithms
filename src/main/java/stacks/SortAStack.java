@@ -3,9 +3,6 @@
  */
 package stacks;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 /**
  * 
  * Write a program to sort a stack in ascending order (with biggest items on
@@ -13,12 +10,12 @@ import org.junit.Test;
  * copy the elements into any other data structure (such as an array). The stack
  * supports the following operations: push, pop, peek, and isEmpty.
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class SortAStack {
 	
-	public static void sortStack(Stack<Integer> stack) {
+	public void sortStack(Stack<Integer> stack) {
 		Stack<Integer> tmp = new Stack<>();
 		while (!stack.isEmpty()) {
 			tmp.push(stack.pop());
@@ -35,37 +32,10 @@ public class SortAStack {
 		return;
 	}
 
-	private static void pushBack(Stack<Integer> stack, Stack<Integer> tmp) {
+	private void pushBack(Stack<Integer> stack, Stack<Integer> tmp) {
 		while (!tmp.isEmpty()) {
 			stack.push(tmp.pop());
 		}
 	}
 
-	 @Test
-	public void test() {
-		Stack<Integer> stack = new Stack<>();
-		stack.push(5);
-		stack.push(4);
-		stack.push(3);
-		stack.push(2);
-		stack.push(1);
-		sortStack(stack);
-		Assert.assertEquals(stack.peek().intValue(), 8);
-	}
-
-	@Test
-	public void test2() {
-		Stack<Integer> stack = new Stack<>();
-		stack.push(1);
-		stack.push(9);
-		stack.push(2);
-		stack.push(5);
-		stack.push(3);
-		stack.push(4);
-		stack.push(8);
-		stack.push(7);
-		stack.push(6);
-		sortStack(stack);
-		Assert.assertEquals(stack.peek().intValue(), 9);
-	}
 }

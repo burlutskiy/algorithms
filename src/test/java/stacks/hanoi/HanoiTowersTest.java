@@ -3,7 +3,12 @@ package stacks.hanoi;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TowersOfHanoi {
+import stacks.hanoi.HanoiTowers;
+import stacks.hanoi.HanoiTowersNotOriginalSolution1;
+import stacks.hanoi.HanoiTowersNotOriginalSolution2;
+import stacks.hanoi.HanoiTowersOriginal;
+
+public class HanoiTowersTest {
 	private final static int N = 15;
 	@Test
 	public void testHanoiTowersNotOriginalSolution1() {

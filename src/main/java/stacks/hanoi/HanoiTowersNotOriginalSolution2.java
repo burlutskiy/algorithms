@@ -18,7 +18,7 @@ package stacks.hanoi;
  * 
  * For this version of Tower of Hanoi puzzle is 3^n - 1, where n is the number of disks.
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class HanoiTowersNotOriginalSolution2 extends HanoiTowersOriginal {

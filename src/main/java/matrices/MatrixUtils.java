@@ -4,7 +4,7 @@
 package matrices;
 
 /**
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  */
 public class MatrixUtils {

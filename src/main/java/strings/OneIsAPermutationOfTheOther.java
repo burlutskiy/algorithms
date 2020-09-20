@@ -6,7 +6,7 @@ package strings;
 import java.util.BitSet;
 
 /**
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  * Given two strings, write a method to decide if one is a permutation of the other.
  * n-permutations = n!

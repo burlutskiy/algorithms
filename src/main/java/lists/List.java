@@ -2,7 +2,7 @@ package lists;
 
 /**
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  * @param <T>
  */

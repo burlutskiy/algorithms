@@ -3,7 +3,7 @@ package sort;
 /**
  * http://en.wikipedia.org/wiki/Comb_sort
  * 
- * @author burlutal 
+ * @author Alexey Burlutskiy 
  * 	Worst case performance \Omega(n^2)[1] 
  * 	Best case performance O(n) 
  * 	Average case performance \Omega(n^2/2^p), where p is the number of increments Worst case space complexity

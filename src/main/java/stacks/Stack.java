@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /**
  * 
- * @author burlutal
+ * @author Alexey Burlutskiy
  *
  * @param <T>
  */

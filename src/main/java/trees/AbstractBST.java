@@ -113,14 +113,9 @@ public abstract class AbstractBST<K extends Comparable<K>, V, N extends Node<K, 
 	}
 
 	protected N deleteMin(N node) {
-		if (node.left == null) {
-			if (node.right != null)
-				return node.right;
-			else
-				return null;
-		} else {
-			node.left = deleteMin(node.left);
-		}
+		if (node.left == null)
+			return node.right;
+		node.left = deleteMin(node.left);
 		return node;
 	}
 
