@@ -28,7 +28,36 @@ public class RotatedStringDetector {
      * @param string2 a string or {@code null}
      * @return {@code true} if string1 is a "rotation" of string2
      */
+	
     public static boolean isRotation(String str1, String str2) {
+    	if(str1 == null || str2 ==null || str1.length() != str2.length() )
+    		return false;
+    	if(str1.trim().isEmpty() && str2.trim().isEmpty())
+    		return true;
+    	
+    	char[] cstr1 = str1.toCharArray();
+    	char[] cstr2 = str2.toCharArray();
+    	for(int i = 0; i < str1.length(); i++)
+    		if(compare(cstr1, cstr2, i))
+    			return true;
+    	return false;
+    }
+
+    private static boolean compare(char[] array1, char[] array2, int indx) {
+    	final int len = array2.length;
+    	for(int i = 0; i < len; i++)
+    		if(array1[(indx + i) % len] != array2[i])
+    			return false;
+    	return true;
+    }
+
+
+    /**
+     * 
+     * Extra space is not needed
+     */
+    @Deprecated
+    public static boolean __isRotation(String str1, String str2) {
     	if(str1 == null || str2 ==null || str1.length() != str2.length() )
     		return false;
     	if(str1.trim().isEmpty() && str2.trim().isEmpty())
@@ -45,13 +74,15 @@ public class RotatedStringDetector {
     	return false;
     }
     
+
+    @Deprecated
     private static boolean compare(char[] c1, char[] c2, int ic1, int len) {
     	for(int i = 0; i < len; i++)
     		if(c1[ic1 + i] != c2[i])
     			return false;
     	return true;
     }
-
+    
     /**
      * 
      * Too slow

@@ -1,16 +1,15 @@
 package strings;
 
-import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.Ignore;
-import org.junit.Test;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static strings.RotatedStringDetector.isRotation;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static strings.RotatedStringDetector.isRotation;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.Test;
 
 /**
  * Tests for {@link RotatedStringDetector}
