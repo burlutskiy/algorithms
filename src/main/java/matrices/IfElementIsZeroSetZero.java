@@ -1,8 +1,6 @@
 package matrices;
 
 import java.util.BitSet;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Write an algorithm such that if an element in an MxN matrix is 0, its entire

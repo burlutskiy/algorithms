@@ -1,8 +1,5 @@
 package trees.simple;
 
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.LongAdder;
-
 public class Tree {
 
 	class Node {

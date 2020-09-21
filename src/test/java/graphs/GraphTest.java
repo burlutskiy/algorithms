@@ -1,14 +1,9 @@
 package graphs;
 
 import java.util.Arrays;
-import java.util.Iterator;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import graphs.ObjectGraph;
-import graphs.Paths;
 
 public class GraphTest {
 	private static final String LAS_VEGAS = "LasVegas";

@@ -1,7 +1,5 @@
 package strings;
 
-import javax.print.attribute.Size2DSyntax;
-
 /**
  * @author Alexey Burlutskiy
  *
