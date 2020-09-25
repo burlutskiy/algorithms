@@ -7,6 +7,7 @@ public class ContagiousArrays {
 
 	// find a number of subarrays for index of max
 	int countSubarrays(int[] arr, int imax) {
+		
 		final int max = arr[imax];
 		final int n = arr.length;
 

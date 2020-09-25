@@ -1,7 +1,8 @@
 package arrays;
 
-import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 // Add any extra import statements you may need here
 
