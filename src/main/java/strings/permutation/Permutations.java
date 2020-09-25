@@ -1,4 +1,4 @@
-package strings;
+package strings.permutation;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -107,5 +107,6 @@ public class Permutations {
 		Assert.assertEquals(Arrays.asList("ABC", "ACB", "BAC", "BCA", "CAB", "CBA"), perm.permutate("ABC"));
 		Assert.assertEquals(Arrays.asList("ABGS", "ABSG", "AGBS", "AGSB", "ASBG", "ASGB", "BAGS", "BASG", "BGAS", "BGSA", "BSAG", "BSGA", "GABS", "GASB", "GBAS",
 				"GBSA", "GSAB", "GSBA", "SABG", "SAGB", "SBAG", "SBGA", "SGAB", "SGBA"), perm.permutate("ABSG"));
+		Assert.assertEquals(40320/*n!*/, perm.permutate("12345678").size());		
 	}
 }

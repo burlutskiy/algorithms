@@ -1,7 +1,7 @@
 /**
  * 
  */
-package strings;
+package strings.permutation;
 
 import java.util.BitSet;
 

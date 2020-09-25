@@ -7,6 +7,12 @@ import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * Two sum exacly one solution
+ * 
+ * @author alexey
+ *
+ */
 public class TwoSum {
 
 	/*
