@@ -111,6 +111,6 @@ public class ElementSwapping {
 	}
 
 	public static void main(String[] args) {
-		new Main().run();
+		new ElementSwapping().run();
 	}
 }
