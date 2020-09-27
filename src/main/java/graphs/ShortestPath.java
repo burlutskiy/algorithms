@@ -7,7 +7,8 @@ import java.util.Queue;
 import stacks.Stack;
 
 /**
- * Computes the shortest path from source to any vertex, the distance is computed on number of edges it need to pass.
+ * Computes the shortest path from source to any vertex,
+ * the distance is computed on number of edges it need to pass.
  * @author alexey
  *
  */
