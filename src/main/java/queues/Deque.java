@@ -30,7 +30,7 @@ public class Deque<Item> implements Iterable<Item> {
 			return String.valueOf(value);
 		}
 	}
-
+	
 	private Node first, last;
 	private int size;
 
