@@ -9,16 +9,20 @@ public class RunTestFromClass {
 		JUnitCore.main("utils.RunTestFromClass");
 	}
 	
+	public boolean func(boolean b) {
+		return b;
+	}
+	
 	@Test
 	public void test() {
 		System.out.println("Test");
-		Assert.assertTrue(true);
+		Assert.assertTrue(func(true));
 	}
 
 	@Test
 	public void test2() {
 		System.out.println("Test");
-		Assert.assertTrue(false);
+		Assert.assertFalse(func(false));
 	}
 	
 }
