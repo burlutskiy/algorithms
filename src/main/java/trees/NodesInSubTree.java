@@ -108,7 +108,7 @@ public class NodesInSubTree {
 		final int[] result = new int[queries.size()];
 		int i = 0;
 		for (Query query : queries) {
-			Node node = findNode(root, query.u);
+			Node node = findNode(root, query.u); //TODO we can have a map so that we can save u -> node and save time
 			if (node != null)
 				result[i++] = traverse(node, query.c, ucMap);
 			else
