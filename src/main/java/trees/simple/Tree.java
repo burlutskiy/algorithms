@@ -67,21 +67,6 @@ public class Tree {
 		return node;
 	}
 	
-	private Node _delete(Node node, int value) {
-		if(value < node.value) 
-			node.left = delete(node.left, value);
-		else if(value > node.value) 
-			node.right = delete(node.left, value);
-		else {
-			if(node.right == null)	return node.left;
-			if(node.left == null)	return node.right;
-			Node min = min(node.right);
-			min.left = node.left;
-			return node.right;
-		}
-		return node;
-	}
-	
 	private Node delete(Node node, int value) {
 		if(value < node.value) 
 			node.left = delete(node.left, value);

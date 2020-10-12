@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.pingpong;
 
 import java.util.Arrays;
 import java.util.List;

@@ -7,19 +7,19 @@ import org.junit.Test;
 
 public class The8QueensProblem {
 
-	boolean isSameRow(int[] queens, int col, int row) {
+	static boolean isSameRow(int[] queens, int col, int row) {
 		return queens[col] == row;
 	}
 
-	boolean isSameRightDiagonal(int[] queens, int i, int col, int row) {
+	static boolean isSameRightDiagonal(int[] queens, int i, int col, int row) {
 		return queens[i] - i == row - col;
 	}
 
-	boolean isSameLeftDiagonal(int[] queens, int i, int col, int row) {
+	static boolean isSameLeftDiagonal(int[] queens, int i, int col, int row) {
 		return queens[i] + i == row + col;
 	}
 
-	boolean canPlaceQueen(int[] queens, int queen, int row) {
+	static boolean canPlaceQueen(int[] queens, int queen, int row) {
 		int n = queens.length;
 		for (int i = 0; i < n; i++) {
 			if (queens[i] >= 0 && i == queen)
@@ -30,7 +30,7 @@ public class The8QueensProblem {
 		return true;
 	}
 
-	boolean allPlaced(int[] queens) {
+	static boolean allPlaced(int[] queens) {
 		for (int i = 0; i < queens.length; i++)
 			if (queens[i] < 0)
 				return false;
@@ -45,7 +45,7 @@ public class The8QueensProblem {
 		return queens;
 	}
 
-	boolean findSolution(int[] queens, int col) {
+	static boolean findSolution(int[] queens, int col) {
 		if (col >= queens.length)
 			return false;
 		boolean result = false;

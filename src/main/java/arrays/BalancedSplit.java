@@ -6,6 +6,11 @@ public class BalancedSplit {
 
 	// Add any helper functions you may need here
 
+	abstract class A {
+		final void methodd() { 
+			
+		}
+	}
 	boolean balancedSplitExists(int[] arr) {
 		final int n = arr.length;
 		if (n < 3)
