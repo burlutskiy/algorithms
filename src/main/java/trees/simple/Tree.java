@@ -1,5 +1,10 @@
 package trees.simple;
 
+/**
+ * Basic operations for further tasks
+ * @author alexey
+ *
+ */
 public class Tree {
 
 	class Node {
