@@ -43,20 +43,21 @@ public class CompareTwoTreesHasSameOrder {
 			return traverse(root, iterator) && !iterator.hasNext();
 		}
 		
+		// faster but still O(n) 
+		boolean equals(TraversableTree other) {
+			final List<Integer> list = new ArrayList<>();
+			other.traverse(value -> list.add(value));
+			return traverse(list.iterator());
+		}
 	}
 	
+	// naive slow
 	boolean checkTwoTrees(TraversableTree t1, TraversableTree t2) {
 		final List<Integer> list1 = new ArrayList<>();
 		final List<Integer> list2 = new ArrayList<>();
 		t1.traverse(value -> list1.add(value));
 		t2.traverse(value -> list2.add(value));
 		return list1.equals(list2);
-	}
-
-	boolean checkTwoTrees2(TraversableTree t1, TraversableTree t2) {
-		final List<Integer> list = new ArrayList<>();
-		t1.traverse(value -> list.add(value));
-		return t2.traverse(list.iterator());
 	}
 	
 	@Test
@@ -76,7 +77,7 @@ public class CompareTwoTreesHasSameOrder {
 		TraversableTree tree2 = new TraversableTree();
 		tree2.add(4,3,2,1);
 
-		Assert.assertTrue(checkTwoTrees2(tree1, tree2));
+		Assert.assertTrue(tree1.equals(tree2));
 	}
 
 	@Test
@@ -86,7 +87,7 @@ public class CompareTwoTreesHasSameOrder {
 		TraversableTree tree2 = new TraversableTree();
 		tree2.add(1,2,3,5);
 		
-		Assert.assertFalse(checkTwoTrees2(tree1, tree2));
+		Assert.assertFalse(tree1.equals(tree2));
 	}
 
 	@Test
@@ -96,7 +97,7 @@ public class CompareTwoTreesHasSameOrder {
 		TraversableTree tree2 = new TraversableTree();
 		tree2.add(1,2,3,4,5);
 		
-		Assert.assertFalse(checkTwoTrees2(tree1, tree2));
+		Assert.assertFalse(tree1.equals(tree2));
 	}
 
 	@Test
@@ -106,7 +107,7 @@ public class CompareTwoTreesHasSameOrder {
 		TraversableTree tree2 = new TraversableTree();
 		tree2.add(1,2,3,4,5);
 		
-		Assert.assertFalse(checkTwoTrees2(tree2, tree1));
+		Assert.assertFalse(tree1.equals(tree2));
 	}
 	
 }
