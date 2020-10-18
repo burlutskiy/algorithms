@@ -1,7 +1,6 @@
 package trees.simple;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class FindTreeDiameter {
@@ -79,12 +78,6 @@ public class FindTreeDiameter {
 	@Test
 	public void test() {
 		Assert.assertEquals(7, treeDiameter(10, new int[][] { { 2, 5 }, { 5, 7 }, { 5, 1 }, { 1, 9 }, { 1, 0 }, { 7, 6 }, { 6, 3 }, { 3, 8 }, { 8, 4 } }));
-	}
-
-	@Test
-	@Ignore
-	public void test2() {
-		Assert.assertEquals(6, treeDiameter(10, new int[][] { { 1, 3 }, { 7, 3 }, { 5, 3 }, { 8, 7 }, { 4, 1 }, { 2, 3 }, { 9, 4 }, { 0, 8 }, { 6, 8 } }));
 	}
 
 }
