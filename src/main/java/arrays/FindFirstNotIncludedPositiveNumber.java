@@ -23,14 +23,15 @@ public class FindFirstNotIncludedPositiveNumber {
 	public void test() {
 		Assert.assertEquals(4, solution(1,2,3));
 	}
+
+	@Test
+	public void test1() {
+		Assert.assertEquals(5, solution(1, 3, 6, 4, 1, 2));
+	}
 	
-	/**
-	 * Example test:   [1, 3, 6, 4, 1, 2]
-OK
-
-Example test:   [1, 2, 3]
-OK
-
-Example test:   [-1, -3]
-	 */
+	@Test
+	public void test2() {
+		Assert.assertEquals(1, solution(-1,-3));
+	}
+	
 }
