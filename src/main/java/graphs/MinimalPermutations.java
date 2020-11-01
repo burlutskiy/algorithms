@@ -8,97 +8,111 @@ import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+/**
+ * Given an integer N, and a permutation, P of the integers from 1 to N, denoted
+ * as (a_1, a_2, ..., a_N), rearrange the elements of the permutation into
+ * increasing order, repeatedly making the following operation: 
+ * 
+ * Select a
+ * sub-portion of the permutation, (a_i, ..., a_j), and reverse its order.
+ * 
+ * Your goal is to compute the minimum number of such operations required to
+ * return the permutation to increasing order.
+ * 
+ * Example If N = 3, and P = (3, 1, 2), we can do the following operations:
+ * Select (1, 2) and reverse it: P = (3, 2, 1). Select (3, 2, 1) and reverse it:
+ * P = (1, 2, 3). output = 2
+ * 
+ * #facebook
+ *  
+ * @author alexey
+ *
+ */
 public class MinimalPermutations {
-	
+
 	class PermutationGraph {
-	    final Map<String, Integer> vertexMap = new HashMap<>();
-	    final Map<Integer, Integer> edgeTo = new HashMap<>();
-	    final AtomicInteger vertexCount = new AtomicInteger();
-	    final String solution;
-	    
-	    PermutationGraph(int[] arr) {
-	    	arr = arr.clone();
-	    	Arrays.sort(arr);
-	    	solution = Arrays.stream(arr).mapToObj(String::valueOf).collect(Collectors.joining());
-	    }
+		final Map<String, Integer> vertexMap = new HashMap<>();
+		final Map<Integer, Integer> edgeTo = new HashMap<>();
+		final AtomicInteger vertexCount = new AtomicInteger();
+		final String solution;
 
-	    boolean isItSolution(String permutation) {
-	    	return permutation.equals(solution);
-	    }
-	    
-	    boolean containsPermutation(String permutation) {
-	    	return vertexMap.containsKey(permutation);
-	    }
+		PermutationGraph(int[] arr) {
+			arr = arr.clone();
+			Arrays.sort(arr);
+			solution = Arrays.stream(arr).mapToObj(String::valueOf).collect(Collectors.joining());
+		}
 
-	    void addPermutation(String permutation, Integer vertexFrom) {
-	    	int newVertex = vertexCount.getAndIncrement();
-	    	vertexMap.put(permutation, newVertex);
-	    	edgeTo.put(newVertex, vertexFrom);
-	    }
-	    
-	    Integer getVertexFrom(String permutation) {
-	    	return vertexMap.get(permutation);
-	    }
-	    
-	    Queue<Integer> getPath(String permutation) {
-	    	Queue<Integer> path = new LinkedList<Integer>();
-		    int vertex = vertexMap.get(permutation);
-		    path.add(vertex);
-		    while(edgeTo.get(vertex) != null) {
-		      vertex = edgeTo.get(vertex);
-		      path.add(vertex);
-		    }
-		    return path;
-	    }
+		boolean isItSolution(String permutation) {
+			return permutation.equals(solution);
+		}
+
+		boolean containsPermutation(String permutation) {
+			return vertexMap.containsKey(permutation);
+		}
+
+		void addPermutation(String permutation, Integer vertexFrom) {
+			int newVertex = vertexCount.getAndIncrement();
+			vertexMap.put(permutation, newVertex);
+			edgeTo.put(newVertex, vertexFrom);
+		}
+
+		Integer getVertexFrom(String permutation) {
+			return vertexMap.get(permutation);
+		}
+
+		Queue<Integer> getPath(String permutation) {
+			Queue<Integer> path = new LinkedList<Integer>();
+			int vertex = vertexMap.get(permutation);
+			path.add(vertex);
+			while (edgeTo.get(vertex) != null) {
+				vertex = edgeTo.get(vertex);
+				path.add(vertex);
+			}
+			return path;
+		}
 	}
 
 	String[] reversePermutations(String s) {
 		Queue<String> queue = new LinkedList<String>();
-		for(int i = 2; i <= s.length(); i++) {
+		for (int i = 2; i <= s.length(); i++) {
 			queue.addAll(permutations(s, i));
 		}
 		return queue.stream().toArray(String[]::new);
 	}
-	
+
 	Queue<String> permutations(String s, int count) {
 		Queue<String> queue = new LinkedList<String>();
-		for(int i = 0; i + count <= s.length(); i++) {
+		for (int i = 0; i + count <= s.length(); i++) {
 			StringBuilder permutation = new StringBuilder();
-			if(i > 0)
+			if (i > 0)
 				permutation.append(s.substring(0, i));
 			permutation.append(new StringBuilder(s.substring(i, i + count)).reverse());
-			if(i + count < s.length())
-				permutation.append(s.substring(i+count));
+			if (i + count < s.length())
+				permutation.append(s.substring(i + count));
 			queue.add(permutation.toString());
 		}
 		return queue;
 	}
 
-	
-
 	int minOperations(int[] arr) {
 		final PermutationGraph graph = new PermutationGraph(arr);
 		final Queue<String> permutations = new LinkedList<>();
-	    String permutation = Arrays.stream(arr).mapToObj(String::valueOf).collect(Collectors.joining());
-	    graph.addPermutation(permutation, null);
-	    permutations.add(permutation);
-	    while(!permutations.isEmpty()) {
-	      permutation = permutations.remove();
-	      if(graph.isItSolution(permutation))
-	        break;
-	      int vertexFrom =  graph.getVertexFrom(permutation);
-	      Arrays.stream(reversePermutations(permutation))
-	                                    .filter(p -> !graph.containsPermutation(p))
-	                                    .forEach(p -> {
-	                                    	graph.addPermutation(p, vertexFrom);
-	                                    	permutations.add(p);
-	                                     });
-	    }
-	    return graph.getPath(permutation).size() - 1;
-	  }
+		String permutation = Arrays.stream(arr).mapToObj(String::valueOf).collect(Collectors.joining());
+		graph.addPermutation(permutation, null);
+		permutations.add(permutation);
+		while (!permutations.isEmpty()) {
+			permutation = permutations.remove();
+			if (graph.isItSolution(permutation))
+				break;
+			int vertexFrom = graph.getVertexFrom(permutation);
+			Arrays.stream(reversePermutations(permutation)).filter(p -> !graph.containsPermutation(p)).forEach(p -> {
+				graph.addPermutation(p, vertexFrom);
+				permutations.add(p);
+			});
+		}
+		return graph.getPath(permutation).size() - 1;
+	}
 
-	
-	
 	// These are the tests we use to determine if the solution is correct.
 	// You can add your own at the bottom, but they are otherwise not editable!
 	int test_case_number = 1;
