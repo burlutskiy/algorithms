@@ -33,7 +33,6 @@ Input:
 Output:
 2 4
 1 5
-
 */
 public class SubArrayWithGivenSum {
 
